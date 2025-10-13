@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Mapa da Jornada</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-pane">
+            <h1>Bem Vindo ao Mapa da Jornada</h1>
+            <p>Nós criamos o Mapa da Jornada para ajudar em sua jornada de conhecimento na área de TI. Um mapeamento das principais áreas de TI pelo mercado, com sugestões e evidências.</p>
+        </div>
+        <div class="right-pane">
+            <div class="form-container">
+                <h2>Registre-se</h2>
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                            
+                        {% for field in form %}
+                            <div class="form-field">
+                                {% if field.errors %}
+                                    <ul class="errorlist">
+                                        {% for error in field.errors %}
+                                            <li>{{ error }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                {{ field }} 
+                            </div>
+                        {% endfor %}
+                            
+                        {% if form.non_field_errors %}
+                            <ul class="errorlist non-field-errors">
+                                {% for error in form.non_field_errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        <button type="submit">Registrar</button>
+                    </form>
+
+                    <div class="redirect-link">
+                           <p>Já tem uma conta? <a href="{% url 'login' %}">Entre</a></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
