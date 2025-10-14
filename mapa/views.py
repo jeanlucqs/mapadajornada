@@ -3,6 +3,10 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import CustomUserCreationForm, CustomAuthenticationForm
 
+def index(request):
+    return render(request, 'index.html')
+
+
 def pagina_registro(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
@@ -27,6 +31,6 @@ def pagina_login(request):
     return render(request, 'login.html', {'form': form})
 
 
-def pagina_principal(request):
-    return render(request, 'principal.html')
+def pagina_front(request):
+    return render(request, 'front.html')
 
