@@ -15,7 +15,7 @@ def pagina_registro(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('pagina_front')
+            return redirect('index')
     else:
         form = CustomUserCreationForm()
     
