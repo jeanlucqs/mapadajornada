@@ -1,9 +1,10 @@
 from django.urls import path
-from . import views
+from .views import index, pagina_principal, pagina_registro, pagina_login, pagina_front
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('registro/', views.pagina_registro, name='registro'),
-    path('login/', views.pagina_login, name='login'),
-    path('front/', views.pagina_front, name='pagina_front'),
+    path('', index, name='index'),
+    path('login/', pagina_login, name='login'),
+    path('registro/', pagina_registro, name='registro'),
+    path('front/', pagina_front, name='pagina_front'),
+    path('login/principal/', pagina_principal, name='pagina_principal'),
 ]
