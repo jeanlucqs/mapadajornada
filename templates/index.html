@@ -17,9 +17,15 @@
         Nós criamos o Mapa da Jornada para ajudar em sua jornada de conhecimento na área de TI.
         Um mapeamento das principais áreas de TI pelo mercado, com sugestões e evidências.
     </p>
-    <a href="#" class="bg-[#C5D3E8] hover:bg-opacity-90 text-black font-semibold py-3 px-10 rounded-lg transition">
+    {% if user.is_authenticated %}
+    <a href="{% url 'pagina_front' %}" class="bg-[#C5D3E8] hover:bg-opacity-90 text-black font-semibold py-3 px-10 rounded-lg transition">
+        Acessar minha área
+    </a>
+{% else %}
+    <a href="{% url 'login' %}" class="bg-[#C5D3E8] hover:bg-opacity-90 text-black font-semibold py-3 px-10 rounded-lg transition">
         Acessar
     </a>
+{% endif %}
 </section>
 
 <!-- Seção de Carreiras -->
@@ -36,7 +42,7 @@
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Cria a parte visual e interativa de sites e aplicativos que o usuário vê e utiliza.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="{% url 'pagina_front' %}" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
             <!-- Card -->
             <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">

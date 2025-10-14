@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomAuthenticationForm
 
 def index(request):
@@ -13,11 +13,12 @@ def pagina_registro(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('pagina_principal')
+            return redirect('pagina_front')
     else:
         form = CustomUserCreationForm()
     
     return render(request, 'registro.html', {'form': form})
+
 
 def pagina_login(request):
     if request.method == 'POST':
@@ -25,12 +26,11 @@ def pagina_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('pagina_principal')
+            return redirect('index')
     else:
         form = CustomAuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
-
+@login_required
 def pagina_front(request):
-    return render(request, 'front.html')
-
+    return render(request, 'pagina_front.html')

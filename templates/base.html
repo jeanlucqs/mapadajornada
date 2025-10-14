@@ -13,31 +13,53 @@
 <body class="flex flex-col min-h-screen bg-white text-gray-800">
 
     <!-- NAVBAR -->
-   <nav class="container mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
+    <nav class="container mx-auto px-6 md:px-12 py-6 flex justify-between items-center">
+    
+        <a href="{% url 'index' %}" class="text-xl font-bold text-gray-800">Mapa da Jornada</a>
         
-        <h1 class="text-xl font-bold text-gray-800"> Mapa da Jornada</h1>
-        <!-- Menu Desktop -->
         <div class="hidden md:flex items-center space-x-8">
             <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Carreiras</a>
             <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Trilhas</a>
-            <a href="#" class="border border-gray-400 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors bg-[#C5D3E8]">
-                Área do aluno
-            </a>
+            
+            {% if user.is_authenticated %}
+                <span class="text-gray-600">Olá, {{ user.username }}!</span>
+                <a href="{% url 'pagina_front' %}" class="border border-gray-400 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors bg-[#C5D3E8]">
+                    Minha Área
+                </a>
+                <form action="{% url 'logout' %}" method="post" class="inline">
+                    {% csrf_token %}
+                    <button type="submit" class="text-red-500 hover:text-red-700 transition-colors bg-transparent border-none p-0 cursor-pointer">Sair</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}" class="border border-gray-400 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors bg-[#C5D3E8]">
+                    Área do aluno
+                </a>
+            {% endif %}
         </div>
-        <!-- Botão do Menu Mobile -->
+    
         <div class="md:hidden">
             <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
     </nav>
-    <!-- Menu Mobile (oculto por padrão) -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 text-right ">
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 text-right">
         <a href="#" class="block text-gray-600 hover:text-gray-900 py-2">Carreiras</a>
         <a href="#" class="block text-gray-600 hover:text-gray-900 py-2">Trilhas</a>
-        <a href="#" class=" mt-2 inline-block border border-gray-400 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors text-center ">
-            Área do aluno
-        </a>
+        
+        {% if user.is_authenticated %}
+            <a href="{% url 'pagina_front' %}" class="mt-2 inline-block border border-gray-400 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors text-center">
+                Minha Área
+            </a>
+            <form action="{% url 'logout' %}" method="post" class="block text-right">
+                {% csrf_token %}
+                <button type="submit" class="w-full text-right text-red-500 hover:text-red-700 py-2 bg-transparent border-none p-0 cursor-pointer">Sair</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}" class="mt-2 inline-block border border-gray-400 hover:bg-gray-100 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors text-center">
+                Área do aluno
+            </a>
+        {% endif %}
     </div>
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');

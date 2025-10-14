@@ -146,3 +146,21 @@ ul.errorlist.non-field-errors {
 .redirect-link a:hover {
     text-decoration: underline;
 }
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.password-toggle-icon svg {
+    width: 20px;
+    height: 20px;
+}
