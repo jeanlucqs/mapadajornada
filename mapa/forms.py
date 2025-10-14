@@ -15,7 +15,6 @@ class CustomUserCreationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        
         self.fields['username'].label = "Nome de Usuário"
         self.fields['username'].widget.attrs.update(
             {'placeholder': 'Nome de Usuário', 'autofocus': True}
