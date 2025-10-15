@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomAuthenticationForm
+from .models import PaginaFrontend
 
 def index(request):
     return render(request, 'index.html')
@@ -36,4 +37,5 @@ def pagina_login(request):
 
 @login_required
 def pagina_front(request):
-    return render(request, 'pagina_front.html')
+    conteudo = PaginaFrontend.objects.first()
+    return render(request, 'pagina_front.html', {'conteudo': conteudo})
