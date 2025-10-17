@@ -5,15 +5,15 @@
 
 {% block content %}
 <!-- Seção Hero -->
-<section class="flex flex-col items-center justify-center text-center mb-24 px-6">
-    <div class="mb-8">
-       <img src="{% static 'imagens/Design sem nome 1.png' %}" alt="Logo Mapa da Jornada" class="w-32 h-32 mx-auto">
+<section class="flex flex-col items-center justify-center text-center mt-2 mb-16 px-6">
+    <div class="mb-2">
+        <img src="{% static 'imagens/Design sem nome 1.png' %}" alt="Logo Mapa da Jornada" class="w-28 h-28 mx-auto">
     </div>
-    <h1 class="text-5xl md:text-5xl font-bold leading-tight mb-4 text-black">
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-3 text-black">
         Descubra o que é possível com<br>
         o extenso mundo da Tecnologia.
     </h1>
-    <p class="text-sm md:text-xl text-gray-800 max-w-xl mb-8">
+    <p class="text-sm md:text-xl text-gray-800 max-w-xl mb-6 p-4">
         Nós criamos o Mapa da Jornada para ajudar em sua jornada de conhecimento na área de TI.
         Um mapeamento das principais áreas de TI pelo mercado, com sugestões e evidências.
     </p>
@@ -21,12 +21,13 @@
     <a href="{% url 'pagina_front' %}" class="bg-[#C5D3E8] hover:bg-opacity-90 text-black font-semibold py-3 px-10 rounded-lg transition">
         Acessar minha área
     </a>
-{% else %}
-    <a href="{% url 'login' %}" class="bg-[#C5D3E8] hover:bg-opacity-90 text-black font-semibold py-3 px-10 rounded-lg transition">
+    {% else %}
+    <a href="{% url 'login' %}" class="border border-gray-400 bg-[#BFDFF6] hover:scale-105 transition duration-300 text-black font-semibold py-3 px-10 rounded-lg transition">
         Acessar
     </a>
-{% endif %}
+    {% endif %}
 </section>
+
 
 <!-- Seção de Carreiras -->
 <section class="container mx-auto px-6 md:px-12 py-8">
@@ -37,28 +38,28 @@
         <h3 class="text-xl font-bold mb-6 text-black">1. Desenvolvimento de Software</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Desenvolvedor Frontend</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Cria a parte visual e interativa de sites e aplicativos que o usuário vê e utiliza.</p>
                 </div>
-                <a href="{% url 'pagina_front' %}" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="{% url 'pagina_front' %}" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Desenvolvedor Backend</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Cuida dos servidores, bancos de dados e da lógica que fazem a aplicação funcionar.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Desenvolvedor Mobile</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Área da tecnologia focada na criação e otimização de aplicativos e sistemas para dispositivos móveis.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
         </div>
     </div>
@@ -68,28 +69,28 @@
         <h3 class="text-xl font-bold mb-6 text-black">2. Dados: Ciência e Engenharia</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Cientista de Dados</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Analisa e interpreta dados complexos para extrair insights valiosos.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Engenheiro de Dados</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Constrói e mantém a infraestrutura para processamento de grandes volumes de dados.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Analista de BI</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Transforma dados brutos em painéis e relatórios para auxiliar na tomada de decisões.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
         </div>
     </div>
@@ -99,28 +100,28 @@
         <h3 class="text-xl font-bold mb-6 text-black">3. Cibersegurança</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Analista de Segurança</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Protege sistemas e redes contra ameaças e ataques cibernéticos.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Engenheiro de Segurança</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Projeta e implementa soluções de segurança robustas para a infraestrutura.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Pentester (Ethical Hacker)</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Realiza testes de invasão controlados para identificar vulnerabilidades.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
         </div>
     </div>
@@ -130,28 +131,28 @@
         <h3 class="text-xl font-bold mb-6 text-black">4. Infraestrutura de TI e Cloud Computing</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Administrador de Redes</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Gerencia e mantém a infraestrutura de rede para garantir a conectividade.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Arquiteto de Soluções em Nuvem</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Desenha e implementa soluções escaláveis em provedores de nuvem.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Engenheiro de DevOps</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Automatiza processos entre desenvolvimento de software e operações de TI.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
         </div>
     </div>
@@ -161,28 +162,28 @@
         <h3 class="text-xl font-bold mb-6 text-black">5. Design de Experiência e Interface do Usuário (UX/UI)</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Designer de UX (User Experience)</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Foca em tornar um produto ou serviço útil, usável e agradável para o usuário.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Designer de UI (User Interface)</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Cria a parte visual e interativa do produto, garantindo uma interface atraente.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
              <!-- Card -->
-            <div class="bg-[#EAE1DD] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
+            <div class="bg-[#FFFFFF] p-8 rounded-lg text-center flex flex-col mx-auto w-full max-w-[364px] h-[320px]">
                 <h4 class="font-bold text-lg text-gray-900">Pesquisador de UX</h4>
                 <div class="flex-grow flex items-center justify-center">
                     <p class="text-gray-700 text-sm">Conduz estudos e pesquisas para entender as necessidades e comportamentos dos usuários.</p>
                 </div>
-                <a href="#" class="self-center bg-white/60 hover:bg-white/80 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
+                <a href="#" class="self-center bg-[#BDD7EA] hover:scale-105 text-gray-800 font-semibold py-2 px-5 rounded-full text-sm transition-colors">Saiba Mais</a>
             </div>
         </div>
     </div>
