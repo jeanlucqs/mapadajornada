@@ -5,120 +5,181 @@
 
 {% block content %}
 
-<!-- SEÇÃO 1 — Cabeçalho e Introdução -->
-<section
-    class="max-w-7xl mx-auto px-10 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[197px] bg-white">
+<!-- SEÇÃO 1 — Introdução -->
+<section class="max-w-7xl mx-auto px-10 pt-4 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[197px]">
     <div>
-        <h1 class="text-5xl font-extrabold mb-6 text-black leading-tight">{{ conteudo.titulo_principal }}</h1>
-        <p class="text-gray-800 text-lg leading-relaxed mb-8">{{ conteudo.introducao|safe }}</p>
+        <h1 class="text-5xl font-extrabold mb-6 text-black leading-tight">Por Que Estudar Frontend?</h1>
+        <p class="text-gray-800 text-lg leading-relaxed mb-8">
+            Dominar o desenvolvimento Frontend é essencial para quem deseja criar interfaces modernas, interativas e
+            responsivas.
+            Essa área combina design, programação e experiência do usuário, sendo uma das carreiras mais dinâmicas e
+            requisitadas
+            no mercado de tecnologia. Você aprenderá a transformar layouts em código funcional, garantindo que sites e
+            aplicativos
+            sejam rápidos, acessíveis e visualmente impressionantes. Além disso, desenvolverá habilidades de resolução
+            de problemas,
+            otimização de performance e trabalho em equipe competências valiosas em qualquer área de TI.
+        </p>
 
         <div class="flex flex-col items-start gap-4 border-t border-gray-300 pt-6">
             <p class="text-gray-800 text-base">Deseja saber mais sobre a carreira?</p>
             <a href="#"
-                class="bg-gray-900 text-white px-7 py-2.5 rounded-full shadow-md hover:bg-gray-800 transition text-base font-semibold">Trilhas</a>
+                class="bg-gray-900 text-white px-7 py-2.5 rounded-full shadow-md hover:bg-gray-800 transition text-base font-semibold">
+                Trilhas
+            </a>
         </div>
     </div>
 
     <div class="flex justify-center">
-        <img src="{% static 'img/frontend-ilustracao.png' %}" alt="Ilustração Frontend" class="w-[380px] h-auto">
+        <img src="{% static 'imagens/foto front.png' %}" alt="Ilustração Frontend" class="w-[380px] h-auto">
     </div>
 </section>
 
 <!-- SEÇÃO 2 — Por Que Escolher Frontend -->
-<section class="bg-[#0b0b17] text-white pt-10 pb-16 px-10 min-h-[850px] flex items-center">
+<section class="bg-[#0b0b17] text-white pt-10 pb-16 px-10 flex items-center">
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
-            <h2 class="text-5xl font-bold mb-10 leading-tight">Por que escolher<br> Front-end?</h2>
+            <h2 class="text-5xl font-bold mb-10 leading-tight">Por Que Escolher<br>Front-end?</h2>
 
-            <div class="space-y-6">
+            <div class="space-y-8">
                 <div>
                     <h3 class="text-2xl font-semibold mb-3">Mercado em Expansão</h3>
-                    <p class="text-gray-300 text-base leading-relaxed">{{ conteudo.motivo_escolher|safe }}</p>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Todo site, app ou sistema precisa de um desenvolvedor Frontend.<br>
+                        Vagas remotas e oportunidades globais (EUA, Europa).<br>
+                        Média salarial: R$ 3.000 (iniciante) a R$ 15.000+ (sênior)
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-3">Criatividade + Tecnologia</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Transforme designs em interfaces reais com código.<br>
+                        Trabalhe com animações, interações e experiências digitais.<br>
+                        Junte lógica de programação (JavaScript) e senso estético (CSS/UI).
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="bg-white text-gray-900 rounded-2xl p-8 w-full max-w-md mx-auto shadow-xl">
-            <h3 class="text-xl font-bold mb-6 text-center">Faixa Salarial no Brasil</h3>
-            <div class="space-y-5 text-base">
-                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
-                    <p>Júnior</p>
-                    <div class="w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-green-500 h-2 rounded-full" style="width: 25%"></div>
+        <div
+            class="bg-white text-gray-900 rounded-2xl p-10 w-full max-w-md mx-auto shadow-xl min-h-[440px] flex flex-col justify-center">
+            <h3 class="text-2xl font-extrabold mb-10 text-center text-gray-800">Faixa Salarial Brasil:</h3>
+            <div class="space-y-8 text-lg">
+                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-5">
+                    <p class="font-medium">Júnior</p>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 25%"></div>
                     </div>
-                    <span class="font-bold text-green-600">R$ 3.000</span>
+                    <span class="font-extrabold text-green-600 text-xl">R$ 3.000</span>
                 </div>
-                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
-                    <p>Pleno</p>
-                    <div class="w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
+
+                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-5">
+                    <p class="font-medium">Pleno</p>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 60%"></div>
                     </div>
-                    <span class="font-bold text-green-600">R$ 9.000</span>
+                    <span class="font-extrabold text-green-600 text-xl">R$ 9.000</span>
                 </div>
-                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
-                    <p>Sênior</p>
-                    <div class="w-full bg-gray-200 rounded-full h-2">
-                        <div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
+
+                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-5">
+                    <p class="font-medium">Sênior</p>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 100%"></div>
                     </div>
-                    <span class="font-bold text-green-600">R$ 15.000</span>
+                    <span class="font-extrabold text-green-600 text-xl">R$ 15.000</span>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
 <!-- SEÇÃO 3 — Público-Alvo -->
-<section class="bg-white py-16 px-10 min-h-[850px] flex items-center">
+<section class="bg-[#F2E8E8] py-16 px-10 flex items-center">
     <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-5xl font-bold mb-12">Para quem essa área é indicada?</h2>
+        <h2 class="text-5xl font-bold mb-12">Para quem está<br>essa área é indicada?</h2>
 
         <div class="grid md:grid-cols-2 gap-12 text-left">
-            <div class="bg-gray-50 p-8 rounded-2xl shadow-md">
-                <h3 class="text-xl font-semibold mb-4">Iniciantes na área de TI</h3>
-                <p class="text-gray-700 text-base leading-relaxed">{{ conteudo.publico_alvo|safe }}</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-center">Iniciantes na área de TI</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    O Frontend é ideal para quem busca entrar na área de TI criando interfaces visuais e interativas.
+                    Essa área oferece um excelente ponto de partida para transformar designs em experiências digitais
+                    funcionais,
+                    combinando habilidades técnicas com senso estético.
+                </p>
             </div>
 
-            <div class="bg-gray-50 p-8 rounded-2xl shadow-md">
-                <h3 class="text-xl font-semibold mb-4">Pessoas criativas</h3>
-                <p class="text-gray-700 text-base leading-relaxed">{{ conteudo.publico_alvo|safe }}</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md">
+                <h3 class="text-xl font-bold mb-4 text-center">Pessoas criativas</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    Se você gosta de design, cores, tipografia e se importa com a experiência do usuário, o curso de
+                    frontend
+                    pode ser o caminho ideal. O desenvolvedor frontend é responsável por traduzir o design de uma página
+                    em código
+                    e garantir que a navegação seja intuitiva.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- SEÇÃO 4 — O Que Você Irá Aprender -->
-<section class="bg-[#0b0b17] text-white py-16 px-10 min-h-[850px] flex items-center">
+<section class="bg-[#0b0b17] text-white py-16 px-10 flex items-center">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-5xl font-bold text-center mb-16">O que você irá aprender?</h2>
 
         <div class="grid md:grid-cols-2 gap-14">
-            <div>
+            <div class="bg-white text-black rounded-2xl p-8 shadow-md">
                 <h3 class="text-2xl font-semibold mb-5">Fundamentos Essenciais</h3>
-                <p class="text-gray-300 text-base leading-relaxed">{{ conteudo.conteudo_aprendizado|safe }}</p>
+                <ul class="text-black text-base leading-relaxed space-y-3">
+                    <li><strong>HTML5</strong> — É o esqueleto de um site. Define títulos, parágrafos, imagens e links.
+                    </li>
+                    <li><strong>CSS3</strong> — É a “pele e roupa” do site. Define cores, fontes, layouts e animações.
+                    </li>
+                    <li><strong>JavaScript (ES6+)</strong> — É o sistema nervoso. Adiciona interatividade e movimento.
+                    </li>
+                </ul>
             </div>
 
-            <div>
+            <div class="text-black rounded-2xl p-8 shadow-md bg-white">
                 <h3 class="text-2xl font-semibold mb-5">Bibliotecas e Frameworks</h3>
-                <p class="text-gray-300 text-base leading-relaxed">{{ conteudo.conteudo_aprendizado|safe }}</p>
+                <ul class="text-black text-base leading-relaxed space-y-3">
+                    <li><strong>React, Vue ou Angular</strong> — Frameworks populares que facilitam o desenvolvimento de
+                        interfaces dinâmicas e complexas.</li>
+                    <li><strong>Bibliotecas de Componentes (ex: Bootstrap)</strong> — Ferramentas que oferecem
+                        componentes prontos (botões, menus, etc.) para acelerar o desenvolvimento.</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
 <!-- SEÇÃO 5 — Profissões da Área -->
-<section class="bg-white py-16 px-10 min-h-[850px] flex items-center">
+<section class="bg-[#F2E8E8] py-16 px-10 flex items-center">
     <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-5xl font-bold mb-14">Profissões da Área</h2>
 
         <div class="grid md:grid-cols-2 gap-12 text-left">
             <div class="bg-gray-50 p-8 rounded-2xl shadow-md">
-                <h3 class="text-xl font-bold mb-4">Desenvolvedor(a) Frontend</h3>
-                <p class="text-gray-700 text-base leading-relaxed">{{ conteudo.profissoes|safe }}</p>
+                <h3 class="text-xl font-bold mb-4 text-center">Desenvolvedor(a) Frontend</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    <strong>Função</strong> — Cria a interface visual e interativa de sites e apps.<br><br>
+                    <strong>Tecnologias principais</strong> — HTML, CSS, JavaScript, React, Vue, Angular.<br><br>
+                    <strong>Por que é importante?</strong> É quem transforma o design em código funcional — ou seja, faz
+                    o site “acontecer” no navegador.
+                </p>
             </div>
 
             <div class="bg-gray-50 p-8 rounded-2xl shadow-md">
-                <h3 class="text-xl font-bold mb-4">Designer UI/UX</h3>
-                <p class="text-gray-700 text-base leading-relaxed">{{ conteudo.profissoes|safe }}</p>
+                <h3 class="text-xl font-bold mb-4 text-center">Designer UI/UX</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    <strong>Função</strong> — Cria interfaces visualmente atraentes e funcionais, priorizando a
+                    usabilidade e a experiência do usuário.<br><br>
+                    <strong>Tecnologias principais</strong> — Trabalha com ferramentas como Figma ou Adobe XD para
+                    projetar layouts e protótipos.
+                </p>
             </div>
         </div>
     </div>
