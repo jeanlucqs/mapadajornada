@@ -26,7 +26,7 @@
                 </a>
                 <form action="{% url 'logout' %}" method="post" class="inline">
                     {% csrf_token %}
-                    <button type="submit" class="text-red-500 hover:text-red-700 transition-colors bg-transparent border-none p-0 cursor-pointer">Sair</button>
+                    <button type="submit" class=" border border-red-300 text-white hover:text-white transition-colors bg-red-600 px-4 py-1 rounded-lg transition-colors">Sair</button>
                 </form>
             {% else %}
                 <a href="{% url 'login' %}" class="border border-gray-400 text-gray-800 font-semibold py-2 px-5 rounded-lg transition-colors bg-[#C5D3E8] hover:scale-105 transition duration-300">
