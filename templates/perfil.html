@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}Meu Perfil{% endblock %}
+
+{% block content %}
+
+<div class="max-w-3xl mx-auto text-center bg-[#F2E8E8]">
+  {% if perfil.foto %}
+    <img src="{{ perfil.foto.url }}" alt="Foto do Perfil" class="w-24 h-24 rounded-full mx-auto object-cover">
+  {% else %}
+    <img src="https://via.placeholder.com/150" alt="Foto do Perfil" class="w-24 h-24 rounded-full mx-auto">
+  {% endif %}
+  
+  <h1 class="text-3xl font-bold mt-4 text-gray-900">{{ user.username }}</h1>
+  
+  {% if perfil.curso %}
+    <p class="text-lg text-gray-600 mt-1">{{ perfil.curso }}</p>
+  {% endif %}
+  
+  <a href="{% url 'editar_perfil' %}" class=" bg-[#BFDFF6] inline-block mt-6 text-gray-800 font-medium py-2 px-6 rounded-lg">
+    Editar Perfil
+  </a>
+</div>
+
+
+<div class="max-w-3xl mx-auto mt-10">
+  <h2 class="text-2xl font-bold mb-4 text-gray-900">Habilidades</h2>
+  
+  <div class="flex flex-wrap gap-2"> {% for hab in habilidades %}
+      <span class="bg-[#BFDFF6] text-gray-800 text-sm font-medium px-4 py-1 rounded-full">
+        {{ hab.nome }}
+      </span>
+    {% empty %}
+      <p class="text-gray-500">Nenhuma habilidade cadastrada.</p>
+    {% endfor %}
+  </div>
+  
+  <a href="{% url 'adicionar_habilidade' %}" class="inline-block mt-4 text-blue-600 hover:underline">
+    + Adicionar Habilidade
+  </a>
+</div>
+
+
+<div class="max-w-3xl mx-auto mt-8 mb-12">
+  <h2 class="text-2xl font-bold mb-4 text-gray-900">Competências</h2>
+  
+  <div class="flex flex-wrap gap-2"> {% for comp in competencias %}
+      <span class="bg-[#BFDFF6] text-gray-800 text-sm font-medium px-4 py-1 rounded-full">
+        {{ comp.nome }}
+      </span>
+    {% empty %}
+      <p class="text-gray-500">Nenhuma competência cadastrada.</p>
+    {% endfor %}
+  </div>
+  
+  <a href="{% url 'adicionar_competencia' %}" class="inline-block mt-4 text-blue-600 hover:underline">
+    + Adicionar Competência
+  </a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Editar Perfil{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto p-8">
+  <h1 class="text-3xl font-bold mb-6 text-center">Editar Perfil</h1>
+
+  {% if messages %}
+    {% for m in messages %}
+      <p class="text-green-600 text-center mb-4">{{ m }}</p>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" enctype="multipart/form-data" class="space-y-6">
+    {% csrf_token %}
+    <div>
+      <label class="block font-semibold mb-1">Foto</label>
+      {{ form.foto }}
+    </div>
+    <div>
+        <label class="block font-semibold mb-1">Curso</label>{{ form.curso }}
+    </div>
+
+    <div class="flex justify-between">
+    <div>
+      <label class="block font-semibold mb-1">Habilidades (texto livre)</label>
+      {{ form.habilidades }}
+    </div>
+    <div>
+      <label class="block font-semibold mb-1">Competências (texto livre)</label>
+      {{ form.competencias }}
+    </div>
+
+    <div class="flex justify-between">
+      <a href="{% url 'perfil' %}" class="text-gray-600 hover:underline">Cancelar</a>
+      <button type="submit" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Salvar</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
