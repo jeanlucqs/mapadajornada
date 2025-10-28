@@ -1,4 +1,29 @@
 from django.db import models
+from django.contrib.auth.models import User
+
+class Perfil(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    foto = models.ImageField(upload_to='fotos_perfil/', blank=True, null=True)
+    curso = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return f"Perfil de {self.user.username}"
+
+# Modelos opcionais separados — se preferir armazenar cada item em tabela separada
+class Habilidade(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='habilidades')
+    nome = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome
+
+class Competencia(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='competencias')
+    nome = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome
+    
 
 
 class PaginaFrontend(models.Model):

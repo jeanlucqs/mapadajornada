@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
+from .models import Habilidade, Competencia, Perfil
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(
@@ -37,3 +38,25 @@ class CustomAuthenticationForm(AuthenticationForm):
         self.fields['password'].widget.attrs.update(
             {'placeholder': 'Senha'}
         )
+
+
+class PerfilForm(forms.ModelForm):
+    class Meta:
+        model = Perfil
+        fields = ['foto', 'curso',]
+
+class HabilidadeForm(forms.ModelForm):
+    class Meta:
+        model = Habilidade
+        fields = ['nome']
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'border rounded-lg p-2 w-full','placeholder':'Ex: Raciocínio lógico'})
+        }
+
+class CompetenciaForm(forms.ModelForm):
+    class Meta:
+        model = Competencia
+        fields = ['nome']
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'border rounded-lg p-2 w-full','placeholder':'Ex: Python'})
+        }
