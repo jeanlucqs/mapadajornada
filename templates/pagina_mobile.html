@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mapa da Jornada - Mobile{% endblock %}
+
+{% block content %}
+
+<section class="max-w-7xl mx-auto px-10 pt-4 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div>
+        <h1 class="text-5xl font-extrabold mb-6 text-black leading-tight">{{ conteudo.titulo_principal }}</h1>
+        <p class="text-gray-800 text-lg leading-relaxed mb-8">{{ conteudo.descricao_principal }}</p>
+
+        <div class="flex flex-col items-start gap-4 border-t border-gray-300 pt-6">
+            <p class="text-gray-800 text-base">Deseja saber mais sobre a carreira?</p>
+            <a href="#"
+               class="bg-gray-900 text-white px-7 py-2.5 rounded-full shadow-md hover:bg-gray-800 transition text-base font-semibold">
+               Trilhas
+            </a>
+        </div>
+    </div>
+
+    <div class="hidden md:flex justify-center">
+         <img src="{% static 'imagens/mobile3.png' %}" alt="Imagem Mobile" class="w-[390px] h-auto ml-20">
+    </div>
+</section>
+
+<section class="bg-[#0b0b17] text-white pt-10 pb-16 px-10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-5xl font-bold mb-10 leading-tight">Por Que Estudar Desenvolvimento mobile?</h2>
+            <p class="text-gray-300 text-base leading-relaxed whitespace-pre-line">{{ conteudo.motivo_escolher }}</p>
+        </div>
+
+         <div
+            class="bg-white text-gray-900 rounded-2xl p-10 w-full max-w-md mx-auto shadow-xl min-h-[440px] flex flex-col justify-center">
+            <h3 class="text-2xl font-extrabold mb-10 text-center text-gray-800">Faixa Salarial Brasil:</h3>
+            <div class="space-y-8 text-lg">
+                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-5">
+                    <p class="font-medium">Júnior</p>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 25%"></div>
+                    </div>
+                    <span class="font-extrabold text-green-600 text-xl">{{ conteudo.faixa_junior }}</span>
+                </div>
+
+                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-5">
+                    <p class="font-medium">Pleno</p>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 60%"></div>
+                    </div>
+                    <span class="font-extrabold text-green-600 text-xl">{{ conteudo.faixa_pleno }}</span>
+                </div>
+
+                <div class="grid grid-cols-[auto_1fr_auto] items-center gap-5">
+                    <p class="font-medium">Sênior</p>
+                    <div class="w-full bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 100%"></div>
+                    </div>
+                    <span class="font-extrabold text-green-600 text-xl">{{ conteudo.faixa_senior }} </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#F2E8E8] py-16 px-10">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 uppercase">Para quem está<br>essa área é indicada?</h2>
+
+        <div class="grid md:grid-cols-2 gap-12 text-left">
+            <div class="bg-white p-8 rounded-2xl shadow-md flex flex-col justify-between text-center">
+                <h3 class="text-xl font-bold mb-4">Focados na Experiência do Usuário</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    O espaço na tela de um celular é limitado e valioso. Essa carreira é perfeita para quem se preocupa com cada detalhe da jornada do usuário,
+                    pensando em interfaces intuitivas, performance rápida e um design que funcione
+                    perfeitamente em diferentes tamanhos de tela.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-md flex flex-col justify-between text-center">
+                <h3 class="text-xl font-bold mb-4">Apaixonados por Inovação e Dispositivos</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    Se você fica animado com o lançamento de um novo smartphone ou smartwatch e adora explorar novas funcionalidades de hardware
+                    (como câmeras, sensores e GPS), a carreira mobile é o lugar ideal.
+                    É uma área para quem gosta de unir o software ao hardware.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-[#0b0b17] text-white py-16 px-10">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 uppercase">O que você irá aprender?</h2>
+
+        <div class="grid md:grid-cols-2 gap-12 text-left">
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between text-center">
+                <h3 class=" text-black text-2xl font-semibold mb-5">Desenvolvimento Nativo</h3>
+                <p class="text-black text-base leading-relaxed">
+                    <strong>Para Android</strong> — A linguagem Kotlin (a principal) e o ambiente de desenvolvimento Android Studio.<br>
+                    <strong>Para iOS</strong> — A linguagem Swift (a mais moderna) e o ambiente de desenvolvimento Xcode, da Apple.<br>
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between text-center">
+                <h3 class=" text-black text-2xl font-semibold mb-5">Desenvolvimento Multiplataforma</h3>
+                <p class="text-black text-base leading-relaxed">
+                    <strong>Flutter </strong> —  Framework do Google que utiliza a linguagem Dart para criar interfaces ricas e de alta performance.<br>
+                    <strong>React Native</strong> —  Framework que usa JavaScript/React para criar aplicativos com aparência nativa, muito popular no mercado.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-[#F2E8E8] py-16 px-10">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16 uppercase">Profissões da área</h2>
+
+        <div class="grid md:grid-cols-2 gap-12 text-left">
+            <div class="bg-white p-8 rounded-2xl shadow-md flex flex-col justify-between text-center">
+                <h3 class="text-xl font-bold mb-4">Dev  Multiplataforma</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    <strong>Objetivo:</strong> otimizar o tempo e os custos, escrevendo um único código-fonte que funciona tanto em iOS quanto em Android.<br><br>
+                    <strong>Testes:</strong>  Realiza testes em todas as plataformas para garantir a qualidade, o desempenho e a usabilidade do software.<br><br>
+                    <strong>Importância:</strong> É quem faz a aplicação funcionar de forma eficiente e segura.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-md flex flex-col justify-between text-center">
+                <h3 class="text-xl font-bold mb-4">Dev Nativo</h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                    <strong>Especialistas:</strong>Estes profissionais são especialistas em um único ecossistema (Apple ou Google), o que permite extrair o máximo de performance e recursos do hardware.<br><br>
+                    <strong>Otimização de performance:</strong>  Monitorar e otimizar o desempenho do aplicativo para garantir a melhor experiência possível para o usuário.<br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
