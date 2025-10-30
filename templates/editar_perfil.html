@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}Editar Perfil{% endblock %}
+
 {% block content %}
-<div class="max-w-3xl mx-auto p-8">
+<div class="max-w-3xl mx-auto p-8 bg-[#F2E8E8] rounded-lg">
   <h1 class="text-3xl font-bold mb-6 text-center">Editar Perfil</h1>
 
   {% if messages %}
@@ -10,30 +11,88 @@
     {% endfor %}
   {% endif %}
 
+  <!-- FORMULÁRIO DO PERFIL -->
   <form method="post" enctype="multipart/form-data" class="space-y-6">
     {% csrf_token %}
     <div>
       <label class="block font-semibold mb-1">Foto</label>
       {{ form.foto }}
     </div>
+
     <div>
-        <label class="block font-semibold mb-1">Curso</label>{{ form.curso }}
+      <label class="block font-semibold mb-1">Curso</label>
+      {{ form.curso }}
     </div>
 
-    <div class="flex justify-between">
-    <div>
-      <label class="block font-semibold mb-1">Habilidades (texto livre)</label>
-      {{ form.habilidades }}
-    </div>
-    <div>
-      <label class="block font-semibold mb-1">Competências (texto livre)</label>
-      {{ form.competencias }}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block font-semibold mb-1">Habilidades (texto livre)</label>
+        {{ form.habilidades }}
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Competências (texto livre)</label>
+        {{ form.competencias }}
+      </div>
     </div>
 
-    <div class="flex justify-between">
+    <div class="flex justify-between mt-6">
       <a href="{% url 'perfil' %}" class="text-gray-600 hover:underline">Cancelar</a>
       <button type="submit" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Salvar</button>
     </div>
   </form>
+
+  <!-- BLOCO DE HABILIDADES -->
+  <div class="mt-10">
+    <h2 class="text-2xl font-bold mb-4 text-gray-900">Minhas Habilidades</h2>
+
+    <div class="flex flex-wrap gap-2">
+      {% for hab in habilidades %}
+        <div class="flex items-center bg-[#BFDFF6] text-gray-800 text-sm font-medium px-4 py-1 rounded-full">
+          <span>{{ hab.nome }}</span>
+          <a href="{% url 'excluir_habilidade' hab.id %}" 
+             onclick="return confirm('Tem certeza que deseja excluir esta habilidade?');"
+             class="ml-2 text-red-600 hover:text-red-800 font-bold"
+             title="Excluir habilidade">✕</a>
+        </div>
+      {% empty %}
+        <p class="text-gray-500">Nenhuma habilidade cadastrada.</p>
+      {% endfor %}
+    </div>
+
+    <!-- Formulário de adicionar nova habilidade -->
+    <form method="post" action="{% url 'adicionar_habilidade' %}" class="mt-4 flex gap-2 items-center">
+      {% csrf_token %}
+      <input type="text" name="nome" placeholder="Nova habilidade" required
+             class="border border-gray-300 rounded-lg px-3 py-1 w-full focus:ring-2 focus:ring-blue-400 outline-none">
+      <button type="submit" class="bg-blue-600 text-white px-4 py-1 rounded-lg hover:bg-blue-700 transition">Adicionar</button>
+    </form>
+  </div>
+
+  <!-- BLOCO DE COMPETÊNCIAS -->
+  <div class="mt-10 mb-8">
+    <h2 class="text-2xl font-bold mb-4 text-gray-900">Minhas Competências</h2>
+
+    <div class="flex flex-wrap gap-2">
+      {% for comp in competencias %}
+        <div class="flex items-center bg-[#BFDFF6] text-gray-800 text-sm font-medium px-4 py-1 rounded-full">
+          <span>{{ comp.nome }}</span>
+          <a href="{% url 'excluir_competencia' comp.id %}" 
+             onclick="return confirm('Tem certeza que deseja excluir esta competência?');"
+             class="ml-2 text-red-600 hover:text-red-800 font-bold"
+             title="Excluir competência">✕</a>
+        </div>
+      {% empty %}
+        <p class="text-gray-500">Nenhuma competência cadastrada.</p>
+      {% endfor %}
+    </div>
+
+    <!-- Formulário de adicionar nova competência -->
+    <form method="post" action="{% url 'adicionar_competencia' %}" class="mt-4 flex gap-2 items-center">
+      {% csrf_token %}
+      <input type="text" name="nome" placeholder="Nova competência" required
+             class="border border-gray-300 rounded-lg px-3 py-1 w-full focus:ring-2 focus:ring-blue-400 outline-none">
+      <button type="submit" class="bg-blue-600 text-white px-4 py-1 rounded-lg hover:bg-blue-700 transition">Adicionar</button>
+    </form>
+  </div>
 </div>
 {% endblock %}
