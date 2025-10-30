@@ -2,23 +2,28 @@
 {% block title %}Meu Perfil{% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-[#F2E8E8] flex justify-center items-start py-10">
+<div class="min-h-screen flex justify-center items-start py-10">
   <div class="w-full max-w-2xl px-8">
     
     <!-- Título -->
-    <h1 class="text-2xl font-semibold mb-6 text-left text-gray-900">Meu Perfil</h1>
-
-    <!-- Cabeçalho -->
+    <h1 class="text-4xl font-semibold mb-12 text-left text-gray-900">Meu Perfil</h1>
     <div class="flex items-center gap-6 mb-10">
-      {% if perfil.foto %}
-        <img src="{{ perfil.foto.url }}" alt="Foto do Perfil" class="w-24 h-24 rounded-full object-cover bg-gray-300">
-      {% else %}
-        <div class="w-24 h-24 rounded-full bg-gray-300"></div>
-      {% endif %}
+      <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
+        <span class="text-gray-500 text-2xl font-bold">
+          {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
+        </span>
+      </div>
 
       <div class="flex-1 text-left">
-        <h2 class="text-2xl font-extrabold text-gray-900">{{ user.first_name }} {{ user.last_name }}</h2>
-        <p class="text-gray-800 mt-1">
+        <!-- NOME DO USUÁRIO - aparece do login -->
+        <h2 class="text-3xl font-extrabold text-gray-900">
+          {% if user.first_name or user.last_name %}
+            {{ user.first_name }} {{ user.last_name }}
+          {% else %}
+            {{ user.username }}
+          {% endif %}
+        </h2>
+        <p class="text-gray-800 mt-2">
           {{ perfil.curso|default:"Curso não informado" }}
         </p>
       </div>
@@ -31,10 +36,10 @@
 
     <!-- Habilidades -->
     <div class="mt-8">
-      <h3 class="text-lg font-bold text-gray-900 mb-3">Habilidades</h3>
+      <h3 class="text-3xl font-bold text-gray-900 mb-3">Habilidades</h3>
       <div class="flex flex-wrap gap-3">
         {% for hab in habilidades %}
-          <span class="bg-[#EDE8E8] text-gray-900 px-4 py-2 rounded-md text-sm font-medium">
+          <span class="bg-[#BFDFF6] text-gray-900 px-4 py-2 rounded-md text-lg font-medium">
             {{ hab.nome }}
           </span>
         {% empty %}
@@ -45,10 +50,10 @@
 
     <!-- Competências -->
     <div class="mt-10 mb-12">
-      <h3 class="text-lg font-bold text-gray-900 mb-3">Competências</h3>
+      <h3 class="text-3xl font-bold text-gray-900 mb-3">Competências</h3>
       <div class="flex flex-wrap gap-3">
         {% for comp in competencias %}
-          <span class="bg-[#EDE8E8] text-gray-900 px-4 py-2 rounded-md text-sm font-medium">
+          <span class="bg-[#BFDFF6] text-gray-900 px-4 py-2 rounded-md text-lg font-medium">
             {{ comp.nome }}
           </span>
         {% empty %}

@@ -55,12 +55,13 @@ def pagina_mobile(request):
     return render(request, 'pagina_mobile.html', {'conteudo': conteudo})
 @login_required
 def perfil(request):
-    perfil, _ = Perfil.objects.get_or_create(user=request.user)
+    # CORREÇÃO: Desempacotar a tupla
+    perfil, created = Perfil.objects.get_or_create(user=request.user)
     habilidades = Habilidade.objects.filter(user=request.user)
     competencias = Competencia.objects.filter(user=request.user)
 
     context = {
-        'perfil': perfil,
+        'perfil': perfil,  # Agora é o objeto, não a tupla
         'habilidades': habilidades,
         'competencias': competencias,
     }
@@ -70,15 +71,34 @@ def perfil(request):
 # ---------------- EDITAR PERFIL ----------------
 @login_required
 def editar_perfil(request):
-    perfil, _ = Perfil.objects.get_or_create(user=request.user)
+    # CORREÇÃO: Desempacotar a tupla
+    perfil, created = Perfil.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
         form = PerfilForm(request.POST, request.FILES, instance=perfil)
         if form.is_valid():
             form.instance.user = request.user
             form.save()
+            
+            # Processar novas habilidades
+            novas_habilidades = request.POST.getlist('habilidades')
+            for nome_habilidade in novas_habilidades:
+                if nome_habilidade.strip():
+                    Habilidade.objects.get_or_create(
+                        user=request.user, 
+                        nome=nome_habilidade.strip()
+                    )
+            
+            # Processar novas competências
+            novas_competencias = request.POST.getlist('competencias')
+            for nome_competencia in novas_competencias:
+                if nome_competencia.strip():
+                    Competencia.objects.get_or_create(
+                        user=request.user, 
+                        nome=nome_competencia.strip()
+                    )
+            
             messages.success(request, 'Perfil atualizado com sucesso!')
-            # ✅ Redireciona para a página de perfil
             return redirect('perfil')
     else:
         form = PerfilForm(instance=perfil)
@@ -88,7 +108,7 @@ def editar_perfil(request):
 
     context = {
         'form': form,
-        'perfil': perfil,
+        'perfil': perfil,  # Agora é o objeto, não a tupla
         'habilidades': habilidades,
         'competencias': competencias,
     }
