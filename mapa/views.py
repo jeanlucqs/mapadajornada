@@ -53,13 +53,13 @@ def pagina_back(request):
 def pagina_mobile(request):
     conteudo = PaginaMobile.objects.first()  
     return render(request, 'pagina_mobile.html', {'conteudo': conteudo})
-
 @login_required
 def perfil(request):
-    perfil = Perfil.objects.get_or_create(user=request.user)
+    perfil, _ = Perfil.objects.get_or_create(user=request.user)
     habilidades = Habilidade.objects.filter(user=request.user)
     competencias = Competencia.objects.filter(user=request.user)
-    context ={
+
+    context = {
         'perfil': perfil,
         'habilidades': habilidades,
         'competencias': competencias,
@@ -67,33 +67,47 @@ def perfil(request):
     return render(request, 'perfil.html', context)
 
 
+# ---------------- EDITAR PERFIL ----------------
 @login_required
 def editar_perfil(request):
     perfil, _ = Perfil.objects.get_or_create(user=request.user)
+
     if request.method == 'POST':
         form = PerfilForm(request.POST, request.FILES, instance=perfil)
         if form.is_valid():
             form.instance.user = request.user
             form.save()
             messages.success(request, 'Perfil atualizado com sucesso!')
+            # ✅ Redireciona para a página de perfil
             return redirect('perfil')
     else:
         form = PerfilForm(instance=perfil)
-    return render(request, 'editar_perfil.html', {'form': form})
 
-# --- CRUD HABILIDADE ---
+    habilidades = Habilidade.objects.filter(user=request.user)
+    competencias = Competencia.objects.filter(user=request.user)
+
+    context = {
+        'form': form,
+        'perfil': perfil,
+        'habilidades': habilidades,
+        'competencias': competencias,
+    }
+    return render(request, 'editar_perfil.html', context)
+
+
+# ---------------- HABILIDADES ----------------
 @login_required
 def adicionar_habilidade(request):
     if request.method == 'POST':
-        form = HabilidadeForm(request.POST)
-        if form.is_valid():
-            hab = form.save(commit=False)
-            hab.user = request.user
-            hab.save()
-            return redirect('perfil')
-    else:
-        form = HabilidadeForm()
-    return render(request, 'form.html', {'form': form, 'titulo': 'Adicionar Habilidade'})
+        nome = request.POST.get('nome')
+        if nome:
+            Habilidade.objects.create(user=request.user, nome=nome)
+            messages.success(request, f'Habilidade "{nome}" adicionada com sucesso!')
+        else:
+            messages.error(request, 'Digite o nome da habilidade antes de adicionar.')
+        return redirect('editar_perfil')
+    return redirect('editar_perfil')
+
 
 @login_required
 def editar_habilidade(request, id):
@@ -102,32 +116,37 @@ def editar_habilidade(request, id):
         form = HabilidadeForm(request.POST, instance=hab)
         if form.is_valid():
             form.save()
-            return redirect('perfil')
+            messages.success(request, 'Habilidade atualizada com sucesso!')
+            return redirect('editar_perfil')
     else:
         form = HabilidadeForm(instance=hab)
     return render(request, 'form.html', {'form': form, 'titulo': 'Editar Habilidade'})
+
 
 @login_required
 def excluir_habilidade(request, id):
     hab = get_object_or_404(Habilidade, id=id, user=request.user)
     if request.method == 'POST':
+        nome = hab.nome
         hab.delete()
-        return redirect('perfil')
+        messages.success(request, f'Habilidade "{nome}" excluída com sucesso!')
+        return redirect('editar_perfil')
     return render(request, 'confirm_delete.html', {'obj': hab, 'tipo': 'habilidade'})
 
 
+# ---------------- COMPETÊNCIAS ----------------
 @login_required
 def adicionar_competencia(request):
     if request.method == 'POST':
-        form = CompetenciaForm(request.POST)
-        if form.is_valid():
-            c = form.save(commit=False)
-            c.user = request.user
-            c.save()
-            return redirect('perfil')
-    else:
-        form = CompetenciaForm()
-    return render(request, 'form.html', {'form': form, 'titulo': 'Adicionar Competência'})
+        nome = request.POST.get('nome')
+        if nome:
+            Competencia.objects.create(user=request.user, nome=nome)
+            messages.success(request, f'Competência "{nome}" adicionada com sucesso!')
+        else:
+            messages.error(request, 'Digite o nome da competência antes de adicionar.')
+        return redirect('editar_perfil')
+    return redirect('editar_perfil')
+
 
 @login_required
 def editar_competencia(request, id):
@@ -136,15 +155,19 @@ def editar_competencia(request, id):
         form = CompetenciaForm(request.POST, instance=comp)
         if form.is_valid():
             form.save()
-            return redirect('perfil')
+            messages.success(request, 'Competência atualizada com sucesso!')
+            return redirect('editar_perfil')
     else:
         form = CompetenciaForm(instance=comp)
-    return render(request, 'mapa/form.html', {'form': form, 'titulo': 'Editar Competência'})
+    return render(request, 'form.html', {'form': form, 'titulo': 'Editar Competência'})
+
 
 @login_required
 def excluir_competencia(request, id):
     comp = get_object_or_404(Competencia, id=id, user=request.user)
     if request.method == 'POST':
+        nome = comp.nome
         comp.delete()
-        return redirect('perfil')
-    return render(request, 'mapa/confirm_delete.html', {'obj': comp, 'tipo': 'competência'})
+        messages.success(request, f'Competência "{nome}" excluída com sucesso!')
+        return redirect('editar_perfil')
+    return render(request, 'confirm_delete.html', {'obj': comp, 'tipo': 'competência'})
