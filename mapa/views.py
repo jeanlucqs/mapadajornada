@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from .forms import CustomUserCreationForm, CustomAuthenticationForm, PerfilForm, HabilidadeForm, CompetenciaForm
-from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Perfil, Habilidade, Competencia, Categoria, Carreira
+from .forms import CustomUserCreationForm, CustomAuthenticationForm, PerfilForm, HabilidadeForm, CompetenciaForm, ProjetoForm
+from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Perfil, Habilidade, Competencia, Categoria, Carreira, Projeto
 from django.contrib import messages
 
 def index(request):
@@ -59,15 +59,16 @@ def pagina_mobile(request):
     return render(request, 'pagina_mobile.html', {'conteudo': conteudo})
 @login_required
 def perfil(request):
-    # CORREÇÃO: Desempacotar a tupla
     perfil, created = Perfil.objects.get_or_create(user=request.user)
     habilidades = Habilidade.objects.filter(user=request.user)
     competencias = Competencia.objects.filter(user=request.user)
+    projetos = Projeto.objects.filter(user=request.user)
 
     context = {
-        'perfil': perfil,  # Agora é o objeto, não a tupla
+        'perfil': perfil,
         'habilidades': habilidades,
         'competencias': competencias,
+        'projetos': projetos,
     }
     return render(request, 'perfil.html', context)
 
@@ -195,3 +196,42 @@ def excluir_competencia(request, id):
         messages.success(request, f'Competência "{nome}" excluída com sucesso!')
         return redirect('editar_perfil')
     return render(request, 'confirm_delete.html', {'obj': comp, 'tipo': 'competência'})
+
+@login_required
+def adicionar_projeto(request):
+    if request.method == 'POST':
+        form = ProjetoForm(request.POST)
+        if form.is_valid():
+            projeto = form.save(commit=False)
+            projeto.user = request.user
+            projeto.save()
+            messages.success(request, f'Projeto "{projeto.titulo}" adicionado com sucesso!')
+            return redirect('perfil')
+    else:
+        form = ProjetoForm()
+    return render(request, 'projeto_form.html', {'form': form, 'titulo': 'Adicionar Novo Projeto'})
+
+
+@login_required
+def editar_projeto(request, id):
+    projeto = get_object_or_404(Projeto, id=id, user=request.user)
+    if request.method == 'POST':
+        form = ProjetoForm(request.POST, instance=projeto)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Projeto "{projeto.titulo}" atualizado com sucesso!')
+            return redirect('perfil')
+    else:
+        form = ProjetoForm(instance=projeto)
+    return render(request, 'projeto_form.html', {'form': form, 'titulo': 'Adicionar Novo Projeto'})
+
+
+@login_required
+def excluir_projeto(request, id):
+    projeto = get_object_or_404(Projeto, id=id, user=request.user)
+    if request.method == 'POST':
+        nome = projeto.titulo
+        projeto.delete()
+        messages.success(request, f'Projeto "{nome}" excluído com sucesso!')
+        return redirect('perfil')
+    return render(request, 'confirm_delete.html', {'obj': projeto, 'tipo': 'projeto'})

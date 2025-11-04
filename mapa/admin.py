@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Categoria, Carreira
+from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Categoria, Carreira, Projeto
 
 
 @admin.register(PaginaFrontend)
@@ -26,4 +26,10 @@ class CarreiraAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'categoria', 'url_nome', 'ordem')
     list_editable = ('categoria', 'ordem')
     list_filter = ('categoria',)
+    search_fields = ('titulo', 'descricao')
+
+@admin.register(Projeto)
+class ProjetoAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'user', 'link_repositorio')
+    list_filter = ('user',)
     search_fields = ('titulo', 'descricao')

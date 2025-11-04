@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 from django.contrib.auth.views import LogoutView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('registro/', views.pagina_registro, name='registro'),
@@ -18,4 +20,10 @@ urlpatterns = [
     path('competencia/adicionar/', views.adicionar_competencia, name='adicionar_competencia'),
     path('competencia/editar/<int:id>/', views.editar_competencia, name='editar_competencia'),
     path('competencia/excluir/<int:id>/', views.excluir_competencia, name='excluir_competencia'),
+    path('projeto/adicionar/', views.adicionar_projeto, name='adicionar_projeto'),
+    path('projeto/editar/<int:id>/', views.editar_projeto, name='editar_projeto'),
+    path('projeto/excluir/<int:id>/', views.excluir_projeto, name='excluir_projeto'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

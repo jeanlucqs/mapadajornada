@@ -93,3 +93,19 @@ class Carreira(models.Model):
 
     def __str__(self):
         return f"{self.categoria.nome} - {self.titulo}"
+    
+class Projeto(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='projetos')
+    titulo = models.CharField(max_length=100)
+    descricao = models.TextField(blank=True, null=True)
+    # imagem = models.ImageField(upload_to='fotos_projetos/', blank=True, null=True, help_text="Opcional: Imagem de capa do projeto.")
+    link_repositorio = models.URLField(max_length=200, blank=True, null=True, verbose_name="Link do Repositório (Ex: GitHub)")
+    link_producao = models.URLField(max_length=200, blank=True, null=True, verbose_name="Link da Aplicação (Opcional)")
+    
+    class Meta:
+        verbose_name = "Projeto"
+        verbose_name_plural = "Projetos"
+        ordering = ['-id'] 
+
+    def __str__(self):
+        return self.titulo
