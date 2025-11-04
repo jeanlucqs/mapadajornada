@@ -45,7 +45,7 @@
   "fields": {
     "categoria": 5,
     "titulo": "Desenvolvedor Frontend",
-    "descricao": "Cria a parte visual e interativa..",
+    "descricao": "Cria a parte visual e interativa de sites e aplicativos que o usuário vê e utiliza.",
     "url_nome": "http://127.0.0.1:8000/front/",
     "ordem": 1
   }
@@ -56,7 +56,7 @@
   "fields": {
     "categoria": 5,
     "titulo": "Desenvolvedor Backend",
-    "descricao": "Cuida dos servidores, bancos de dados e da lógica que fazem a aplicação funcionar",
+    "descricao": "Cuida dos servidores, bancos de dados e da lógica que fazem a aplicação funcionar.",
     "url_nome": "http://127.0.0.1:8000/back/",
     "ordem": 2
   }
@@ -67,7 +67,7 @@
   "fields": {
     "categoria": 5,
     "titulo": "Desenvolvedor Mobile",
-    "descricao": "área da tecnologia focada na criação e otimização de aplicativos e sistemas para dispositivos móveis,",
+    "descricao": "Área da tecnologia focada na criação e otimização de aplicativos e sistemas para dispositivos móveis.",
     "url_nome": "http://127.0.0.1:8000/mobile/",
     "ordem": 3
   }
@@ -89,7 +89,7 @@
   "fields": {
     "categoria": 1,
     "titulo": "Engenheiro de Dados",
-    "descricao": "É um profissional que projeta, constrói e mantém a infraestrutura de dados de uma organização,",
+    "descricao": "É um profissional que projeta, constrói e mantém a infraestrutura de dados de uma organização.",
     "url_nome": "#",
     "ordem": 2
   }
@@ -100,7 +100,7 @@
   "fields": {
     "categoria": 1,
     "titulo": "Analista de BI",
-    "descricao": "É o profissional que coleta, analisa e interpreta dados para transformá-los em insights estratégicos",
+    "descricao": "É o profissional que coleta, analisa e interpreta dados para transformá-los em insights estratégicos.",
     "url_nome": "#",
     "ordem": 3
   }
