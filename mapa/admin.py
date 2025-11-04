@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PaginaFrontend, PaginaBackend, PaginaMobile
+from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Categoria, Carreira
 
 
 @admin.register(PaginaFrontend)
@@ -15,3 +15,15 @@ class PaginaBackAdmin(admin.ModelAdmin):
 @admin.register(PaginaMobile)
 class PaginaMobileAdmin(admin.ModelAdmin):
     list_display = ['titulo_principal', 'faixa_junior', 'faixa_pleno', 'faixa_senior']
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'ordem')
+    list_editable = ('ordem',)
+
+@admin.register(Carreira)
+class CarreiraAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'categoria', 'url_nome', 'ordem')
+    list_editable = ('categoria', 'ordem')
+    list_filter = ('categoria',)
+    search_fields = ('titulo', 'descricao')

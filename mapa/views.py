@@ -2,11 +2,15 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomAuthenticationForm, PerfilForm, HabilidadeForm, CompetenciaForm
-from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Perfil, Habilidade, Competencia
+from .models import PaginaFrontend, PaginaBackend, PaginaMobile, Perfil, Habilidade, Competencia, Categoria, Carreira
 from django.contrib import messages
 
 def index(request):
-    return render(request, 'index.html')
+    categorias = Categoria.objects.prefetch_related('carreiras').order_by('ordem')
+    context = {
+        'categorias_list': categorias
+    }
+    return render(request, 'index.html', context)
 
 def pagina_principal(request):
     return render(request, 'principal.html')

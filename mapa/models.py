@@ -62,3 +62,34 @@ class PaginaMobile(models.Model):
 
     def __str__(self):
         return "Página Mobile"
+    
+class Categoria(models.Model):
+    nome = models.CharField(max_length=100, unique=True, verbose_name="Nome da Categoria")
+    ordem = models.PositiveIntegerField(default=0, help_text="Use para definir a ordem na página (ex: 1, 2, 3...)")
+
+    class Meta:
+        verbose_name = "Categoria de Carreira"
+        verbose_name_plural = "1. Categorias de Carreiras" 
+        ordering = ['ordem', 'nome']
+    
+    def __str__(self):
+        return self.nome
+
+class Carreira(models.Model):
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name='carreiras', verbose_name="Categoria")
+    titulo = models.CharField(max_length=100, verbose_name="Título do Card")
+    descricao = models.TextField(verbose_name="Descrição Curta")
+    url_nome = models.CharField(
+        max_length=100, 
+        verbose_name="Nome da URL (para o botão 'Saiba Mais')",
+        help_text="Ex: 'pagina_front'. Use '#' se não tiver uma página de detalhe."
+    )
+    ordem = models.PositiveIntegerField(default=0, help_text="Use para definir a ordem dos cards (ex: 1, 2, 3...)")
+
+    class Meta:
+        verbose_name = "Carreira"
+        verbose_name_plural = "2. Carreiras"
+        ordering = ['categoria__ordem', 'ordem', 'titulo']
+
+    def __str__(self):
+        return f"{self.categoria.nome} - {self.titulo}"
