@@ -6,7 +6,7 @@
 <div class="min-h-screen flex justify-center items-start py-10">
   <div class="w-full max-w-2xl px-8">
     
-    <h1 class="text-4xl font-semibold mb-8 text-left text-gray-900">{{ titulo }}</h1>
+    <h1 class="text-4xl font-semibold mb-8 text-left text-white">{{ titulo }}</h1>
 
     <form method="post" class="space-y-6">
       {% csrf_token %}
@@ -20,44 +20,56 @@
       {% endif %}
 
       <div>
-        <label for="{{ form.titulo.id_for_label }}" class="block text-sm font-medium text-gray-700">
+        <label for="{{ form.titulo.id_for_label }}" class="block text-sm font-medium text-white">
           {{ form.titulo.label }}
         </label>
         <div class="mt-1">
-          {{ form.titulo }} </div>
+          <input type="text" name="{{ form.titulo.name }}" id="{{ form.titulo.id_for_label }}" 
+                 class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                 value="{{ form.titulo.value|default:'' }}">
+        </div>
         {% if form.titulo.errors %}
           <p class="mt-1 text-sm text-red-600">{{ form.titulo.errors|first }}</p>
         {% endif %}
       </div>
 
       <div>
-        <label for="{{ form.descricao.id_for_label }}" class="block text-sm font-medium text-gray-700">
+        <label for="{{ form.descricao.id_for_label }}" class="block text-sm font-medium text-white">
           {{ form.descricao.label }}
         </label>
         <div class="mt-1">
-          {{ form.descricao }} </div>
+          <textarea name="{{ form.descricao.name }}" id="{{ form.descricao.id_for_label }}" 
+                    class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    rows="4">{{ form.descricao.value|default:'' }}</textarea>
+        </div>
         {% if form.descricao.errors %}
           <p class="mt-1 text-sm text-red-600">{{ form.descricao.errors|first }}</p>
         {% endif %}
       </div>
       
       <div>
-        <label for="{{ form.link_repositorio.id_for_label }}" class="block text-sm font-medium text-gray-700">
+        <label for="{{ form.link_repositorio.id_for_label }}" class="block text-sm font-medium text-white">
           {{ form.link_repositorio.label }}
         </label>
         <div class="mt-1">
-          {{ form.link_repositorio }} </div>
+          <input type="url" name="{{ form.link_repositorio.name }}" id="{{ form.link_repositorio.id_for_label }}" 
+                 class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                 value="{{ form.link_repositorio.value|default:'' }}">
+        </div>
         {% if form.link_repositorio.errors %}
           <p class="mt-1 text-sm text-red-600">{{ form.link_repositorio.errors|first }}</p>
         {% endif %}
       </div>
 
       <div>
-        <label for="{{ form.link_producao.id_for_label }}" class="block text-sm font-medium text-gray-700">
+        <label for="{{ form.link_producao.id_for_label }}" class="block text-sm font-medium text-white">
           {{ form.link_producao.label }}
         </label>
         <div class="mt-1">
-          {{ form.link_producao }} </div>
+          <input type="url" name="{{ form.link_producao.name }}" id="{{ form.link_producao.id_for_label }}" 
+                 class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                 value="{{ form.link_producao.value|default:'' }}">
+        </div>
         {% if form.link_producao.errors %}
           <p class="mt-1 text-sm text-red-600">{{ form.link_producao.errors|first }}</p>
         {% endif %}
