@@ -50,13 +50,15 @@ def pagina_front(request):
 
 @login_required
 def pagina_back(request):
-    conteudo = PaginaBackend.objects.first()  
-    return render(request, 'pagina_back.html', {'conteudo': conteudo})
+    area = PaginaBackend.objects.last()
+    return render(request, 'pagina_back.html', {'area': area})
 
 @login_required
 def pagina_mobile(request):
-    conteudo = PaginaMobile.objects.first()  
-    return render(request, 'pagina_mobile.html', {'conteudo': conteudo})
+    area = PaginaMobile.objects.last()
+    return render(request, 'pagina_mobile.html', {'area': area})
+
+
 @login_required
 def perfil(request):
     perfil, created = Perfil.objects.get_or_create(user=request.user)

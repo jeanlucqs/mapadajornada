@@ -14,19 +14,16 @@
                     <i class="fas fa-mobile-alt mr-2"></i> Mercado em Expansão
                 </div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                    Por Que Estudar 
-                    <span class="text-gradient-mobile">Mobile</span>?
+                    {{ area.titulo_principal|default:"Por Que Estudar Mobile?" }}
                 </h1>
                 <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                    O desenvolvimento mobile está revolucionando a forma como as pessoas interagem com a tecnologia. 
-                    Com mais de 6 bilhões de smartphones no mundo, criar aplicativos tornou-se uma das habilidades 
-                    mais valiosas do mercado de tecnologia.
+                    {{ area.descricao_principal|default:"O desenvolvimento mobile está revolucionando a forma como as pessoas interagem com a tecnologia. Com mais de 6 bilhões de smartphones no mundo, criar aplicativos tornou-se uma das habilidades mais valiosas do mercado de tecnologia." }}
                 </p>
+                {% if area.motivo_escolher %}
                 <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                    Como desenvolvedor mobile, você criará experiências que cabem no bolso dos usuários, 
-                    desenvolvendo aplicativos intuitivos, responsivos e que solucionam problemas reais do dia a dia. 
-                    É uma carreira que combina criatividade, tecnologia e impacto direto na vida das pessoas.
+                    {{ area.motivo_escolher }}
                 </p>
+                {% endif %}
 
                 <div class="flex flex-col items-start gap-4 border-t border-gray-700 pt-6">
                     <p class="text-gray-300 text-lg">Deseja saber mais sobre a carreira?</p>
@@ -86,6 +83,23 @@
                     <span class="text-gradient-mobile">Mobile</span>?
                 </h2>
 
+                {% if area.motivo_escolher %}
+                <div class="space-y-8">
+                    <div class="bg-primary p-6 rounded-xl card-hover border border-gray-800">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-chart-line text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-3 text-white">Mercado Global</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    {{ area.motivo_escolher|linebreaksbr }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
                 <div class="space-y-8">
                     <div class="bg-primary p-6 rounded-xl card-hover border border-gray-800">
                         <div class="flex items-start">
@@ -119,6 +133,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
             </div>
 
             <div class="bg-primary text-white rounded-2xl p-8 w-full max-w-md mx-auto shadow-xl border border-gray-800">
@@ -127,7 +142,7 @@
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <p class="font-medium text-gray-300">Júnior</p>
-                            <span class="font-bold text-purple-400 text-xl">R$ 4.500</span>
+                            <span class="font-bold text-purple-400 text-xl">{{ area.faixa_junior|default:"R$ 4.500" }}</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3">
                             <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style="width: 28%"></div>
@@ -137,7 +152,7 @@
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <p class="font-medium text-gray-300">Pleno</p>
-                            <span class="font-bold text-purple-400 text-xl">R$ 9.000</span>
+                            <span class="font-bold text-purple-400 text-xl">{{ area.faixa_pleno|default:"R$ 9.000" }}</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3">
                             <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style="width: 56%"></div>
@@ -147,7 +162,7 @@
                     <div>
                         <div class="flex justify-between items-center mb-2">
                             <p class="font-medium text-gray-300">Sênior</p>
-                            <span class="font-bold text-purple-400 text-xl">R$ 16.000</span>
+                            <span class="font-bold text-purple-400 text-xl">{{ area.faixa_senior|default:"R$ 16.000" }}</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3">
                             <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style="width: 100%"></div>
@@ -166,6 +181,21 @@
 </section>
 
 <!-- Target Audience -->
+{% if area.publico_alvo %}
+<section class="py-16 bg-primary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                Para quem está<br>
+                <span class="text-gradient-mobile">essa área é indicada</span>?
+            </h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+                {{ area.publico_alvo }}
+            </p>
+        </div>
+    </div>
+</section>
+{% else %}
 <section class="py-16 bg-primary">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto text-center">
@@ -205,8 +235,25 @@
         </div>
     </div>
 </section>
+{% endif %}
 
 <!-- What You Will Learn -->
+{% if area.conteudo_aprendizado %}
+<section class="py-16 bg-secondary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+                O que você <span class="text-gradient-mobile">irá aprender</span>?
+            </h2>
+            <div class="bg-primary text-white rounded-2xl p-8 card-hover border border-gray-800">
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    {{ area.conteudo_aprendizado|linebreaksbr }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
 <section class="py-16 bg-secondary">
     <div class="container mx-auto px-4">
         <div class="max-w-7xl mx-auto">
@@ -275,8 +322,25 @@
         </div>
     </div>
 </section>
+{% endif %}
 
 <!-- Professions in the Area -->
+{% if area.profissoes %}
+<section class="py-16 bg-primary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                Profissões <span class="text-gradient-mobile">da Área</span>
+            </h2>
+            <div class="bg-secondary p-8 rounded-2xl card-hover border border-gray-800 text-left">
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    {{ area.profissoes|linebreaksbr }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
 <section class="py-16 bg-primary">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto text-center">
@@ -322,6 +386,7 @@
         </div>
     </div>
 </section>
+{% endif %}
 
 <style>
     .gradient-bg {
