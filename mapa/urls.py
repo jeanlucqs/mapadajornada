@@ -13,6 +13,8 @@ urlpatterns = [
     path('back/', views.pagina_back, name='pagina_back'),
     path('mobile/', views.pagina_mobile, name='pagina_mobile'),
     path('ciencia/', views.pagina_ciencia, name='pagina_ciencia'),
+    path('engenharia/', views.pagina_engenharia, name='pagina_engenharia'),
+
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
     path('habilidade/adicionar/', views.adicionar_habilidade, name='adicionar_habilidade'),
