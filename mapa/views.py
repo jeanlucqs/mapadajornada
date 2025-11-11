@@ -45,8 +45,8 @@ def pagina_login(request):
 
 @login_required
 def pagina_front(request):
-    conteudo = PaginaFrontend.objects.first()
-    return render(request, 'pagina_front.html', {'conteudo': conteudo})
+    area = PaginaFrontend.objects.first()
+    return render(request, 'pagina_front.html', {'area': area})
 
 @login_required
 def pagina_back(request):

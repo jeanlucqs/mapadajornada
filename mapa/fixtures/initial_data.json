@@ -3,7 +3,7 @@
   "model": "mapa.categoria",
   "pk": 1,
   "fields": {
-    "nome": "Dados: Ciência, Análise e Engenharia",
+    "nome": "Dados: Ciï¿½ncia, Anï¿½lise e Engenharia",
     "ordem": 2
   }
 },
@@ -11,7 +11,7 @@
   "model": "mapa.categoria",
   "pk": 2,
   "fields": {
-    "nome": "Infraestrutura e Operações em TI",
+    "nome": "Infraestrutura e Operaï¿½ï¿½es em TI",
     "ordem": 4
   }
 },
@@ -19,7 +19,7 @@
   "model": "mapa.categoria",
   "pk": 3,
   "fields": {
-    "nome": "Interface e Experiência do Usuário",
+    "nome": "Interface e Experiï¿½ncia do Usuï¿½rio",
     "ordem": 5
   }
 },
@@ -27,7 +27,7 @@
   "model": "mapa.categoria",
   "pk": 4,
   "fields": {
-    "nome": "Cibersegurança",
+    "nome": "Ciberseguranï¿½a",
     "ordem": 3
   }
 },
@@ -45,7 +45,7 @@
   "fields": {
     "categoria": 5,
     "titulo": "Desenvolvedor Frontend",
-    "descricao": "Cria a parte visual e interativa de sites e aplicativos que o usuário vê e utiliza.",
+    "descricao": "Cria a parte visual e interativa de sites e aplicativos que o usuï¿½rio vï¿½ e utiliza.",
     "url_nome": "http://127.0.0.1:8000/front/",
     "ordem": 1
   }
@@ -56,7 +56,7 @@
   "fields": {
     "categoria": 5,
     "titulo": "Desenvolvedor Backend",
-    "descricao": "Cuida dos servidores, bancos de dados e da lógica que fazem a aplicaþÒo funcionar.",
+    "descricao": "Cuida dos servidores, bancos de dados e da lï¿½gica que fazem a aplicaï¿½ï¿½o funcionar.",
     "url_nome": "http://127.0.0.1:8000/back/",
     "ordem": 2
   }
@@ -67,7 +67,7 @@
   "fields": {
     "categoria": 5,
     "titulo": "Desenvolvedor Mobile",
-    "descricao": "Área da tecnologia focada na criaþÒo e otimização de aplicativos e sistemas para dispositivos móveis.",
+    "descricao": "ï¿½rea da tecnologia focada na criaï¿½ï¿½o e otimizaï¿½ï¿½o de aplicativos e sistemas para dispositivos mï¿½veis.",
     "url_nome": "http://127.0.0.1:8000/mobile/",
     "ordem": 3
   }
@@ -89,7 +89,7 @@
   "fields": {
     "categoria": 1,
     "titulo": "Engenheiro de Dados",
-    "descricao": "um profissional que projeta, constroi e mantem a infraestrutura de dados de uma organização.",
+    "descricao": "um profissional que projeta, constroi e mantem a infraestrutura de dados de uma organizaï¿½ï¿½o.",
     "url_nome": "http://127.0.0.1:8000/engenharia/",
     "ordem": 2
   }
@@ -100,7 +100,7 @@
   "fields": {
     "categoria": 1,
     "titulo": "Analista de BI",
-    "descricao": " o profissional que coleta, analisa e interpreta dados para transforma-los em insights estratégicos.",
+    "descricao": " o profissional que coleta, analisa e interpreta dados para transforma-los em insights estratï¿½gicos.",
     "url_nome": "#",
     "ordem": 3
   }
