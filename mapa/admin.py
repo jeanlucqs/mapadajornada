@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import PaginaFrontend, PaginaBackend, PaginaMobile,Categoria, Carreira, Projeto,PaginaCiencia, PaginaEngenharia, PaginaAnalistaBI
+from .models import PaginaFrontend, PaginaBackend, PaginaMobile,Categoria, Carreira, Projeto,PaginaCiencia, PaginaEngenharia, PaginaAnalistaBI, PaginaAnaliseSeguranca
+
 
 
 @admin.register(PaginaFrontend)
@@ -27,6 +28,10 @@ class PaginaEngenhariaAdmin(admin.ModelAdmin):
 
 @admin.register(PaginaAnalistaBI)
 class PaginaAnalistaAdmin(admin.ModelAdmin):
+    list_display = ['titulo_principal', 'faixa_junior', 'faixa_pleno', 'faixa_senior']
+
+@admin.register(PaginaAnaliseSeguranca)
+class PaginaAnaliseSegurancaAdmin(admin.ModelAdmin):
     list_display = ['titulo_principal', 'faixa_junior', 'faixa_pleno', 'faixa_senior']
 
 @admin.register(Categoria)

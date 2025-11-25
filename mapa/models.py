@@ -9,7 +9,7 @@ class Perfil(models.Model):
     def __str__(self):
         return f"Perfil de {self.user.username}"
 
-# Modelos opcionais separados — se preferir armazenar cada item em tabela separada
+
 class Habilidade(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='habilidades')
     nome = models.CharField(max_length=100)
@@ -95,12 +95,25 @@ class PaginaAnalistaBI(models.Model):
     descricao_principal = models.TextField(blank=True, null=True, verbose_name="Descrição Principal")
     motivo_escolher = models.TextField(blank=True, null=True, verbose_name="Motivos para Escolher Analista de BI")
     faixa_junior = models.CharField(max_length=50, default="R$ 4.500", verbose_name="Faixa Salarial Júnior")
-    faixa_pleno = models.CharField(max_length=50, default="R$ 8.000", verbose_name="Faixa Salarial Pleno")
+    faixa_pleno = models.CharField(max_length=50, default="R$ 7.000", verbose_name="Faixa Salarial Pleno")
     faixa_senior = models.CharField(max_length=50, default="R$ 15.000", verbose_name="Faixa Salarial Sênior")
     atualizado_em = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return "Página Analista de BI"
+    
+
+class PaginaAnaliseSeguranca(models.Model):
+    titulo_principal = models.CharField(max_length=200, default="Por Que Estudar Análise de Segurança?", verbose_name="Título Principal")
+    descricao_principal = models.TextField(blank=True, null=True, verbose_name="Descrição Principal")
+    motivo_escolher = models.TextField(blank=True, null=True, verbose_name="Motivos para Escolher Análise de Dados")
+    faixa_junior = models.CharField(max_length=50, default="R$ 3.000", verbose_name="Faixa Salarial Júnior")
+    faixa_pleno = models.CharField(max_length=50, default="R$ 5.500", verbose_name="Faixa Salarial Pleno")
+    faixa_senior = models.CharField(max_length=50, default="R$ 16.000", verbose_name="Faixa Salarial Sênior")
+    atualizado_em = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "Página Análise de Dados"
     
 class Categoria(models.Model):
     nome = models.CharField(max_length=100, unique=True, verbose_name="Nome da Categoria")
