@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -74,14 +75,12 @@
   </head>
 
   <body class="flex flex-col min-h-screen bg-primary text-white font-sans">
-    <!-- NAVBAR FIXA -->
     <header class="gradient-bg py-6 border-b border-gray-800 sticky top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-3">
-                        <i class="fas fa-laptop-code text-black text-lg"></i>
-                    </div>
+                    <img src="{% static 'imagens/logo.png' %}" alt="Mapa da Jornada Icon" class="h-10 w-auto mr-3">
+                    
                     <div class="text-2xl font-bold text-white">
                         <span>Mapa da Jornada</span>
                     </div>
@@ -131,10 +130,8 @@
         </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-secondary border border-gray-700 w-64 rounded-xl shadow-2xl">
         <div class="p-4 space-y-3">
-            <!-- Links principais -->
             <div class="space-y-2">
                 <a href="{% url 'index' %}" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
                     <i class="fas fa-briefcase w-5 mr-3"></i>
@@ -154,7 +151,6 @@
                 </a>
             </div>
 
-            <!-- Separador -->
             <div class="border-t border-gray-700 pt-3">
                 {% if user.is_authenticated %}
                 <div class="space-y-2">
@@ -184,7 +180,6 @@
         </div>
     </div>
 
-    <!-- Overlay para fechar o menu -->
     <div id="menu-overlay" class="hidden md:hidden"></div>
 
     <script>
@@ -240,7 +235,6 @@
         });
     </script>
 
-    <!-- Espaçamento entre nav e conteúdo -->
     <main class="flex-grow">
         {% block content %}
         {% endblock %}
@@ -249,17 +243,14 @@
     <footer class="gradient-bg py-12 border-t border-gray-800">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <!-- Logo e Nome -->
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-3">
-                        <i class="fas fa-laptop-code text-black text-lg"></i>
-                    </div>
+                    <img src="{% static 'imagens/desing sem nome 1.png' %}" alt="Mapa da Jornada Icon" class="h-10 w-auto mr-3 brightness-0 invert">
+
                     <div class="text-2xl font-bold text-white">
                         <span>Mapa da Jornada</span>
                     </div>
                 </div>
 
-                <!-- Informações -->
                 <div class="text-center md:text-right text-gray-500 text-sm">
                     &copy; 2025 - IFRN | Curso de Informática para Internet 💡 |
                 </div>

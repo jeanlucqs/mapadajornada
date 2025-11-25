@@ -104,5 +104,16 @@
     "url_nome": "http://127.0.0.1:8000/analista-bi",
     "ordem": 3
   }
+},
+{
+  "model": "mapa.carreira",
+  "pk": 7,
+  "fields": {
+    "categoria": 4,
+    "titulo": "Analise de Seguranca",
+    "descricao": "Um profissional que identifica, avalia e corrigi vulnerabilidades em sistemas, redes ou aplicacoes.",
+    "url_nome": "http://127.0.0.1:8000/analise-seguranca/",
+    "ordem": 0
+  }
 }
 ]
