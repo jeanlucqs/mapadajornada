@@ -14,6 +14,7 @@ urlpatterns = [
     path('mobile/', views.pagina_mobile, name='pagina_mobile'),
     path('ciencia/', views.pagina_ciencia, name='pagina_ciencia'),
     path('engenharia/', views.pagina_engenharia, name='pagina_engenharia'),
+    path('analista-bi/', views.pagina_analista_bi, name='pagina_analista'),
 
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
