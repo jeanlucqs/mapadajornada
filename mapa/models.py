@@ -115,6 +115,18 @@ class PaginaAnaliseSeguranca(models.Model):
     def __str__(self):
         return "Página Análise de Dados"
     
+class PaginaForense(models.Model):
+    titulo_principal = models.CharField(max_length=200, default="Por Que Estudar a Area de Forense Digital?", verbose_name="Título Principal")
+    descricao_principal = models.TextField(blank=True, null=True, verbose_name="Descrição Principal")
+    motivo_escolher = models.TextField(blank=True, null=True, verbose_name="Motivos para Escolher Forense Digital")
+    faixa_junior = models.CharField(max_length=50, default="R$ 3.500", verbose_name="Faixa Salarial Júnior")
+    faixa_pleno = models.CharField(max_length=50, default="R$ 6.500", verbose_name="Faixa Salarial Pleno")
+    faixa_senior = models.CharField(max_length=50, default="R$ 20.000", verbose_name="Faixa Salarial Sênior")
+    atualizado_em = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "Página Forense Digital"
+    
 class Categoria(models.Model):
     nome = models.CharField(max_length=100, unique=True, verbose_name="Nome da Categoria")
     ordem = models.PositiveIntegerField(default=0, help_text="Use para definir a ordem na página (ex: 1, 2, 3...)")
