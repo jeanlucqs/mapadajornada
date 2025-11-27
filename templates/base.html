@@ -85,19 +85,31 @@
                         <span>Mapa da Jornada</span>
                     </div>
                 </div>
-                <nav class="hidden md:block">
+                
+                
+                <nav class="hidden lg:block">
                     <ul class="flex space-x-8">
                         <li><a href="{% url 'index' %}" class="text-gray-300 hover:text-white transition-colors font-medium">Carreiras</a></li>
                         <li><a href="#carreiras" class="text-gray-300 hover:text-white transition-colors font-medium">Trilhas</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Vagas</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors font-medium">Projetos</a></li>
                         {% if user.is_authenticated %}
                         <li><a href="{% url 'perfil' %}" class="text-gray-300 hover:text-white transition-colors font-medium">Perfil</a></li>
                         {% endif %}
                     </ul>
                 </nav>
-
-                <div class="hidden md:flex items-center space-x-4">
+    
+                
+                <nav class="hidden md:block lg:hidden">
+                    <ul class="flex space-x-6">
+                        <li><a href="{% url 'index' %}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Carreiras</a></li>
+                        <li><a href="#carreiras" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Trilhas</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'perfil' %}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Perfil</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+    
+                
+                <div class="hidden lg:flex items-center space-x-4">
                     {% if user.is_authenticated %}
                     <span class="text-gray-300">Olá, {{ user.username }}!</span>
                     <a href="{% url 'perfil' %}" class="bg-accent hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -115,7 +127,21 @@
                     </a>
                     {% endif %}
                 </div>
-
+    
+                
+                <div class="hidden md:flex lg:hidden items-center space-x-3">
+                    {% if user.is_authenticated %}
+                    <span class="text-gray-300 text-sm whitespace-nowrap">Olá, {{ user.username|truncatechars:10 }}!</span>
+                    <a href="{% url 'perfil' %}" class="bg-accent hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap">
+                        Minha Área
+                    </a>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="bg-accent hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap">
+                        Entrar
+                    </a>
+                    {% endif %}
+                </div>
+    
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
                         <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -129,6 +155,7 @@
             </div>
         </div>
     </header>
+    
 
     <div id="mobile-menu" class="hidden md:hidden bg-secondary border border-gray-700 w-64 rounded-xl shadow-2xl">
         <div class="p-4 space-y-3">
@@ -140,14 +167,6 @@
                 <a href="#carreiras" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
                     <i class="fas fa-road w-5 mr-3"></i>
                     Trilhas
-                </a>
-                <a href="#" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
-                    <i class="fas fa-search w-5 mr-3"></i>
-                    Vagas
-                </a>
-                <a href="#" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
-                    <i class="fas fa-project-diagram w-5 mr-3"></i>
-                    Projetos
                 </a>
             </div>
 

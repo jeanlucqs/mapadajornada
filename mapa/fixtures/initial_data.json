@@ -133,7 +133,7 @@
   "fields": {
     "categoria": 4,
     "titulo": "Engenheiro de Seguranca",
-    "descricao": "Profissional responsável por planejar, implementar e monitorar praticas e politicas que garantam um ambiente de trabalho seguro, prevenindo acidentes ocupacionais.",
+    "descricao": "Profissional responsï¿½vel por planejar, implementar e monitorar praticas e politicas que garantam um ambiente de trabalho seguro, prevenindo acidentes ocupacionais.",
     "url_nome": "http://127.0.0.1:8000/engenharia-seguranca/",
     "ordem": 3
   }
