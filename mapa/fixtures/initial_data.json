@@ -113,7 +113,7 @@
     "titulo": "Analise de Seguranca",
     "descricao": "Um profissional que identifica, avalia e corrigi vulnerabilidades em sistemas, redes ou aplicacoes.",
     "url_nome": "http://127.0.0.1:8000/analise-seguranca/",
-    "ordem": 0
+    "ordem": 1
   }
 },
 {
@@ -122,9 +122,20 @@
   "fields": {
     "categoria": 4,
     "titulo": "Especialista em Forense Digital",
-    "descricao": "Forense digital  responsavel por investigar crimes e incidentes envolvendo tecnologia. Ela coleta, preserva e analisa provas digitais — como arquivos, logs e dispositivos;",
+    "descricao": "Responsavel por investigar crimes e incidentes envolvendo tecnologia.",
     "url_nome": "http://127.0.0.1:8000/forense/",
     "ordem": 2
+  }
+},
+{
+  "model": "mapa.carreira",
+  "pk": 9,
+  "fields": {
+    "categoria": 4,
+    "titulo": "Engenheiro de Seguranca",
+    "descricao": "Profissional responsável por planejar, implementar e monitorar praticas e politicas que garantam um ambiente de trabalho seguro, prevenindo acidentes ocupacionais.",
+    "url_nome": "http://127.0.0.1:8000/engenharia-seguranca/",
+    "ordem": 3
   }
 }
 ]
