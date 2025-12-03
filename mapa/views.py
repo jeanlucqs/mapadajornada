@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm, CustomAuthenticationForm, PerfilForm, HabilidadeForm, CompetenciaForm, ProjetoForm
-from .models import PaginaFrontend, PaginaBackend, PaginaMobile,PaginaCiencia,PaginaEngenharia, Perfil, Habilidade, Competencia, Categoria, Carreira, Projeto, PaginaAnalistaBI, PaginaAnaliseSeguranca, PaginaForense, PaginaEngenhariaSeguranca, PaginaAdmRedes
+from .models import PaginaFrontend, PaginaBackend, PaginaMobile,PaginaCiencia,PaginaEngenharia, Perfil, Habilidade, Competencia, Categoria, Carreira, Projeto, PaginaAnalistaBI, PaginaAnaliseSeguranca, PaginaForense, PaginaEngenhariaSeguranca, PaginaAdmRedes, PaginaArquitetoNuvem
 from django.contrib import messages
 
 def index(request):
@@ -93,6 +93,11 @@ def pagina_EngenhariaSeguranca(request):
 def pagina_AdmRedes(request):
     area = PaginaAdmRedes.objects.first()
     return render(request, 'pagina_adm_redes.html', {'area': area})
+
+@login_required
+def pagina_ArquitetoNuvem(request):
+    area = PaginaArquitetoNuvem.objects.first()
+    return render(request, 'pagina_arquiteto_nuvem.html', {'area': area})
 
 
 @login_required

@@ -144,7 +144,7 @@
   "fields": {
     "categoria": 2,
     "titulo": "Administrador de Redes",
-    "descricao": "Profissional responsavel por gerenciar, instalar e manter a infraestrutura de redes de computadores, garantindo que a comunicacao entre sistemas e usuários seja fluida e segura",
+    "descricao": "Profissional responsavel por gerenciar, instalar e manter a infraestrutura de redes de computadores, garantindo que a comunicacao entre sistemas e usuï¿½rios seja fluida e segura",
     "url_nome": "http://127.0.0.1:8000/adm-redes/",
     "ordem": 1
   }
@@ -154,7 +154,7 @@
   "pk": 11,
   "fields": {
     "categoria": 2,
-    "titulo": "Arquiteto de Soluções em Nuvem",
+    "titulo": "Arquiteto de Soluï¿½ï¿½es em Nuvem",
     "descricao": "Implementa e gerencia a infraestrutura de computacao em nuvem de uma organizacao,  garantindo que ela atenda as necessidades de negocios em termos de desempenho, seguranca, escalabilidade e custo.",
     "url_nome": "#",
     "ordem": 2
