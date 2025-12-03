@@ -163,6 +163,18 @@ class PaginaArquitetoNuvem(models.Model):
     def __str__(self):
         return "Página Arquitetura de Nuvem"
     
+class PaginaDevOps(models.Model):
+    titulo_principal = models.CharField(max_length=200, default="Por Que Estudar a Área de Engenharia de Devops?", verbose_name="Título Principal")
+    descricao_principal = models.TextField(blank=True, null=True, verbose_name="Descrição Principal")
+    motivo_escolher = models.TextField(blank=True, null=True, verbose_name="Motivos para Escolher Engenheiro DevOps")
+    faixa_junior = models.CharField(max_length=50, default="R$ 7.000", verbose_name="Faixa Salarial Júnior")
+    faixa_pleno = models.CharField(max_length=50, default="R$ 15.000", verbose_name="Faixa Salarial Pleno")
+    faixa_senior = models.CharField(max_length=50, default="R$ 35.000", verbose_name="Faixa Salarial Sênior")
+    atualizado_em = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "Página Engenheiro DevOps"
+    
 class Categoria(models.Model):
     nome = models.CharField(max_length=100, unique=True, verbose_name="Nome da Categoria")
     ordem = models.PositiveIntegerField(default=0, help_text="Use para definir a ordem na página (ex: 1, 2, 3...)")

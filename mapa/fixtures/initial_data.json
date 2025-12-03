@@ -144,7 +144,7 @@
   "fields": {
     "categoria": 2,
     "titulo": "Administrador de Redes",
-    "descricao": "Profissional responsavel por gerenciar, instalar e manter a infraestrutura de redes de computadores, garantindo que a comunicacao entre sistemas e usu�rios seja fluida e segura",
+    "descricao": "Profissional responsavel por gerenciar, instalar e manter a infraestrutura de redes de computadores, garantindo que a comunicacao entre sistemas e usuarios seja fluida e segura",
     "url_nome": "http://127.0.0.1:8000/adm-redes/",
     "ordem": 1
   }
@@ -154,9 +154,9 @@
   "pk": 11,
   "fields": {
     "categoria": 2,
-    "titulo": "Arquiteto de Solu��es em Nuvem",
+    "titulo": "Arquiteto de Solucoes em Nuvem",
     "descricao": "Implementa e gerencia a infraestrutura de computacao em nuvem de uma organizacao,  garantindo que ela atenda as necessidades de negocios em termos de desempenho, seguranca, escalabilidade e custo.",
-    "url_nome": "#",
+    "url_nome": "http://127.0.0.1:8000/arquiteto-nuvem/",
     "ordem": 2
   }
 },
@@ -167,7 +167,7 @@
     "categoria": 2,
     "titulo": "Engenheiro DevOps",
     "descricao": "profissional responsavel por fazer a ponte entre as equipes de desenvolvimento (dev) e operacoes (ops), automatizando e integrando seus processos para acelerar a entrega de software.",
-    "url_nome": "#",
+    "url_nome": "http://127.0.0.1:8000/devops/",
     "ordem": 3
   }
 }

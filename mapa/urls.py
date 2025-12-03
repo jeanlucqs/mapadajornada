@@ -20,6 +20,7 @@ urlpatterns = [
     path('engenharia-seguranca/', views.pagina_EngenhariaSeguranca, name='pagina_engenharia_seguranca'),
     path('adm-redes/', views.pagina_AdmRedes, name='pagina_adm_redes'),
     path('arquiteto-nuvem/', views.pagina_ArquitetoNuvem, name='pagina_arquiteto_nuvem'),
+    path('devops/', views.pagina_DevOps, name='pagina_devops'),
 
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
