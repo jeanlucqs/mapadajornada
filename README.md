@@ -25,3 +25,6 @@ python manage.py loaddata mapa/fixtures/initial_data.json
 
 # 5. Rodar o servidor
 python manage.py runserver
+
+# 6. Opcional (Caso queira rodar através de uma linha de comando):
+python -m venv venv; .\venv\Scripts\Activate.ps1; pip install -r requirements.txt; python manage.py migrate; python manage.py loaddata mapa/fixtures/initial_data.json; python manage.py runserver
