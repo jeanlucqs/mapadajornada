@@ -1,0 +1,348 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mapa da Jornada - Pesquisador de Experiência do Usuário{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="gradient-bg py-20 md:py-28">
+    <div class="container mx-auto px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-block px-4 py-1 rounded-full bg-gray-800 text-amber-400 text-sm mb-6">
+                    <i class="fas fa-search mr-2"></i> Design e Experiência do Usuário
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                    Por Que Estudar 
+                    <span class="text-gradient-uxr">Pesquisa de Experiência do Usuário</span>?
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    O Pesquisador de Experiência do Usuário (UX Researcher) é o profissional que desvenda 
+                    os segredos do comportamento humano digital. Enquanto produtos precisam entender seus 
+                    usuários, você será o detetive que encontra respostas através de dados e empatia.
+                </p>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Como pesquisador UX, você será o cientista que transforma perguntas em insights, 
+                    entrevistas em estratégias e dados em decisões que moldam produtos que milhões 
+                    de pessoas usam todos os dias.
+                </p>
+
+                <div class="flex flex-col items-start gap-4 border-t border-gray-700 pt-6">
+                    <p class="text-gray-300 text-lg">Quer descobrir o que realmente motiva os usuários?</p>
+                    <a href="#"
+                        class="accent-gradient-uxr text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center">
+                        <i class="fas fa-road mr-2"></i> Explorar Trilhas
+                    </a>
+                </div>
+            </div>
+
+            <div class="hidden md:flex justify-center">
+                <div class="relative">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-amber-500 rounded-full opacity-20 floating"></div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-orange-500 rounded-full opacity-20 floating" style="animation-delay: 1.5s;"></div>
+                    <div class="bg-secondary border border-gray-800 rounded-2xl p-8 shadow-2xl">
+                        <div class="bg-gray-800 rounded-xl p-6 mb-6">
+                            <div class="flex space-x-2 mb-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="font-mono text-sm text-green-400">
+                                <span class="text-blue-400">research</span><span class="text-white">></span> interviews: 12_completed<br>
+                                <span class="text-yellow-400">analysis</span><span class="text-white">></span> affinity_mapping<br>
+                                <span class="text-purple-400">insights</span><span class="text-white">></span> 5_key_findings<br>
+                                <span class="text-cyan-400">report</span><span class="text-white">></span> creating_presentation<br>
+                                &nbsp;&nbsp;<span class="text-green-300">Confidence: 95% statistical</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-chart-bar text-5xl text-amber-400 mb-4"></i>
+                            <h3 class="text-xl font-bold text-white">UX Researcher</h3>
+                            <p class="text-gray-400 mt-2">Descobrindo a verdade sobre os usuários</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose UX Research Section -->
+<section class="py-16 bg-secondary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-10 text-white leading-tight">
+                    Por Que Escolher<br>
+                    <span class="text-gradient-uxr">Pesquisa de UX</span>?
+                </h2>
+
+                <div class="space-y-8">
+                    <div class="bg-primary p-6 rounded-xl card-hover border border-gray-800">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-brain text-amber-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-3 text-white">Voz do Usuário em Primeiro Lugar</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Empresas tomam melhores decisões com dados reais de usuários.<br>
+                                    Pesquisadores UX são os tradutores entre usuários e negócios.<br>
+                                    Carreira que une psicologia, estatística e estratégia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary p-6 rounded-xl card-hover border border-gray-800">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-chart-pie text-amber-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-3 text-white">Ciência Aplicada ao Design</h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Transforme hipóteses em dados concretos e acionáveis.<br>
+                                    Reduza riscos de produtos através de validação contínua.<br>
+                                    Crie produtos baseados em evidências, não em suposições.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-primary text-white rounded-2xl p-8 w-full max-w-md mx-auto shadow-xl border border-gray-800">
+                <h3 class="text-2xl font-bold mb-8 text-center text-white">Faixa Salarial no Brasil</h3>
+                <div class="space-y-8 text-lg">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="font-medium text-gray-300">Júnior</p>
+                            <span class="font-bold text-amber-400 text-xl">R$ 4.000</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-amber-500 to-orange-500 h-3 rounded-full" style="width: 35%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="font-medium text-gray-300">Pleno</p>
+                            <span class="font-bold text-amber-400 text-xl">R$ 7.000</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-amber-500 to-orange-500 h-3 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="font-medium text-gray-300">Sênior</p>
+                            <span class="font-bold text-amber-400 text-xl">R$ 11.000</span>
+                        </div>
+                        <div class="w-full bg-gray-800 rounded-full h-3">
+                            <div class="bg-gradient-to-r from-amber-500 to-orange-500 h-3 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 pt-6 border-t border-gray-700">
+                    <p class="text-gray-400 text-sm text-center">
+                        <i class="fas fa-info-circle mr-1"></i> Atualizado em {{ area.atualizado_em|date:"d/m/Y" }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Target Audience -->
+<section class="py-16 bg-primary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                Para quem está<br>
+                <span class="text-gradient-uxr">essa área é indicada</span>?
+            </h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+                A Pesquisa de Experiência do Usuário atrai profissionais curiosos e analíticos
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-secondary p-8 rounded-2xl card-hover border border-gray-800">
+                    <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-5 mx-auto">
+                        <i class="fas fa-user-secret text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center text-white">Detetives Curiosos</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Ideal para quem adora fazer perguntas e descobrir "por quê?". 
+                        Pesquisadores UX são como detetives que desvendam comportamentos, 
+                        motivações e necessidades escondidas dos usuários.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-2xl card-hover border border-gray-800">
+                    <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-5 mx-auto">
+                        <i class="fas fa-balance-scale text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center text-white">Analistas de Dados Humanos</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Perfeito para quem ama analisar padrões e extrair significado de dados. 
+                        Se você gosta de transformar informações complexas em insights claros 
+                        e acionáveis, encontrará seu lugar na pesquisa de UX.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What You Will Learn -->
+<section class="py-16 bg-secondary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+                O que você <span class="text-gradient-uxr">irá aprender</span>?
+            </h2>
+            <p class="text-xl text-gray-300 text-center max-w-2xl mx-auto mb-12">
+                Domine as metodologias e técnicas essenciais para se tornar um Pesquisador UX
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-primary text-white rounded-2xl p-8 card-hover border border-gray-800">
+                    <div class="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center mb-5">
+                        <i class="fas fa-microphone text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-5 text-white">Pesquisa Qualitativa</h3>
+                    <ul class="text-gray-300 leading-relaxed space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-400 mr-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">Entrevistas em Profundidade</strong> — Técnicas de entrevista, roteiros, análise de discurso.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-400 mr-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">Testes de Usabilidade</strong> — Moderados, não moderados, protocolo think-aloud.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-400 mr-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">Etnografia Digital</strong> — Observação contextual, diários de usuário, shadowing.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-primary text-white rounded-2xl p-8 card-hover border border-gray-800">
+                    <div class="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center mb-5">
+                        <i class="fas fa-calculator text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-5 text-white">Pesquisa Quantitativa</h3>
+                    <ul class="text-gray-300 leading-relaxed space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-400 mr-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">Survey e Questionários</strong> — Design de surveys, análise estatística, amostragem.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-400 mr-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">Análise de Dados</strong> — A/B testing, análise de funil, métricas de comportamento.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-400 mr-3 mt-1"></i>
+                            <div>
+                                <strong class="text-white">Ferramentas de Analytics</strong> — Google Analytics, Hotjar, Mixpanel, Amplitude.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Professions in the Area -->
+<section class="py-16 bg-primary">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+                Profissões <span class="text-gradient-uxr">da Área</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+                Descubra as diferentes oportunidades de carreira em Pesquisa de Experiência do Usuário
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-secondary p-8 rounded-2xl card-hover border border-gray-800">
+                    <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-5 mx-auto">
+                        <i class="fas fa-search text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center text-white">UX Researcher</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        <strong class="text-white">Função</strong> — Planeja e executa estudos de pesquisa com usuários.<br><br>
+                        <strong class="text-white">Tecnologias principais</strong> — UserTesting, Lookback, Dovetail, Miro.<br><br>
+                        <strong class="text-white">Impacto</strong> — Fornece insights que guiam o desenvolvimento de produtos.
+                    </p>
+                </div>
+
+                <div class="bg-secondary p-8 rounded-2xl card-hover border border-gray-800">
+                    <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-5 mx-auto">
+                        <i class="fas fa-chart-line text-amber-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center text-white">UX Analyst</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        <strong class="text-white">Função</strong> — Analisa dados quantitativos e qualitativos de usuários.<br><br>
+                        <strong class="text-white">Tecnologias principais</strong> — SQL, Python, Tableau, Google Analytics.<br><br>
+                        <strong class="text-white">Foco</strong> — Métricas, dashboards e análise preditiva de comportamento.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="#"
+                    class="accent-gradient-uxr text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center">
+                    <i class="fas fa-road mr-2"></i> Ver Todas as Trilhas de Aprendizado
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .gradient-bg {
+        background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    }
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    .text-gradient-uxr {
+        background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .accent-gradient-uxr {
+        background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+    }
+    .floating {
+        animation: floating 3s ease-in-out infinite;
+    }
+    @keyframes floating {
+        0% { transform: translate(0, 0px); }
+        50% { transform: translate(0, -10px); }
+        100% { transform: translate(0, 0px); }
+    }
+</style>
+
+{% endblock %}
