@@ -170,5 +170,38 @@
     "url_nome": "http://127.0.0.1:8000/devops/",
     "ordem": 3
   }
+},
+{
+  "model": "mapa.carreira",
+  "pk": 13,
+  "fields": {
+    "categoria": 3,
+    "titulo": "Designer de Experiência do Usuário (UX)",
+    "descricao": "Cria produtos e serviços digitais intuitivos, facil de usar e agradavel, focando nas necessidades, comportamentos e sentimentos do usuario.",
+    "url_nome": "http://127.0.0.1:8000/ux/",
+    "ordem": 0
+  }
+},
+{
+  "model": "mapa.carreira",
+  "pk": 14,
+  "fields": {
+    "categoria": 3,
+    "titulo": "Designer de Interface do Usuário (UI)",
+    "descricao": "Cria a aparencia visual e interativa de produtos digitais (apps, sites), focando em tornar a navegacao intuitiva",
+    "url_nome": "#",
+    "ordem": 1
+  }
+},
+{
+  "model": "mapa.carreira",
+  "pk": 15,
+  "fields": {
+    "categoria": 3,
+    "titulo": "Pesquisador de Experiência do Usuário",
+    "descricao": "Estuda as necessidades, comportamentos e motivacoes dos usuarios para projetar produtos e servicos mais intuitivos e satisfatorios",
+    "url_nome": "#",
+    "ordem": 2
+  }
 }
 ]

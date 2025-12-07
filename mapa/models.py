@@ -174,6 +174,18 @@ class PaginaDevOps(models.Model):
 
     def __str__(self):
         return "Página Engenheiro DevOps"
+
+class PaginaUx(models.Model):
+    titulo_principal = models.CharField(max_length=200, default="Por Que Estudar UX?", verbose_name="Título Principal")
+    descricao_principal = models.TextField(blank=True, null=True, verbose_name="Descrição Principal")
+    motivo_escolher = models.TextField(blank=True, null=True, verbose_name="Motivos para Escolher UX")
+    faixa_junior = models.CharField(max_length=50, default="R$ 4.000", verbose_name="Faixa Salarial Júnior")
+    faixa_pleno = models.CharField(max_length=50, default="R$ 8.000", verbose_name="Faixa Salarial Pleno")
+    faixa_senior = models.CharField(max_length=50, default="R$ 18.000", verbose_name="Faixa Salarial Sênior")
+    atualizado_em = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "Página UX"
     
 class Categoria(models.Model):
     nome = models.CharField(max_length=100, unique=True, verbose_name="Nome da Categoria")

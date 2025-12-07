@@ -21,6 +21,7 @@ urlpatterns = [
     path('adm-redes/', views.pagina_AdmRedes, name='pagina_adm_redes'),
     path('arquiteto-nuvem/', views.pagina_ArquitetoNuvem, name='pagina_arquiteto_nuvem'),
     path('devops/', views.pagina_DevOps, name='pagina_devops'),
+    path('ux/', views.pagina_Ux, name='pagina_ux'),
 
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
