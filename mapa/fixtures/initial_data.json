@@ -176,8 +176,8 @@
   "pk": 13,
   "fields": {
     "categoria": 3,
-    "titulo": "Designer de Experiência do Usuário (UX)",
-    "descricao": "Cria produtos e serviços digitais intuitivos, facil de usar e agradavel, focando nas necessidades, comportamentos e sentimentos do usuario.",
+    "titulo": "Designer de Experiencia do Usuario (UX)",
+    "descricao": "Cria produtos e servicos digitais intuitivos, facil de usar e agradavel, focando nas necessidades, comportamentos e sentimentos do usuario.",
     "url_nome": "http://127.0.0.1:8000/ux/",
     "ordem": 0
   }
@@ -187,9 +187,9 @@
   "pk": 14,
   "fields": {
     "categoria": 3,
-    "titulo": "Designer de Interface do Usuário (UI)",
+    "titulo": "Designer de Interface do Usuario (UI)",
     "descricao": "Cria a aparencia visual e interativa de produtos digitais (apps, sites), focando em tornar a navegacao intuitiva",
-    "url_nome": "#",
+    "url_nome": "http://127.0.0.1:8000/ui/",
     "ordem": 1
   }
 },
@@ -198,9 +198,9 @@
   "pk": 15,
   "fields": {
     "categoria": 3,
-    "titulo": "Pesquisador de Experiência do Usuário",
+    "titulo": "Pesquisador de Experiencia do Usuario",
     "descricao": "Estuda as necessidades, comportamentos e motivacoes dos usuarios para projetar produtos e servicos mais intuitivos e satisfatorios",
-    "url_nome": "#",
+    "url_nome": "http://127.0.0.1:8000/pesquisador/",
     "ordem": 2
   }
 }
