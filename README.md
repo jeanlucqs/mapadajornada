@@ -1,6 +1,4 @@
-import pypandoc
-
-text = """# Mapa da Jornada - Projeto e Desenvolvimento de Sistemas para Internet
+# Mapa da Jornada - Projeto e Desenvolvimento de Sistemas para Internet
 
 Este README fornece instruções mínimas para rodar o projeto.
 
