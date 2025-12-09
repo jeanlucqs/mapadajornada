@@ -232,59 +232,59 @@
             </h3>
             
             <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
-                Nesta jornada, você começa dominando o terminal Linux, passa pela revolução dos Containers com Docker e culmina na orquestração em nuvem com Kubernetes e AWS. O objetivo final é construir um pipeline completo onde um commit no Git dispara testes, builds e o deploy automático em produção.
+                Esta jornada leva você do "works on my machine" para a escala global. Começamos dominando o terminal Linux, passamos pela revolução dos Containers e culminamos na orquestração em nuvem com Kubernetes e Terraform.
             </p>
-
+        
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                <div class="bg-blue-900/20 border border-blue-900/50 p-6 rounded hover:bg-blue-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
                     <div>
                         <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Linux Survival</h4>
                         <p class="text-xs text-blue-100 leading-relaxed font-medium">
-                            Comandos essenciais, gerenciamento de usuários, SSH, Vim e Scripting para automação básica.
+                            Domine o terminal, permissões, SSH, manipulação de processos e Scripting em Bash.
                         </p>
                     </div>
-                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
-                        FUNDAMENTAL
+                    <span class="inline-block bg-blue-500/20 text-[10px] text-blue-300 px-3 py-1 rounded-full w-max mt-4 border border-blue-500/30">
+                        INFRA BÁSICA
                     </span>
                 </div>
-
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+        
+                <div class="bg-cyan-900/20 border border-cyan-900/50 p-6 rounded hover:bg-cyan-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
                     <div>
-                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Docker & CI/CD</h4>
-                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
-                            Containerizando aplicações e criando suas primeiras esteiras de entrega com GitHub Actions.
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Docker Pro</h4>
+                        <p class="text-xs text-cyan-100 leading-relaxed font-medium">
+                            Crie imagens otimizadas, gerencie volumes e redes, e suba stacks completas com Docker Compose.
                         </p>
                     </div>
-                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                    <span class="inline-block bg-cyan-500/20 text-[10px] text-cyan-300 px-3 py-1 rounded-full w-max mt-4 border border-cyan-500/30">
+                        CONTAINERS
+                    </span>
+                </div>
+        
+                <div class="bg-orange-900/20 border border-orange-900/50 p-6 rounded hover:bg-orange-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - CI/CD Pipelines</h4>
+                        <p class="text-xs text-orange-100 leading-relaxed font-medium">
+                            Automatize testes e deploys usando GitHub Actions ou Jenkins. O fim do "deploy manual".
+                        </p>
+                    </div>
+                    <span class="inline-block bg-orange-500/20 text-[10px] text-orange-300 px-3 py-1 rounded-full w-max mt-4 border border-orange-500/30">
                         AUTOMAÇÃO
                     </span>
                 </div>
-
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+        
+                <div class="bg-purple-900/20 border border-purple-900/50 p-6 rounded hover:bg-purple-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
                     <div>
-                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Nuvem AWS</h4>
-                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
-                            EC2, S3, RDS e redes na nuvem (VPC). Introdução ao Terraform para infra como código.
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Cloud & Kubernetes</h4>
+                        <p class="text-xs text-purple-100 leading-relaxed font-medium">
+                            Infraestrutura como Código com Terraform, AWS e orquestração de clusters com K8s.
                         </p>
                     </div>
-                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
-                        CLOUD
+                    <span class="inline-block bg-purple-500/20 text-[10px] text-purple-300 px-3 py-1 rounded-full w-max mt-4 border border-purple-500/30">
+                        SRE / CLOUD
                     </span>
                 </div>
-
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
-                    <div>
-                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Kubernetes & SRE</h4>
-                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
-                            Orquestração de clusters, Helm Charts, e Monitoramento avançado com Prometheus e Grafana.
-                        </p>
-                    </div>
-                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
-                        ADVANCED
-                    </span>
-                </div>
-
+        
             </div>
         </section>
 

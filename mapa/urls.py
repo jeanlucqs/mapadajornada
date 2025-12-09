@@ -30,8 +30,6 @@ urlpatterns = [
     path('trilhas/backend/', views.trilha_backend, name='trilha_backend'),
     path('trilhas/fullstack/', views.trilha_fullstack, name='trilha_fullstack'),
     path('trilhas/devops/', views.trilha_devops, name='trilha_devops'),
-
-
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
     path('habilidade/adicionar/', views.adicionar_habilidade, name='adicionar_habilidade'),

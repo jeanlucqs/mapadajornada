@@ -332,4 +332,4 @@ def excluir_projeto(request, id):
     return render(request, 'confirm_delete.html', {'obj': projeto, 'tipo': 'projeto'})
 
 def trilha_frontend(request):
-    return render(request, 'pagina_front_trilhas.html')
+    return render(request, 'trilha_frontend.html')

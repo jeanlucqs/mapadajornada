@@ -1,24 +1,24 @@
-{% extends "base.html" %}
-
+{% extends 'base.html' %}
+{% block title %}Trilha Front-end - Mapa da Jornada{% endblock %}
 {% block content %}
+<body class="bg-black text-white selection:bg-blue-500 selection:text-white">
 
-<body class="bg-black text-white">
     <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
 
         <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
             <div class="flex -space-x-1 mr-3">
-                <span class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-[8px] font-bold">G</span>
-                <span class="w-5 h-5 rounded-full bg-blue-800 flex items-center justify-center text-[8px] font-bold">in</span>
-                <span class="w-5 h-5 rounded-full bg-cyan-600 flex items-center justify-center text-[8px] font-bold">I</span>
+                <span class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-[8px] font-bold text-black">UI</span>
+                <span class="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center text-[8px] font-bold text-black">JS</span>
+                <span class="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center text-[8px] font-bold">UX</span>
             </div>
-            <span class="text-xs text-gray-400">Cerca de trinta e três mil vagas nas principais plataformas de contratação</span>
+            <span class="text-xs text-gray-400">Alta demanda: foco em React, UX e Performance Web</span>
         </div>
 
         <section class="mb-16">
-            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Conheça o universo do</h2>
-            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6">Desenvolvimento Front-end</h1>
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Desenvolvimento de Interfaces e</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Ecossistema Front-end</h1>
             <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
-                Pense em qualquer site ou aplicação web que você usa. Tudo o que você vê, clica e interage no seu navegador é o Front-end. O Desenvolvimento Front-end é a prática de converter dados e designs em uma interface gráfica (GUI - Graphical User Interface). O objetivo é criar um ambiente digital onde o usuário possa visualizar e interagir com as informações de forma eficaz e agradável.
+                O Front-end é a ponte entre o design e a tecnologia. É a arte de criar experiências digitais que sejam bonitas, funcionais e rápidas. O objetivo é dominar a tríade da web (HTML, CSS, JS) e evoluir para frameworks modernos, garantindo que a aplicação funcione perfeitamente em qualquer dispositivo.
             </p>
         </section>
 
@@ -26,223 +26,265 @@
             <h2 class="text-3xl font-bold mb-6">Perfil profissional</h2>
             <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
                 <p>
-                    O profissional projeta, desenvolve, testa e otimiza a interface visual e interativa de sistemas computacionais para a web. Ele traduz layouts e protótipos em código funcional, estruturando o conteúdo, aplicando estilos e criando a lógica de interação que o usuário final utiliza.
+                    O desenvolvedor Front-end moderno não apenas "corta layout". Ele é um engenheiro de software focado no navegador. Ele constrói Single Page Applications (SPAs) complexas, gerencia estados globais da aplicação e se preocupa profundamente com performance (Core Web Vitals) e Acessibilidade (a11y).
                 </p>
                 <p>
-                    Este profissional trabalha diretamente com as linguagens fundamentais da web — HTML, CSS e JavaScript — e domina bibliotecas e frameworks modernos como React, Vue ou Angular. Ele utiliza ferramentas de controle de versão, como o Git, e colabora com designers e desenvolvedores back-end seguindo metodologias de projetos ágeis.
+                    Este profissional domina JavaScript a fundo, entende como o browser renderiza páginas e utiliza ferramentas como React, Next.js e TypeScript para criar interfaces escaláveis. Ele trabalha lado a lado com designers (no Figma) e com o Back-end (consumindo APIs) para entregar o produto final ao usuário.
                 </p>
-                <p>
-                    Atenção aos detalhes, a preocupação com a experiência do usuário e a fidelidade ao design são essenciais em seu trabalho. A garantia da usabilidade, acessibilidade (para todos os públicos), responsividade (funcionamento em múltiplos dispositivos) e performance de carregamento da aplicação são fundamentais à sua atuação.
-                </p>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold mb-6">Tecnologias associadas</h2>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
-                O profissional projeta, desenvolve, testa e otimiza a interface visual e interativa de sistemas computacionais para a web. Ele traduz layouts e protótipos em código funcional, estruturando o conteúdo, aplicando estilos e criando a lógica de interação que o usuário final utiliza.
-            </p>
-            <div class="space-y-4">
-                <h3 class="text-xl font-bold">Habilidades</h3>
-                <h3 class="text-xl font-bold">Competências</h3>
             </div>
         </section>
 
         <section class="mb-20">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
-                <span class="text-gray-400 text-sm">8 Áreas • 60+ Tópicos</span>
+                <span class="text-gray-400 text-sm">4 Fases • 50+ Tópicos</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-500 transition-colors">
                     <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
-                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-orange-500 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Fundamentos da Web</h3>
-                    <p class="text-gray-400 text-sm mb-6">A base estrutural e visual da internet.</p>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos Web</h3>
+                    <p class="text-gray-400 text-sm mb-6">A base sólida que todo dev precisa ter.</p>
                     
-                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs">
-                                            </div>
-
                     <div class="space-y-4">
                         <div>
-                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">HTML5</h4>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Estrutura & Estilo</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Semântica e SEO</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Acessibilidade (ARIA)</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Formulários</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">CSS3</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Flexbox & Grid</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Box Model</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">HTML5 Semântico</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">CSS Flexbox & Grid</span>
                                 <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Responsividade</span>
                             </div>
                         </div>
                         <div>
-                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">DOM</h4>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Qualidade</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Árvore DOM</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Eventos</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SEO Básico</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Acessibilidade (ARIA)</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative">
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-yellow-500 transition-colors">
                     <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
                     <div class="w-10 h-10 bg-yellow-900/30 rounded-lg flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        <i class="fab fa-js text-yellow-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Linguagem de Programação</h3>
-                    <p class="text-gray-400 text-sm mb-6">Lógica e interatividade.</p>
+                    <h3 class="text-xl font-bold mb-2">JavaScript Moderno</h3>
+                    <p class="text-gray-400 text-sm mb-6">A linguagem que dá vida à web.</p>
+
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                       
+
+[Image of JavaScript event loop diagram]
+
+                    </div>
 
                     <div class="space-y-4">
                         <div>
-                            <h4 class="text-yellow-500 text-sm font-bold mb-2 uppercase">JAVASCRIPT (ES6+)</h4>
+                            <h4 class="text-yellow-500 text-sm font-bold mb-2 uppercase">Lógica & DOM</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Assincronismo (Async/Await)</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Closures & This</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">ES Modules</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">ES6+ (Arrow Functions)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">DOM Manipulation</span>
                             </div>
                         </div>
                         <div>
-                            <h4 class="text-blue-400 text-sm font-bold mb-2 uppercase">TYPESCRIPT</h4>
+                            <h4 class="text-yellow-500 text-sm font-bold mb-2 uppercase">Assincronismo</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Tipagem Estática</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Interfaces & Generics</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Fetch API & Axios</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Promises & Async/Await</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative">
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-blue-500 transition-colors">
                     <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
-                    <div class="w-10 h-10 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fab fa-react text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Frameworks Modernos</h3>
-                    <p class="text-gray-400 text-sm mb-6">Construção de interfaces complexas baseadas em componentes.</p>
+                    <h3 class="text-xl font-bold mb-2">React & Ecossistema</h3>
+                    <p class="text-gray-400 text-sm mb-6">Criação de interfaces baseadas em componentes.</p>
 
-                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs">
-                                            </div>
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+[Image of React component lifecycle]
+
+                    </div>
 
                     <div class="space-y-4">
                         <div>
-                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">ECOSSISTEMA REACT</h4>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Core React</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Hooks</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Context API & Redux</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Virtual DOM</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="text-white text-sm font-bold mb-2 uppercase">META-FRAMEWORKS</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Next.js</span>
-                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SSR vs SSG</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Hooks (useState, useEffect)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Context API</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Custom Hooks</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative">
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-purple-500 transition-colors">
                     <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
-                    <div class="w-10 h-10 bg-pink-900/30 rounded-lg flex items-center justify-center mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <div class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-layer-group text-purple-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Build & Qualidade</h3>
-                    <p class="text-gray-400 text-sm mb-6">Configuração de ambiente profissional.</p>
+                    <h3 class="text-xl font-bold mb-2">Next.js & TypeScript</h3>
+                    <p class="text-gray-400 text-sm mb-6">Server-Side Rendering e Tipagem estática.</p>
 
                     <div class="space-y-3 text-sm">
                         <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                            <span class="text-gray-300">Bundlers</span>
-                            <span class="text-pink-500 font-mono text-xs">Vite, Webpack</span>
+                            <span class="text-gray-300">Framework Fullstack</span>
+                            <span class="text-purple-500 font-mono text-xs">Next.js 14+ (App Router)</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                            <span class="text-gray-300">Package Managers</span>
-                            <span class="text-pink-500 font-mono text-xs">npm, yarn, pnpm</span>
+                            <span class="text-gray-300">Segurança de Tipo</span>
+                            <span class="text-purple-500 font-mono text-xs">TypeScript Interfaces</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                            <span class="text-gray-300">Linters</span>
-                            <span class="text-pink-500 font-mono text-xs">ESLint, Prettier</span>
+                            <span class="text-gray-300">Estilização Moderna</span>
+                            <span class="text-purple-500 font-mono text-xs">Tailwind CSS, Styled Comp.</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-[#111] border border-gray-800 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-purple-500"></span> Estilização Avançada
-                    </h3>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Tailwind CSS & CSS Modules
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            CSS-in-JS (Styled Components)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Pré-processadores (Sass/PostCSS)
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-[#111] border border-gray-800 rounded-xl p-6">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Testes & Performance
-                    </h3>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            Core Web Vitals (LCP, CLS, INP)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Testes Unitários (Jest/Vitest)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Testes E2E (Cypress/Playwright)
-                        </li>
-                    </ul>
-                </div>
             </div>
         </section>
 
-        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg">
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Tecnologias associadas</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O Front-end vai muito além do código. Você precisa dominar ferramentas de versionamento, entender de design systems e saber depurar problemas complexos no navegador.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-tools text-blue-500"></i>
+                        Stack de Ferramentas
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Build & Package</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-900/30 border border-red-800 text-red-400 rounded text-sm font-medium">NPM / Yarn</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Vite</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 border border-yellow-800 text-yellow-300 rounded text-sm font-medium">Webpack</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Versionamento & Design</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Git & GitHub</span>
+                            <span class="px-3 py-1 bg-purple-900/30 border border-purple-800 text-purple-300 rounded text-sm font-medium">Figma</span>
+                            <span class="px-3 py-1 bg-green-900/30 border border-green-800 text-green-400 rounded text-sm font-medium">Chrome DevTools</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-brain text-purple-500"></i>
+                        Conceitos & Soft Skills
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Mobile First</h4>
+                                <p class="text-gray-500 text-xs mt-1">Pensar na experiência em telas pequenas antes de expandir para desktops.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Componentização</h4>
+                                <p class="text-gray-500 text-xs mt-1">Capacidade de quebrar interfaces complexas em pequenos blocos reutilizáveis.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Consumo de APIs</h4>
+                                <p class="text-gray-500 text-xs mt-1">Entender verbos HTTP (GET, POST, etc), códigos de status e tratamento de erros.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-blue-600">
             <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
-                DOMINE A BASE DA WEB PARA CRIAR SUAS PRIMEIRAS PÁGINAS INTERATIVAS, RESOLVER PROBLEMAS VISUAIS E CONSTRUIR PROJETOS COM BOAS PRÁTICAS.
+                PARE DE COPIAR CÓDIGO SEM ENTENDER. APRENDA A CRIAR INTERFACES PROFISSIONAIS E ESCALÁVEIS.
             </h3>
             
             <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
-                No início da jornada, você vai aprender a estruturar conteúdo com HTML, estilizar com CSS e dar vida às suas páginas com JavaScript. Essa etapa é focada em desenvolver o raciocínio lógico para interfaces e dominar os conceitos essenciais da tríade da web: estrutura, apresentação e comportamento. A ideia é ganhar autonomia aos poucos, aprendendo a organizar o layout, a garantir a responsividade e a manipular elementos da página dinamicamente. Esse é o momento de criar, errar, praticar e evoluir, construindo a base para frameworks e projetos mais avançados.
+                Esta jornada leva você do zero ao nível profissional. Começamos com a estrutura básica, mergulhamos na lógica de programação com JS e finalizamos com arquitetura de software usando React e Next.js.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px]">
+                <div class="bg-blue-900/20 border border-blue-900/50 p-6 rounded hover:bg-blue-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
                     <div>
-                        <h4 class="font-bold text-white text-sm mb-3 uppercase">01 - COMECE AQUI</h4>
-                        <p class="text-xs text-blue-100 leading-relaxed">
-                            Carreira Desenvolvimento Back-End Python: Boas-vindas e primeiros passos
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - HTML & CSS Pro</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Domine Flexbox, Grid Layout, Posicionamento e crie sites 100% responsivos do zero.
                         </p>
                     </div>
-                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4">
-                        FUNDAMENTAL
+                    <span class="inline-block bg-blue-500/20 text-[10px] text-blue-300 px-3 py-1 rounded-full w-max mt-4 border border-blue-500/30">
+                        INICIANTE
                     </span>
                 </div>
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px]"><div><h4 class="font-bold text-white text-sm mb-3 uppercase">01 - COMECE AQUI</h4><p class="text-xs text-blue-100 leading-relaxed">Carreira Desenvolvimento Back-End Python: Boas-vindas e primeiros passos</p></div><span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4">FUNDAMENTAL</span></div>
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px]"><div><h4 class="font-bold text-white text-sm mb-3 uppercase">01 - COMECE AQUI</h4><p class="text-xs text-blue-100 leading-relaxed">Carreira Desenvolvimento Back-End Python: Boas-vindas e primeiros passos</p></div><span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4">FUNDAMENTAL</span></div>
-                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px]"><div><h4 class="font-bold text-white text-sm mb-3 uppercase">01 - COMECE AQUI</h4><p class="text-xs text-blue-100 leading-relaxed">Carreira Desenvolvimento Back-End Python: Boas-vindas e primeiros passos</p></div><span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4">FUNDAMENTAL</span></div>
+
+                <div class="bg-yellow-900/20 border border-yellow-900/50 p-6 rounded hover:bg-yellow-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Lógica JS</h4>
+                        <p class="text-xs text-yellow-100 leading-relaxed font-medium">
+                            Arrays, Objetos, Funções e Manipulação do DOM. Entenda como a linguagem funciona "por baixo do capô".
+                        </p>
+                    </div>
+                    <span class="inline-block bg-yellow-500/20 text-[10px] text-yellow-300 px-3 py-1 rounded-full w-max mt-4 border border-yellow-500/30">
+                        LÓGICA
+                    </span>
+                </div>
+
+                <div class="bg-cyan-900/20 border border-cyan-900/50 p-6 rounded hover:bg-cyan-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - React JS</h4>
+                        <p class="text-xs text-cyan-100 leading-relaxed font-medium">
+                            Componentes funcionais, Hooks, Roteamento e consumo de APIs externas de forma eficiente.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-cyan-500/20 text-[10px] text-cyan-300 px-3 py-1 rounded-full w-max mt-4 border border-cyan-500/30">
+                        FRAMEWORK
+                    </span>
+                </div>
+
+                <div class="bg-purple-900/20 border border-purple-900/50 p-6 rounded hover:bg-purple-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Next.js Fullstack</h4>
+                        <p class="text-xs text-purple-100 leading-relaxed font-medium">
+                            Server Components, SSR, Otimização de Imagens e Deploy na Vercel com TypeScript.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-purple-500/20 text-[10px] text-purple-300 px-3 py-1 rounded-full w-max mt-4 border border-purple-500/30">
+                        PROFISSIONAL
+                    </span>
+                </div>
+
             </div>
         </section>
 
     </main>
 </body>
+{% endblock %}
