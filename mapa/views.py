@@ -132,6 +132,11 @@ def trilha_backend(request):
     # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
     return render(request, 'trilha_backend.html') 
 
+@login_required
+def trilha_devops(request):
+    # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
+    return render(request, 'trilha_devops.html')
+
 
 @login_required
 def trilha_frontend(request):

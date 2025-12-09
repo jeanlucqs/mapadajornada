@@ -1,0 +1,293 @@
+{% extends 'base.html' %}
+{% block title %}Trilha DevOps - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-orange-500 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-orange-600 flex items-center justify-center text-[8px] font-bold">Ops</span>
+                <span class="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center text-[8px] font-bold">Dev</span>
+                <span class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-[8px] font-bold">Cld</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda global: salários competitivos focados em automação e cloud</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Engenharia de Infraestrutura e</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6">Cultura DevOps</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                DevOps não é apenas uma função, é uma cultura que une o desenvolvimento (Dev) às operações (Ops). O objetivo é encurtar o ciclo de desenvolvimento de sistemas, fornecendo entrega contínua com alta qualidade de software. Aqui, você automatiza o manual, escala a infraestrutura na nuvem e garante que o sistema nunca pare.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Perfil profissional</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    O engenheiro DevOps (ou SRE - Site Reliability Engineer) é o guardião da estabilidade e da velocidade. Ele constrói "pipelines" que pegam o código do desenvolvedor, testam automaticamente e o colocam no ar em segundos. Ele substitui servidores manuais por "Infraestrutura como Código" (IaC).
+                </p>
+                <p>
+                    Este profissional domina sistemas operacionais Linux, redes, containers (Docker/Kubernetes) e os principais provedores de nuvem (AWS, Azure, Google Cloud). Ele é obcecado por monitoramento, logs e automação, garantindo que problemas sejam detectados antes mesmo de afetarem o usuário final.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">6 Áreas • 45+ Tópicos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-gray-600 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Linux & Redes</h3>
+                    <p class="text-gray-400 text-sm mb-6">Onde tudo roda. A base obrigatória.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-white text-sm font-bold mb-2 uppercase">Sistema Operacional</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Terminal & Bash Script</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Permissões & Processos</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SSH & Segurança</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-sm font-bold mb-2 uppercase">Networking</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">DNS, IP & Subnets</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Load Balancers (Nginx)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-blue-800 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Containers & Kubernetes</h3>
+                    <p class="text-gray-400 text-sm mb-6">Empacotamento e escala de aplicações.</p>
+
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs">
+                       
+
+[aqui vai uma iamgem de Docker e K8s, mas como não posso inserir imagens, apenas descrevo o local]
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Docker</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Images & Layers</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Docker Compose</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Kubernetes (K8s)</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Pods & Services</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Deployments</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Helm Charts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">CI/CD & Pipelines</h3>
+                    <p class="text-gray-400 text-sm mb-6">Automação de entrega contínua.</p>
+
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs">
+                        
+
+[aqui vai uma imagem de pipeline CI/CD]
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Pipelines</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">GitHub Actions</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">GitOps (ArgoCD)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Jenkins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-purple-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">IaC & Cloud Computing</h3>
+                    <p class="text-gray-400 text-sm mb-6">Infraestrutura como Código e Nuvem.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Provisionamento</span>
+                            <span class="text-purple-500 font-mono text-xs">Terraform, Ansible</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Provedores Cloud</span>
+                            <span class="text-purple-500 font-mono text-xs">AWS, Azure, GCP</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Observabilidade</span>
+                            <span class="text-purple-500 font-mono text-xs">Prometheus, Grafana, ELK</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Tecnologias associadas</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O profissional de DevOps lida com uma "caixa de ferramentas" vasta. Você precisa conectar ferramentas de desenvolvimento, servidores, scripts de automação e painéis de monitoramento em um fluxo coeso.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        Stack de Infraestrutura
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Scripting & OS</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-900/30 border border-yellow-800 text-yellow-500 rounded text-sm font-medium">Linux (Ubuntu/Alpine)</span>
+                            <span class="px-3 py-1 bg-green-900/30 border border-green-800 text-green-400 rounded text-sm font-medium">Bash/Shell</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Python (Boto3)</span>
+                            <span class="px-3 py-1 bg-cyan-900/30 border border-cyan-800 text-cyan-300 rounded text-sm font-medium">Go (Golang)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Cloud Native</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-900/30 border border-purple-800 text-purple-300 rounded text-sm font-medium">Terraform</span>
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-400 rounded text-sm font-medium">AWS / EKS</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Docker</span>
+                            <span class="px-3 py-1 bg-red-900/30 border border-red-800 text-red-400 rounded text-sm font-medium">Ansible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                        Cultura & SRE
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Automação Obsessiva</h4>
+                                <p class="text-gray-500 text-xs mt-1">Mentalidade de "Se eu tiver que fazer isso duas vezes, eu escrevo um script". Eliminar o trabalho manual (Toil).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Gestão de Crise</h4>
+                                <p class="text-gray-500 text-xs mt-1">Manter a calma quando o servidor cai. Habilidade de analisar logs e fazer troubleshooting rápido.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Colaboração (Dev + Ops)</h4>
+                                <p class="text-gray-500 text-xs mt-1">Quebrar silos. Trabalhar junto com os devs para que o código nasça pronto para a produção.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-orange-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                PARE DE CONFIGURAR SERVIDORES NA MÃO. APRENDA A CRIAR INFRAESTRUTURA ESCALÁVEL E AUTOMATIZADA.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Nesta jornada, você começa dominando o terminal Linux, passa pela revolução dos Containers com Docker e culmina na orquestração em nuvem com Kubernetes e AWS. O objetivo final é construir um pipeline completo onde um commit no Git dispara testes, builds e o deploy automático em produção.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Linux Survival</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Comandos essenciais, gerenciamento de usuários, SSH, Vim e Scripting para automação básica.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        FUNDAMENTAL
+                    </span>
+                </div>
+
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Docker & CI/CD</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Containerizando aplicações e criando suas primeiras esteiras de entrega com GitHub Actions.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        AUTOMAÇÃO
+                    </span>
+                </div>
+
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Nuvem AWS</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            EC2, S3, RDS e redes na nuvem (VPC). Introdução ao Terraform para infra como código.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        CLOUD
+                    </span>
+                </div>
+
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Kubernetes & SRE</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Orquestração de clusters, Helm Charts, e Monitoramento avançado com Prometheus e Grafana.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        ADVANCED
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}
