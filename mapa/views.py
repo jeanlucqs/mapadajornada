@@ -43,8 +43,9 @@ def pagina_login(request):
         form = CustomAuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
-
-
+@login_required
+def trilhas(request):
+    return render(request, 'trilhas.html')
 
 @login_required
 def pagina_front(request):
