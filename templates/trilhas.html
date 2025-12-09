@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+<<<<<<< HEAD
 {% block title %}Trilhas de Carreiras{% endblock %}
 
 {% block content %}
@@ -69,4 +70,422 @@
 </div>
 </main>
 </div>
+=======
+{% load static %}
+
+{% block title %}Trilhas de Carreira - Mapa da Jornada{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-primary relative overflow-hidden py-20 md:py-28">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute top-20 left-20 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block px-4 py-1 rounded-full bg-gray-800 text-gray-300 text-sm mb-6">
+                <i class="fas fa-map-signs mr-2"></i> Guia de Carreiras
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Trilhas de Carreiras em 
+                <span class="text-gradient">Tecnologia da Informação</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Aqui há uma coletânea de trilhas em carreiras de Tecnologia da Informação. 
+                Escolha sua jornada e comece a transformar sua carreira hoje mesmo.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-12 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute top-20 left-20 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center bg-secondary/30 rounded-2xl p-6 backdrop-blur-sm border border-gray-800/50">
+            <div class="p-4">
+                <div class="text-3xl font-bold text-white mb-2">10+</div>
+                <div class="text-gray-400">Trilhas Disponíveis</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl font-bold text-white mb-2">500+</div>
+                <div class="text-gray-400">Habilidades Ensino</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl font-bold text-white mb-2">100%</div>
+                <div class="text-gray-400">Foco no Mercado</div>
+            </div>
+            <div class="p-4">
+                <div class="text-3xl font-bold text-white mb-2">R$ 3,2K</div>
+                <div class="text-gray-400">Salário Inicial Mínimo</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trilhas Section -->
+<section id="trilhas" class="py-16 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute top-20 left-20 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl font-bold mb-4 text-center text-white">Trilhas Disponíveis</h2>
+        <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+            Escolha sua carreira e comece sua jornada de aprendizado
+        </p>
+
+        <div class="max-w-6xl mx-auto">
+            <!-- Grid de Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Desenvolvedor Front-end -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-blue-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-code text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Desenvolvedor Front-end</h3>
+                            <p class="text-gray-400 text-sm mt-1">Criando interfaces visuais e interativas</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Focado em criar e implementar a porta visual e interativa de sites e aplicações web, 
+                        garantindo uma boa experiência para o usuário.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-blue-400 font-bold">R$ 3.200 - R$ 5.000</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="{% url 'trilha_frontend' %}" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 2: Desenvolvedor Full-stack -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-green-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-layer-group text-green-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Desenvolvedor Full-stack</h3>
+                            <p class="text-gray-400 text-sm mt-1">Front-end + Back-end completo</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Focado em atuar tanto no front-end quanto no back-end, desenvolvendo aplicações 
+                        completas que envolvam interfaces, lógica e banco de dados.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-green-400 font-bold">R$ 4.000 - R$ 6.000</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 3: Desenvolvedor Back-end -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-red-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-server text-red-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Desenvolvedor Back-end</h3>
+                            <p class="text-gray-400 text-sm mt-1">Lógica, servidores e bancos de dados</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Focado em criar e monitorar a lógica, os servidores e os bancos de dados 
+                        que garantem o funcionamento das aplicações.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-red-400 font-bold">R$ 3.500 - R$ 5.500</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-red-500 h-2 rounded-full" style="width: 42%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 4: Designer UX -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-pink-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-user-circle text-pink-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Designer UX</h3>
+                            <p class="text-gray-400 text-sm mt-1">Experiência do Usuário</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Pesquisa e design de experiências do usuário focadas em usabilidade, 
+                        acessibilidade e satisfação do usuário.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-pink-400 font-bold">R$ 4.000 - R$ 6.000</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-pink-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-pink-600 hover:bg-pink-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 5: Designer UI -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-purple-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-palette text-purple-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Designer UI</h3>
+                            <p class="text-gray-400 text-sm mt-1">Interface do Usuário</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Design visual de interfaces focadas em estética, consistência e 
+                        experiência visual para os usuários.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-purple-400 font-bold">R$ 4.500 - R$ 6.500</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 6: Administrador de Redes -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-cyan-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-network-wired text-cyan-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Administrador de Redes</h3>
+                            <p class="text-gray-400 text-sm mt-1">Infraestrutura e Conectividade</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Infraestrutura de rede, segurança e conectividade empresarial, 
+                        garantindo estabilidade e performance das conexões.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-cyan-400 font-bold">R$ 3.500 - R$ 5.500</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-cyan-500 h-2 rounded-full" style="width: 42%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 7: Arquiteto em Nuvem -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-green-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-cloud text-green-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Arquiteto em Nuvem</h3>
+                            <p class="text-gray-400 text-sm mt-1">Cloud Computing</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Projeta e implementa soluções escaláveis em nuvem (AWS, Azure, GCP) 
+                        com foco em segurança e performance.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-green-400 font-bold">R$ 6.000 - R$ 8.000</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 8: Engenheiro DevOps -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-orange-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-infinity text-orange-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Engenheiro DevOps</h3>
+                            <p class="text-gray-400 text-sm mt-1">Automação e CI/CD</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Automação, CI/CD e infraestrutura como código para entrega contínua 
+                        e operações eficientes.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-orange-400 font-bold">R$ 5.500 - R$ 7.500</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-orange-500 h-2 rounded-full" style="width: 48%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+                <!-- Card 9: Pesquisador UX -->
+                <div class="bg-secondary rounded-2xl p-6 border border-gray-800 card-hover">
+                    <div class="flex items-start mb-6">
+                        <div class="bg-amber-900/30 p-3 rounded-xl mr-4">
+                            <i class="fas fa-search text-amber-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Pesquisador UX</h3>
+                            <p class="text-gray-400 text-sm mt-1">Pesquisa com Usuários</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Pesquisa qualitativa e quantitativa sobre comportamento de usuários 
+                        para insights que guiam o design de produtos.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-gray-400 text-sm">Salário Inicial</span>
+                            <span class="text-amber-400 font-bold">R$ 4.000 - R$ 6.000</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-amber-500 h-2 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="w-full bg-amber-600 hover:bg-amber-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i> Ver Detalhes
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute top-20 left-20 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center bg-secondary rounded-2xl p-10 border border-gray-800">
+            <h2 class="text-3xl font-bold mb-6 text-white">Encontrou sua trilha ideal?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Comece sua jornada hoje mesmo e transforme sua carreira na tecnologia!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                {% if not user.is_authenticated %}
+                <a href="{% url 'login' %}" class="accent-gradient text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center justify-center">
+                    <i class="fas fa-user-plus mr-2"></i> Criar Conta para Começar
+                </a>
+                {% endif %}
+                <a href="{% url 'index' %}" class="border border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors flex items-center justify-center">
+                    <i class="fas fa-home mr-2"></i> Voltar para Home
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .text-gradient {
+        background: linear-gradient(90deg, #3a86ff 0%, #5fa5ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .accent-gradient {
+        background: linear-gradient(90deg, #3a86ff 0%, #5fa5ff 100%);
+    }
+</style>
+
+>>>>>>> f50d59ce33921784411da2b6c5d16638ee04a7e7
 {% endblock %}

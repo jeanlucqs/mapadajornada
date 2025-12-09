@@ -21,6 +21,9 @@
     <h2>Login</h2>
     <form method="post" novalidate>
         {% csrf_token %} 
+        {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{ request.GET.next }}">
+        {% endif %}
         {% for field in form %}
         {% if field.name == 'password' %}
             <div class="form-field">

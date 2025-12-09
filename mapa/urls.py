@@ -9,6 +9,7 @@ urlpatterns = [
     path('login/', views.pagina_login, name='login'),
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
     path('', views.index, name='index'), 
+     path('trilhas/', views.trilhas, name='trilhas'),
     path('front/', views.pagina_front, name='pagina_front'),
     path('back/', views.pagina_back, name='pagina_back'),
     path('mobile/', views.pagina_mobile, name='pagina_mobile'),
@@ -28,6 +29,8 @@ urlpatterns = [
     path('trilhas/frontend/', views.trilha_frontend, name='trilha_frontend'),
     path('trilhas/backend/', views.trilha_backend, name='trilha_backend'),
     path('trilhas/fullstack/', views.trilha_fullstack, name='trilha_fullstack'),
+
+    path('trilhas/frontend/', views.trilha_frontend, name='trilha_frontend'),
 
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),

@@ -100,7 +100,7 @@
                 <nav class="hidden md:block lg:hidden">
                     <ul class="flex space-x-6">
                         <li><a href="{% url 'index' %}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Carreiras</a></li>
-                        <li><a href="#carreiras" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Trilhas</a></li>
+                        <li><a href="{% url 'trilhas' %}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Trilhas</a></li>
                     </ul>
                 </nav>
     
@@ -167,7 +167,7 @@
                     <i class="fas fa-briefcase w-5 mr-3"></i>
                     Carreiras
                 </a>
-                <a href="#carreiras" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
+                <a href="{% url 'trilhas' %}" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
                     <i class="fas fa-road w-5 mr-3"></i>
                     Trilhas
                 </a>

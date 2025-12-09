@@ -34,14 +34,18 @@ def pagina_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('index')
+            next_url = request.POST.get('next') or request.GET.get('next')
+            if next_url:
+                return redirect(next_url)
+            else:
+                return redirect('index')      
     else:
         form = CustomAuthenticationForm()
     return render(request, 'login.html', {'form': form})
 
-
-
-
+@login_required
+def trilhas(request):
+    return render(request, 'trilhas.html')
 
 @login_required
 def pagina_front(request):
@@ -321,3 +325,6 @@ def excluir_projeto(request, id):
         messages.success(request, f'Projeto "{nome}" excluído com sucesso!')
         return redirect('perfil')
     return render(request, 'confirm_delete.html', {'obj': projeto, 'tipo': 'projeto'})
+
+def trilha_frontend(request):
+    return render(request, 'pagina_front_trilhas.html')

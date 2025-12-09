@@ -296,11 +296,11 @@
                                     <i class="fas fa-clock mr-1"></i>
                                     <span>Salário: {{ carreira.salario_medio|default:"R$ 4.000 - R$ 12.000" }}</span>
                                 </div>
+                                
                                 {% if carreira.url_nome == '#' or carreira.url_nome|slice:":4" == 'http' %}
                                 <a href="{{ carreira.url_nome }}" 
                                    class="text-accent hover:text-white transition-colors text-sm font-medium flex items-center
-                                          {% if carreira.url_nome == '#' %}opacity-50 cursor-not-allowed{% endif %}"
-                                   {% if carreira.url_nome|slice:":4" == 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                          {% if carreira.url_nome == '#' %}opacity-50 cursor-not-allowed{% endif %}">
                                     Explorar <i class="fas fa-arrow-right ml-1"></i>
                                 </a>
                                 {% else %}
@@ -309,7 +309,7 @@
                                     Explorar <i class="fas fa-arrow-right ml-1"></i>
                                 </a>
                                 {% endif %}
-                            </div>
+                                </div>
                         </div>
                         {% empty %}
                         <div class="col-span-2 text-center py-8">
