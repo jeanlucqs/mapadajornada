@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Trilha de Desenvolvimento Fullstack{% endblock %}
+{% block content %}
+
+<body class="bg-black text-white selection:bg-indigo-500 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-[8px] font-bold">FS</span>
+                <span class="w-5 h-5 rounded-full bg-cyan-600 flex items-center justify-center text-[8px] font-bold">Fe</span>
+                <span class="w-5 h-5 rounded-full bg-green-600 flex items-center justify-center text-[8px] font-bold">Be</span>
+            </div>
+            <span class="text-xs text-gray-400">O perfil mais versátil do mercado: mais de 60 mil oportunidades globais</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Domine todo o ecossistema</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6">Desenvolvimento Full Stack</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O desenvolvedor Full Stack é o arquiteto completo. Ele possui a visão 360º do desenvolvimento de software, capaz de criar uma interface interativa (Front-end), construir a lógica do servidor e banco de dados (Back-end) e conectar tudo isso em uma aplicação funcional. É a autonomia de transformar uma ideia em um produto digital completo sozinho.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Perfil profissional</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    Este profissional é um solucionador de problemas versátil. Ele entende como o navegador renderiza pixels e como o servidor processa requisições. Ele não precisa ser o maior especialista do mundo em tudo, mas precisa dominar a integração entre as camadas, garantindo que o fluxo de dados seja seguro, rápido e que a experiência do usuário seja fluida.
+                </p>
+                <p>
+                    Geralmente focado em stacks modernas (como MERN, T3 ou Next.js + Serverless), o Full Stack transita entre criar componentes React, desenhar esquemas de banco de dados e configurar pipelines de deploy na nuvem. É um perfil altamente valorizado por startups e empresas ágeis pela sua capacidade de entrega de ponta a ponta.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">Integrada • 80+ Tópicos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-cyan-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Domínio do Front-end</h3>
+                    <p class="text-gray-400 text-sm mb-6">Interfaces reativas e experiência do usuário.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">Core & Frameworks</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">React.js Avançado</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Tailwind CSS</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">State Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-green-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Back-end & APIs</h3>
+                    <p class="text-gray-400 text-sm mb-6">Regras de negócio e processamento de dados.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-green-500 text-sm font-bold mb-2 uppercase">Server-Side</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Node.js / Bun</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">REST & GraphQL</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Prisma ORM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-indigo-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-indigo-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Arquitetura Full Stack</h3>
+                    <p class="text-gray-400 text-sm mb-6">A cola que une as duas pontas do sistema.</p>
+
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs">
+                       
+
+[Image of Full Stack Architecture Diagram]
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-indigo-500 text-sm font-bold mb-2 uppercase">Meta-Frameworks</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Next.js (App Router)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Server Actions</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Auth (NextAuth/Clerk)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">DevOps & Cloud</h3>
+                    <p class="text-gray-400 text-sm mb-6">Publicação, escala e monitoramento.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Containerização</span>
+                            <span class="text-orange-500 font-mono text-xs">Docker & Compose</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Serverless & Edge</span>
+                            <span class="text-orange-500 font-mono text-xs">Vercel / AWS Lambda</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Bancos Gerenciados</span>
+                            <span class="text-orange-500 font-mono text-xs">Supabase / Neon / PlanetScale</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Tecnologias associadas</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O stack moderno (como T3 ou MERN) exige que você fale a mesma língua no cliente e no servidor. Aqui, o TypeScript é rei, permitindo tipagem segura da interface até o banco de dados.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        O Stack Unificado
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Linguagens & Frameworks</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">TypeScript (Full)</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Next.js 14+</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 border border-yellow-800 text-yellow-500 rounded text-sm font-medium">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Dados & Integração</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-900/30 border border-green-800 text-green-300 rounded text-sm font-medium">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-indigo-900/30 border border-indigo-800 text-indigo-300 rounded text-sm font-medium">Prisma / Drizzle</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Docker</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">tRPC / REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        Competências de Arquiteto
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Visão Sistêmica</h4>
+                                <p class="text-gray-500 text-xs mt-1">Entender o impacto de uma mudança no Front-end sobre o consumo do banco de dados no Back-end.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Autonomia Total</h4>
+                                <p class="text-gray-500 text-xs mt-1">Capacidade de desbloquear o próprio trabalho, sem depender de terceiros para criar uma API ou ajustar um layout.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Gestão de Trade-offs</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber decidir quando usar SSR (Server-Side Rendering) ou CSR (Client-Side Rendering) com base nas necessidades do projeto.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-indigo-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                DO ZERO AO SAAS: APRENDA CONSTRUINDO UMA PLATAFORMA COMPLETA COM A STACK MAIS DESEJADA DO MERCADO.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Nesta trilha unificada, você não vai aprender partes isoladas. Vamos construir um projeto real (como um E-commerce ou LMS) do início ao fim. Você vai configurar o banco, criar a API, desenhar as telas, conectar tudo e fazer o deploy. É a simulação real do dia a dia de um CTO ou fundador técnico.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Fundamentos WEB</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            HTML, CSS, JS e Lógica de Programação. A base sólida para qualquer lado do desenvolvimento.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        NIVELAMENTO
+                    </span>
+                </div>
+
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - O Ecossistema React</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Dominando componentes, hooks e interfaces modernas com React e Tailwind CSS.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        FRONT-END
+                    </span>
+                </div>
+
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Integração Next.js</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            O poder do Full Stack: Rotas de API, Server Components, Banco de Dados e Autenticação.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        INTEGRAÇÃO
+                    </span>
+                </div>
+
+                <div class="bg-[#0f8bc4] p-6 rounded hover:bg-[#0d7ab0] transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Projeto Final (SaaS)</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Desenvolvimento de um Micro-SaaS completo com Pagamentos (Stripe), Emails e Deploy na Vercel.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-[#2f4f63] bg-opacity-40 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-400/30">
+                        CAPSTONE
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

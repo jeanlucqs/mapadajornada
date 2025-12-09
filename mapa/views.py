@@ -120,6 +120,30 @@ def pagina_pesquisador(request):
     return render(request, 'pagina_pesquisador.html', {'area': area})
 
 @login_required
+def trilha_fullstack(request):
+    # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
+    return render(request, 'trilha_fullstack.html')
+@login_required
+def trilha_backend(request):
+    # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
+    return render(request, 'trilha_backend.html') 
+
+
+@login_required
+def trilha_frontend(request):
+    # Mudou de 'trilhafrontend.html' para 'trilha_frontend.html'
+    return render(request, 'trilha_frontend.html')
+
+@login_required
+def trilhas(request):
+    categorias = Categoria.objects.prefetch_related('carreiras').order_by('ordem')
+    context = {
+        'categorias_list': categorias
+    }
+    return render(request, 'trilhas.html', context)
+
+
+@login_required
 def perfil(request):
     perfil, created = Perfil.objects.get_or_create(user=request.user)
     habilidades = Habilidade.objects.filter(user=request.user)
