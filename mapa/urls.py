@@ -26,6 +26,8 @@ urlpatterns = [
     path('ui/', views.pagina_Ui, name='pagina_ui'),
     path('pesquisador/', views.pagina_pesquisador, name='pagina_pesquisador'),
 
+    path('trilhas/frontend/', views.trilha_frontend, name='trilha_frontend'),
+
     path('perfil/', views.perfil, name='perfil'),
     path('perfil/editar/', views.editar_perfil, name='editar_perfil'),
     path('habilidade/adicionar/', views.adicionar_habilidade, name='adicionar_habilidade'),

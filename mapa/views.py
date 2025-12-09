@@ -301,3 +301,6 @@ def excluir_projeto(request, id):
         messages.success(request, f'Projeto "{nome}" excluído com sucesso!')
         return redirect('perfil')
     return render(request, 'confirm_delete.html', {'obj': projeto, 'tipo': 'projeto'})
+
+def trilha_frontend(request):
+    return render(request, 'pagina_front_trilhas.html')
