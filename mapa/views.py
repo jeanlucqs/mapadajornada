@@ -34,11 +34,14 @@ def pagina_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('index')
+            next_url = request.POST.get('next') or request.GET.get('next')
+            if next_url:
+                return redirect(next_url)
+            else:
+                return redirect('index')      
     else:
         form = CustomAuthenticationForm()
     return render(request, 'login.html', {'form': form})
-
 
 
 
