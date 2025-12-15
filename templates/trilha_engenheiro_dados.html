@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Trilha de Engenharia de Dados{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-orange-500 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-orange-600 flex items-center justify-center text-[8px] font-bold">DE</span>
+                <span class="w-5 h-5 rounded-full bg-amber-600 flex items-center justify-center text-[8px] font-bold">PL</span>
+                <span class="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center text-[8px] font-bold">BD</span>
+            </div>
+            <span class="text-xs text-gray-400">Os encanadores digitais: construa as rodovias por onde os dados trafegam.</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Arquitetura e escala massiva</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6">Engenharia de Dados</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O Engenheiro de Dados é o arquiteto da infraestrutura. Enquanto o cientista analisa, o engenheiro constrói os sistemas robustos que coletam, transformam e armazenam terabytes de informação de forma confiável, garantindo que os dados cheguem limpos e rápidos a quem precisa.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Perfil profissional</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    Este profissional é focado em **confiabilidade e escalabilidade**. Ele se preocupa mais com a eficiência do pipeline, a latência da ingestão e a modelagem do Data Warehouse do que com o algoritmo preditivo final. É um perfil altamente técnico, que domina SQL avançado, programação distribuída e infraestrutura em nuvem.
+                </p>
+                <p>
+                    O mercado busca engenheiros que dominem o "Modern Data Stack". Isso envolve orquestrar fluxos complexos com **Airflow**, processar Big Data com **Spark** e gerenciar infraestrutura como código (IaC) com **Terraform**. É a base invisível que sustenta toda a área de IA e Analytics.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">Infrastructure Heavy • 75+ Tópicos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos Sólidos</h3>
+                    <p class="text-gray-400 text-sm mb-6">A base inegociável: SQL avançado e programação.</p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Alicerce Técnico</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SQL Window Functions</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Python para Eng.</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Linux & Bash</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-amber-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-amber-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pipelines e Orquestração</h3>
+                    <p class="text-gray-400 text-sm mb-6">Movendo dados do ponto A ao B de forma automática.</p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-amber-500 text-sm font-bold mb-2 uppercase">Fluxos de Trabalho</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Apache Airflow</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">dbt (Analytics Eng)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Conceitos ETL vs ELT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-red-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-red-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Big Data & Processamento</h3>
+                    <p class="text-gray-400 text-sm mb-6">Lidando com volume, velocidade e variedade.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-red-500 text-sm font-bold mb-2 uppercase">Sistemas Distribuídos</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Apache Spark</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Kafka (Streaming)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Data Lakes (S3/ADLS)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-800 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-orange-800/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Infraestrutura e IaC</h3>
+                    <p class="text-gray-400 text-sm mb-6">Gerenciando recursos na nuvem como código.</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">IaC</span>
+                            <span class="text-orange-400 font-mono text-xs">Terraform / CloudFormation</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Containers</span>
+                            <span class="text-orange-400 font-mono text-xs">Docker & Kubernetes</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Cloud Provider</span>
+                            <span class="text-orange-400 font-mono text-xs">AWS / Azure / GCP</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Tecnologias associadas</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                A caixa de ferramentas do Engenheiro de Dados é vasta e focada em robustez. Usamos linguagens performáticas e ferramentas de orquestração líderes de mercado para garantir que os dados fluam sem interrupções 24/7.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        O Modern Data Stack
+                    </h3>
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Linguagens & Processamento</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-300 rounded text-sm font-medium">Python</span>
+                            <span class="px-3 py-1 bg-red-900/30 border border-red-800 text-red-300 rounded text-sm font-medium">Spark (PySpark/Scala)</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">SQL (ANSI/Presto)</span>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Infra & Ferramentas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-900/30 border border-amber-800 text-amber-300 rounded text-sm font-medium">Airflow/Dagster</span>
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-300 rounded text-sm font-medium">Docker/K8s</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Competências Essenciais
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Modelagem de Dados</h4>
+                                <p class="text-gray-500 text-xs mt-1">Dominar conceitos como Star Schema, Snowflake e Data Vault para Data Warehouses.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Design de Sistemas (Scalability)</h4>
+                                <p class="text-gray-500 text-xs mt-1">Projetar arquiteturas que aguentam petabytes de dados sem falhar.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Observabilidade & Data Quality</h4>
+                                <p class="text-gray-500 text-xs mt-1">Implementar monitoramento e testes para garantir que o dado não está "quebrado".</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-orange-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                PROJETO PRÁTICO: CONSTRUA UM PIPELINE DE STREAMING EM TEMPO REAL NA NUVEM.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Simularemos um ambiente de alta demanda. Você construirá um sistema que ingere dados de transações financeiras em tempo real usando Kafka, processa com Spark Streaming, armazena em um Data Lake (S3) e disponibiliza em um Data Warehouse (BigQuery) modelado para análise.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-orange-800 p-6 rounded hover:bg-orange-700 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Ingestão (Kafka)</h4>
+                        <p class="text-xs text-orange-100 leading-relaxed font-medium">
+                            Configuração de producers e consumers no Apache Kafka para capturar dados em tempo real.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-orange-950 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-orange-400/30">
+                        INGESTÃO
+                    </span>
+                </div>
+
+                <div class="bg-amber-800 p-6 rounded hover:bg-amber-700 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Processamento (Spark)</h4>
+                        <p class="text-xs text-amber-100 leading-relaxed font-medium">
+                            Uso do PySpark Structured Streaming para transformar e agregar os dados "on the fly".
+                        </p>
+                    </div>
+                    <span class="inline-block bg-amber-950 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-amber-400/30">
+                        TRANSFORMAÇÃO
+                    </span>
+                </div>
+
+                <div class="bg-red-800 p-6 rounded hover:bg-red-700 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Data Lake & Warehouse</h4>
+                        <p class="text-xs text-red-100 leading-relaxed font-medium">
+                            Armazenamento em camadas (Bronze/Silver/Gold) no S3 e modelagem dimensional no Data Warehouse.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-red-950 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-red-400/30">
+                        ARMAZENAMENTO
+                    </span>
+                </div>
+
+                <div class="bg-orange-900 p-6 rounded hover:bg-orange-800 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Orquestração (Airflow)</h4>
+                        <p class="text-xs text-orange-200 leading-relaxed font-medium">
+                            Criação de DAGs no Airflow para agendar, monitorar e gerenciar dependências de todo o fluxo.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-black bg-opacity-30 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-orange-500/30">
+                        ORQUESTRAÇÃO
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

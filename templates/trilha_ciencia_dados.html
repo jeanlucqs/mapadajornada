@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Trilha de Ciência de Dados{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-blue-500 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-[8px] font-bold">Py</span>
+                <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-[8px] font-bold">AI</span>
+                <span class="w-5 h-5 rounded-full bg-cyan-600 flex items-center justify-center text-[8px] font-bold">Da</span>
+            </div>
+            <span class="text-xs text-gray-400">O novo petróleo: transforme dados brutos em inteligência</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Preveja o futuro com base no passado</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6">Ciência de Dados</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O Cientista de Dados é o detetive do mundo digital. Utilizando matemática, estatística e programação, você descobrirá padrões ocultos em grandes volumes de informação. Aprenda a limpar dados, criar visualizações impactantes e treinar modelos de Inteligência Artificial que tomam decisões autônomas.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Perfil profissional</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    O especialista em Dados precisa ter um pensamento analítico aguçado e habilidade de "storytelling". Não basta apenas calcular números; é necessário traduzi-los em insights de negócio. Este profissional transita entre a engenharia de software e a estatística, sabendo exatamente qual algoritmo usar para resolver problemas complexos.
+                </p>
+                <p>
+                    Focado no ecossistema Python, Pandas e Scikit-Learn, este perfil é um dos mais valorizados do mercado global. Empresas buscam profissionais que consigam prever tendências de vendas, otimizar logística, recomendar produtos e automatizar processos decisórios através de Machine Learning.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">Data Driven • 80+ Tópicos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-blue-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Python & Análise</h3>
+                    <p class="text-gray-400 text-sm mb-6">A base da programação e manipulação de dados.</p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Data Engineering</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Python Core</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Pandas/NumPy</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SQL Avançado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-indigo-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-indigo-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Visualização & EDA</h3>
+                    <p class="text-gray-400 text-sm mb-6">Transforme números em gráficos intuitivos.</p>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-indigo-500 text-sm font-bold mb-2 uppercase">Storytelling</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Matplotlib</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Seaborn</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Streamlit Apps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-cyan-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Machine Learning</h3>
+                    <p class="text-gray-400 text-sm mb-6">Algoritmos preditivos, classificação e regressão.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">Inteligência Artificial</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Scikit-Learn</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">XGBoost</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Model Tuning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-emerald-900 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-emerald-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Deploy & MLOps</h3>
+                    <p class="text-gray-400 text-sm mb-6">Colocando modelos em produção via API.</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">API Framework</span>
+                            <span class="text-emerald-500 font-mono text-xs">FastAPI / Flask</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Container</span>
+                            <span class="text-emerald-500 font-mono text-xs">Docker</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Cloud</span>
+                            <span class="text-emerald-500 font-mono text-xs">AWS / Azure ML</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Tecnologias associadas</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O ecossistema de dados é vasto. Focamos nas ferramentas padrão da indústria para garantir sua empregabilidade. Usamos **Python** como linguagem franca e bibliotecas robustas para processamento massivo.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        O Stack de Dados
+                    </h3>
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Core & Math</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Python 3.10+</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Pandas</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 border border-yellow-800 text-yellow-500 rounded text-sm font-medium">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Ferramentas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-300 rounded text-sm font-medium">Jupyter Notebooks</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">VS Code</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Google Colab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        Competências de Mercado
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Limpeza de Dados (ETL)</h4>
+                                <p class="text-gray-500 text-xs mt-1">Tratar dados nulos, duplicados e inconsistentes. 80% do trabalho é aqui.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Modelagem Estatística</h4>
+                                <p class="text-gray-500 text-xs mt-1">Entender correlação, causalidade, desvio padrão e testes de hipótese.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Comunicação de Insights</h4>
+                                <p class="text-gray-500 text-xs mt-1">Criar dashboards que explicam o "porquê" para stakeholders não-técnicos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-blue-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                DO ZERO AO MODELO EM PRODUÇÃO: CRIE UM SISTEMA DE RECOMENDAÇÃO INTELIGENTE.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Nesta trilha, vamos simular um ambiente real de uma startup. Você vai coletar dados de comportamento de usuários, limpar essa base, treinar um algoritmo de recomendação (estilo Spotify/Netflix) e disponibilizá-lo via API para consumo.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-blue-800 p-6 rounded hover:bg-blue-700 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Coleta & Python</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Dominando a sintaxe Python e bibliotecas essenciais. Importação de arquivos CSV, JSON e conexão com SQL.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-blue-900 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-blue-300/30">
+                        FUNDAÇÃO
+                    </span>
+                </div>
+
+                <div class="bg-indigo-800 p-6 rounded hover:bg-indigo-700 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - EDA & Cleaning</h4>
+                        <p class="text-xs text-indigo-100 leading-relaxed font-medium">
+                            Análise Exploratória de Dados. Entendendo a distribuição, removendo outliers e preenchendo lacunas.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-indigo-900 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-indigo-300/30">
+                        ANÁLISE
+                    </span>
+                </div>
+
+                <div class="bg-cyan-700 p-6 rounded hover:bg-cyan-600 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Treinamento</h4>
+                        <p class="text-xs text-cyan-100 leading-relaxed font-medium">
+                            Criação do modelo de Machine Learning. Divisão treino/teste, validação cruzada e métricas de erro.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-cyan-900 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-cyan-300/30">
+                        MODELAGEM
+                    </span>
+                </div>
+
+                <div class="bg-emerald-700 p-6 rounded hover:bg-emerald-600 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - API & Deploy</h4>
+                        <p class="text-xs text-emerald-100 leading-relaxed font-medium">
+                            Empacotamento do modelo com Pickle, criação de endpoint com FastAPI e deploy na nuvem.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-emerald-900 bg-opacity-50 text-[10px] text-white px-3 py-1 rounded-full w-max mt-4 border border-emerald-300/30">
+                        PRODUÇÃO
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

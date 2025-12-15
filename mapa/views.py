@@ -123,25 +123,55 @@ def pagina_pesquisador(request):
     area = PaginaPesquisador.objects.first()
     return render(request, 'pagina_pesquisador.html', {'area': area})
 
-@login_required
-def trilha_fullstack(request):
-    # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
+   
     return render(request, 'trilha_fullstack.html')
 @login_required
 def trilha_backend(request):
-    # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
+    
     return render(request, 'trilha_backend.html') 
 
 @login_required
 def trilha_devops(request):
-    # Mudou de 'trilhabackend.html' para 'trilha_backend.html'
     return render(request, 'trilha_devops.html')
 
 
 @login_required
 def trilha_frontend(request):
-    # Mudou de 'trilhafrontend.html' para 'trilha_frontend.html'
+    
     return render(request, 'trilha_frontend.html')
+
+@login_required
+def trilha_mobile(request):
+    
+    return render(request, 'trilha_mobile.html')
+
+@login_required
+def trilha_ciencia_dados(request):
+    return render(request, 'trilha_ciencia_dados.html')
+
+@login_required
+def trilha_engenheiro_dados(request):
+    return render(request, 'trilha_engenheiro_dados.html')
+
+@login_required
+def trilha_bi(request):
+    return render(request, 'trilha_bi.html')
+
+@login_required
+def trilha_engenharia_seguranca(request):
+    return render(request, 'trilha_engenharia_seguranca.html')
+
+@login_required
+def analise_seguranca(request):
+    return render(request, 'trilha_analise_seguranca.html')
+
+@login_required
+def forense(request):
+    return render(request, 'trilha_forense.html')
+
+@login_required
+def adm_redes(request): 
+    return render(request, 'trilha_adm_redes.html')
 
 @login_required
 def trilhas(request):
