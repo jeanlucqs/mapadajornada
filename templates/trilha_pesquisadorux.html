@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% block title %}Trilha UX Researcher - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-teal-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-rose-500 flex items-center justify-center text-[8px] font-bold text-white border border-black">Qli</span>
+                <span class="w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-[8px] font-bold text-white border border-black">Qnt</span>
+                <span class="w-5 h-5 rounded-full bg-teal-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">Ops</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: Discovery Contínuo, Research Ops e Data-Driven Design</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Investigação e Dados na</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Experiência do Usuário</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O UX Researcher é o cientista do produto. Sua missão é mitigar riscos, transformando suposições ("achismos") em certezas baseadas em evidências. Ele combina a empatia da psicologia com o rigor da análise de dados para responder: *quem* é o usuário, *o que* ele precisa e *por que* ele age de determinada maneira.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">O Detetive de Comportamentos</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    Enquanto o Designer desenha e o Dev codifica, o Researcher **investiga**. Ele é responsável por planejar e executar estudos que guiam a estratégia do negócio.
+                </p>
+                <p>
+                    A rotina é dinâmica: em um dia ele está conduzindo entrevistas em profundidade (Qualitativo), no outro está analisando milhares de respostas de surveys ou mapas de calor (Quantitativo). O maior desafio? Sintetizar tudo isso em *insights* acionáveis que convençam stakeholders e direcionem o *roadmap* do produto.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • Mixed Methods</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-teal-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-teal-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-teal-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Psicologia & Planejamento</h3>
+                    <p class="text-gray-400 text-sm mb-6">A base teórica e ética da pesquisa.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-teal-500 text-sm font-bold mb-2 uppercase">Mindset</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Vieses Cognitivos (Biases)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Ética & LGPD</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Formulação de Hipóteses</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-teal-500 text-sm font-bold mb-2 uppercase">Research Plan</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Definição de Escopo</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Recrutamento de Usuários</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-rose-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-rose-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-rose-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pesquisa Qualitativa</h3>
+                    <p class="text-gray-400 text-sm mb-6">Descobrindo o "Porquê" e o "Como".</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-rose-500 text-sm font-bold mb-2 uppercase">Discovery (Generativa)</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Entrevistas em Profundidade</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Diário de Uso</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Shadowing</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-rose-500 text-sm font-bold mb-2 uppercase">Avaliativa</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Teste de Usabilidade Moderado</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Card Sorting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-indigo-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-indigo-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pesquisa Quantitativa</h3>
+                    <p class="text-gray-400 text-sm mb-6">Validando com escala. O "Quanto" e o "Onde".</p>
+                    
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-indigo-500 text-sm font-bold mb-2 uppercase">Métodos</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Surveys & Questionários</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Testes A/B</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Tree Testing</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-indigo-500 text-sm font-bold mb-2 uppercase">Métricas UX</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">NPS / CSAT / CES</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Taxa de Conversão</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-emerald-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-emerald-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-network-wired text-emerald-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Research Ops & Estratégia</h3>
+                    <p class="text-gray-400 text-sm mb-6">Democratizando dados e gerindo o conhecimento.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Repositório</span>
+                            <span class="text-emerald-500 font-mono text-xs">Atomic Research (Dovetail)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Síntese</span>
+                            <span class="text-emerald-500 font-mono text-xs">Triangulação de Dados</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Continuous Discovery</span>
+                            <span class="text-emerald-500 font-mono text-xs">Ritmo Semanal de Pesquisa</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Laboratório de Pesquisa</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O Researcher não precisa de ferramentas de desenho vetorial, mas de plataformas robustas de coleta, gravação e análise de dados.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-microscope text-teal-500"></i>
+                        Stack Técnica
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Testes & Coleta</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-rose-900/30 border border-rose-800 text-rose-300 rounded text-sm font-medium">Maze / Lookback</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Typeform</span>
+                            <span class="px-3 py-1 bg-indigo-900/30 border border-indigo-800 text-indigo-300 rounded text-sm font-medium">Hotjar (Heatmaps)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Organização & Análise</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-emerald-900/30 border border-emerald-800 text-emerald-300 rounded text-sm font-medium">Dovetail</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Miro (Afinidade)</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Google Analytics / Mixpanel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-user-graduate text-indigo-500"></i>
+                        Habilidades Analíticas
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Escuta Ativa (Sem julgamento)</h4>
+                                <p class="text-gray-500 text-xs mt-1">Habilidade de ouvir o que o usuário diz e perceber o que ele *não* diz.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Pensamento Crítico</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber diferenciar correlação de causalidade. Dados podem mentir se mal interpretados.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Facilitação</h4>
+                                <p class="text-gray-500 text-xs mt-1">Conduzir workshops e dinâmicas com usuários e times internos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-teal-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                TRANSFORME DADOS BRUTOS EM DECISÕES ESTRATÉGICAS.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Nesta jornada, você evolui de um executor de testes para um estrategista que direciona o futuro do produto através de evidências.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded hover:bg-gray-800/60 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Junior Research</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed font-medium">
+                            Execução operacional de testes de usabilidade, anotações de entrevistas e recrutamento básico.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-gray-600/20 text-[10px] text-gray-300 px-3 py-1 rounded-full w-max mt-4 border border-gray-600/30">
+                        OPERACIONAL
+                    </span>
+                </div>
+
+                <div class="bg-rose-900/20 border border-rose-900/50 p-6 rounded hover:bg-rose-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Mid-Level</h4>
+                        <p class="text-xs text-rose-100 leading-relaxed font-medium">
+                            Autonomia para escolher metodologias (Quali/Quanti) e conduzir discovery de ponta a ponta.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-rose-500/20 text-[10px] text-rose-300 px-3 py-1 rounded-full w-max mt-4 border border-rose-500/30">
+                        ANALÍTICO
+                    </span>
+                </div>
+
+                <div class="bg-indigo-900/20 border border-indigo-900/50 p-6 rounded hover:bg-indigo-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Senior</h4>
+                        <p class="text-xs text-indigo-100 leading-relaxed font-medium">
+                            Influência no roadmap de produto, triangulação de dados complexos e mentoria.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-indigo-500/20 text-[10px] text-indigo-300 px-3 py-1 rounded-full w-max mt-4 border border-indigo-500/30">
+                        ESTRATÉGICO
+                    </span>
+                </div>
+
+                <div class="bg-teal-900/20 border border-teal-900/50 p-6 rounded hover:bg-teal-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Lead / Ops</h4>
+                        <p class="text-xs text-teal-100 leading-relaxed font-medium">
+                            Estruturação de Research Ops, repositórios de conhecimento e cultura de dados na empresa.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-teal-500/20 text-[10px] text-teal-300 px-3 py-1 rounded-full w-max mt-4 border border-teal-500/30">
+                        ESTRUTURAL
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

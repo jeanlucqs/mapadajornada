@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+{% block title %}Trilha UI Designer - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-fuchsia-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-fuchsia-500 flex items-center justify-center text-[8px] font-bold text-white border border-black">Px</span>
+                <span class="w-5 h-5 rounded-full bg-lime-400 flex items-center justify-center text-[8px] font-bold text-black border border-black">Mot</span>
+                <span class="w-5 h-5 rounded-full bg-cyan-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">Sys</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: Micro-interações, Design Systems e Mobile First</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Visual e Design de</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Interface do Usuário (UI)</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O UI Designer é o artista da tecnologia. Enquanto o UX define como o produto funciona, o UI define como ele se parece e como responde ao toque. É a disciplina que combina psicologia das cores, tipografia, grids e animação para criar interfaces que não são apenas funcionais, mas visualmente deslumbrantes e consistentes com a marca.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">O Artesão Digital</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    A missão desse profissional é o "Pixel Perfect". Ele transforma wireframes rascunhados em telas de alta fidelidade. Ele domina a hierarquia visual (o que o usuário deve olhar primeiro?) e garante que um botão pareça "clicável".
+                </p>
+                <p>
+                    A rotina envolve a criação de bibliotecas de componentes escaláveis, definição de *Design Tokens* (variáveis de estilo), colaboração estreita com desenvolvedores Front-end e a aplicação de movimentos sutis (Motion Design) para guiar o usuário.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • High Fidelity</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-fuchsia-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-fuchsia-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-palette text-fuchsia-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos do Design</h3>
+                    <p class="text-gray-400 text-sm mb-6">As regras invisíveis que tornam algo bonito.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-fuchsia-500 text-sm font-bold mb-2 uppercase">Teoria Visual</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Teoria das Cores & Contraste</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Tipografia (Hierarquia/Escala)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Gestalt & Espaço em Branco</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-fuchsia-500 text-sm font-bold mb-2 uppercase">Estrutura</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Grids & Layouts (8pt Grid)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Responsividade (Breakpoints)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-cyan-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-layer-group text-cyan-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Componentes & Figma</h3>
+                    <p class="text-gray-400 text-sm mb-6">Construindo interfaces modulares e inteligentes.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">Figma Avançado</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Auto Layout (Flexbox Visual)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Interactive Components</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Variables & Styles</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">Elementos UI</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Iconografia (Vetores/SVG)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Design de Formulários</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-lime-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-lime-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-magic text-lime-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Motion & Prototipagem</h3>
+                    <p class="text-gray-400 text-sm mb-6">Interfaces não são estáticas; elas se movem e reagem.</p>
+                    
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-lime-500 text-sm font-bold mb-2 uppercase">Interatividade</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Smart Animate</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Micro-interações (Hover/Click)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Transições de Tela</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-purple-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cubes text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Design Systems & Handoff</h3>
+                    <p class="text-gray-400 text-sm mb-6">Escalando o design para grandes times e produtos.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Design Tokens</span>
+                            <span class="text-purple-500 font-mono text-xs">JSON, Variáveis de Cor/Fonte</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Documentação</span>
+                            <span class="text-purple-500 font-mono text-xs">Zeroheight / Storybook</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Dev Handoff</span>
+                            <span class="text-purple-500 font-mono text-xs">Anotações para Front-end</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Atelier do Designer</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O foco aqui é produção visual. As ferramentas devem permitir precisão, manipulação vetorial e animação fluida.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-mouse-pointer text-cyan-500"></i>
+                        Software & Assets
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Core UI Tools</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-fuchsia-900/30 border border-fuchsia-800 text-fuchsia-300 rounded text-sm font-medium">Figma (Mastery)</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Adobe Illustrator</span>
+                            <span class="px-3 py-1 bg-lime-900/30 border border-lime-800 text-lime-300 rounded text-sm font-medium">ProtoPie (Motion)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Recursos</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Google Fonts</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Unsplash / Pexels</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Material Design Icons</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-eye text-fuchsia-500"></i>
+                        Habilidades Artísticas
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Atenção ao Detalhe</h4>
+                                <p class="text-gray-500 text-xs mt-1">Identificar desalinhamentos de 1px ou inconsistências de cor a olho nu.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Criatividade sob Restrição</h4>
+                                <p class="text-gray-500 text-xs mt-1">Inovar visualmente mantendo a usabilidade e as regras da marca.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-fuchsia-500/20 text-fuchsia-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Technical Mindset</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber como CSS Flexbox/Grid funciona para desenhar algo viável de programar.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-fuchsia-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                DO CANVAS EM BRANCO A PRODUTOS DESLUMBRANTES.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Esta jornada foca no domínio técnico do software e na evolução do seu olhar estético para criar interfaces de classe mundial.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded hover:bg-gray-800/60 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - UI Junior</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed font-medium">
+                            Replicação de telas, entendimento de tipografia, cores e uso básico do Figma.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-gray-600/20 text-[10px] text-gray-300 px-3 py-1 rounded-full w-max mt-4 border border-gray-600/30">
+                        APRENDIZ
+                    </span>
+                </div>
+
+                <div class="bg-cyan-900/20 border border-cyan-900/50 p-6 rounded hover:bg-cyan-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - UI Pleno</h4>
+                        <p class="text-xs text-cyan-100 leading-relaxed font-medium">
+                            Criação de componentes complexos, Auto Layout avançado e protótipos navegáveis.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-cyan-500/20 text-[10px] text-cyan-300 px-3 py-1 rounded-full w-max mt-4 border border-cyan-500/30">
+                        CRIADOR
+                    </span>
+                </div>
+
+                <div class="bg-fuchsia-900/20 border border-fuchsia-900/50 p-6 rounded hover:bg-fuchsia-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - UI Senior</h4>
+                        <p class="text-xs text-fuchsia-100 leading-relaxed font-medium">
+                            Gestão de Design Systems, definição de identidade visual e acessibilidade.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-fuchsia-500/20 text-[10px] text-fuchsia-300 px-3 py-1 rounded-full w-max mt-4 border border-fuchsia-500/30">
+                        ARQUITETO
+                    </span>
+                </div>
+
+                <div class="bg-lime-900/20 border border-lime-900/50 p-6 rounded hover:bg-lime-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Motion UI</h4>
+                        <p class="text-xs text-lime-100 leading-relaxed font-medium">
+                            Especialização em animações avançadas e micro-interações que encantam o usuário.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-lime-500/20 text-[10px] text-lime-300 px-3 py-1 rounded-full w-max mt-4 border border-lime-500/30">
+                        SPECIALIST
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

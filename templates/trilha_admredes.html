@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+{% block title %}Trilha Network Admin - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-blue-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-[8px] font-bold text-white border border-black">NOC</span>
+                <span class="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">CLD</span>
+                <span class="w-5 h-5 rounded-full bg-slate-400 flex items-center justify-center text-[8px] font-bold text-black border border-black">SDN</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: Redes Híbridas, Automação (Ansible) e Segurança de Borda</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Infraestrutura e</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Administração de Redes</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O Administrador de Redes é o arquiteto da conectividade. Sem ele, a nuvem não existe e os dados não trafegam. É a função responsável por garantir que bits viajem de A até B com velocidade, segurança e disponibilidade, gerenciando desde o cabo de rede até protocolos de roteamento complexos.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">O Guardião da Infraestrutura</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    O profissional de Redes moderno evoluiu do "técnico de cabos" para um engenheiro de tráfego digital. Ele domina o modelo OSI de ponta a ponta. Ele configura Switches, Roteadores e Firewalls, mas também entende de virtualização e redes definidas por software (SDN).
+                </p>
+                <p>
+                    A rotina envolve monitoramento proativo (NOC), resolução de incidentes críticos (troubleshooting), planejamento de capacidade e implementação de segurança na borda. O objetivo final é um só: **Uptime (Tempo de Atividade)**.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • 50+ Protocolos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-blue-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-project-diagram text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos & Camada Física</h3>
+                    <p class="text-gray-400 text-sm mb-6">Onde tudo começa: Bits, Cabos e Endereços.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Teoria Essencial</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Modelo OSI & TCP/IP</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Cálculo de Subnet (IPv4)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Introdução ao IPv6</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Physical Layer</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Cabeamento Estruturado</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Fibra Óptica</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Wifi & RF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-network-wired text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Routing & Switching</h3>
+                    <p class="text-gray-400 text-sm mb-6">O coração da rede corporativa (LAN/WAN).</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Switching (L2)</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">VLANs & Trunking (802.1Q)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Spanning Tree (STP)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Etherchannel/LACP</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Routing (L3)</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Estático vs Dinâmico</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">OSPF & EIGRP</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">NAT/PAT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-red-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-red-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Serviços de Rede & Security</h3>
+                    <p class="text-gray-400 text-sm mb-6">Gerenciando o acesso e protegendo o perímetro.</p>
+                    
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+[Image of Enterprise Network Topology Diagram]
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-red-500 text-sm font-bold mb-2 uppercase">Infra Services</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">DHCP & DNS</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">VPN (IPSec/SSL)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">QoS (Qualidade de Serviço)</span>
+                            </div>
+                        </div>
+                         <div>
+                            <h4 class="text-red-500 text-sm font-bold mb-2 uppercase">Network Security</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Firewall Rules (ACLs)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Port Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-indigo-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-indigo-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">NetDevOps & Cloud</h3>
+                    <p class="text-gray-400 text-sm mb-6">O futuro: Automação e Redes Híbridas.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Automação</span>
+                            <span class="text-indigo-500 font-mono text-xs">Ansible & Python for Network</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Cloud Networking</span>
+                            <span class="text-indigo-500 font-mono text-xs">AWS VPC / Azure VNet</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">High Availability</span>
+                            <span class="text-indigo-500 font-mono text-xs">BGP, HSRP/VRRP, Load Balancers</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Caixa de Ferramentas</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                Ferramentas de diagnóstico, configuração e virtualização indispensáveis para o dia a dia do NOC e da Engenharia.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-server text-blue-500"></i>
+                        Softwares & Vendors
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Diagnóstico & Gestão</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Wireshark</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">PuTTY / SecureCRT</span>
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-300 rounded text-sm font-medium">Nmap</span>
+                            <span class="px-3 py-1 bg-red-900/30 border border-red-800 text-red-300 rounded text-sm font-medium">Zabbix / PRTG</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Simulação & Lab</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">Cisco Packet Tracer</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">GNS3 / EVE-NG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-brain text-orange-500"></i>
+                        Habilidades Operacionais
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Raciocínio Lógico de Troubleshooting</h4>
+                                <p class="text-gray-500 text-xs mt-1">A habilidade de isolar o problema: "É DNS? É Rota? É Físico?" em segundos.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Documentação e Topologia</h4>
+                                <p class="text-gray-500 text-xs mt-1">Manter diagramas de rede atualizados (Visio/Draw.io) é vital para a equipe.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Gestão de Crise</h4>
+                                <p class="text-gray-500 text-xs mt-1">Manter a calma quando o servidor cai e a empresa inteira para.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-blue-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                GARANTA A ESTABILIDADE DO MUNDO CONECTADO.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Esta jornada leva você do básico da crimpagem de cabos até a configuração de protocolos de roteamento que mantêm a internet funcionando.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-blue-900/20 border border-blue-900/50 p-6 rounded hover:bg-blue-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Network Tech</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Entendimento de cabeamento, endereçamento IP básico e configuração inicial de switches.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-blue-500/20 text-[10px] text-blue-300 px-3 py-1 rounded-full w-max mt-4 border border-blue-500/30">
+                        JUNIOR
+                    </span>
+                </div>
+
+                <div class="bg-orange-900/20 border border-orange-900/50 p-6 rounded hover:bg-orange-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Network Admin</h4>
+                        <p class="text-xs text-orange-100 leading-relaxed font-medium">
+                            Gestão de VLANs, roteamento OSPF, políticas de Firewall e resolução de problemas L2/L3.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-orange-500/20 text-[10px] text-orange-300 px-3 py-1 rounded-full w-max mt-4 border border-orange-500/30">
+                        PLENO
+                    </span>
+                </div>
+
+                <div class="bg-red-900/20 border border-red-900/50 p-6 rounded hover:bg-red-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Network Analyst</h4>
+                        <p class="text-xs text-red-100 leading-relaxed font-medium">
+                            Análise de pacotes profunda, otimização de performance, segurança avançada e VPNs.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-red-500/20 text-[10px] text-red-300 px-3 py-1 rounded-full w-max mt-4 border border-red-500/30">
+                        SENIOR
+                    </span>
+                </div>
+
+                <div class="bg-indigo-900/20 border border-indigo-900/50 p-6 rounded hover:bg-indigo-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Net Architect</h4>
+                        <p class="text-xs text-indigo-100 leading-relaxed font-medium">
+                            Design de redes híbridas, automação com Ansible, SDN e integração Cloud.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-indigo-500/20 text-[10px] text-indigo-300 px-3 py-1 rounded-full w-max mt-4 border border-indigo-500/30">
+                        SPECIALIST
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

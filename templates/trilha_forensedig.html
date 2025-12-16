@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% block title %}Trilha Forense Digital - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-cyan-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-cyan-600 flex items-center justify-center text-[8px] font-bold text-black border border-black">DISK</span>
+                <span class="w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">RAM</span>
+                <span class="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center text-[8px] font-bold text-white border border-black">NET</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: Resposta a Incidentes (CSIRT) e Perícia Judicial</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Investigação Cibernética e</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Forense Digital</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                A Forense Digital é a ciência de identificar, preservar, recuperar, analisar e apresentar fatos sobre dados digitais. É a arte de reconstruir a cena de um crime digital, transformando bits e bytes em evidências legais irrefutáveis, mantendo estrita cadeia de custódia.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Perfil do Investigador</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    O Perito Forense não apenas "acha arquivos deletados". Ele é um detetive digital metódico. Ele deve entender profundamente como os Sistemas Operacionais gerenciam dados, como a memória RAM armazena processos voláteis e como redes trafegam informações.
+                </p>
+                <p>
+                    A atuação pode ser **Judicial** (auxiliando a justiça/polícia) ou **Corporativa** (Investigação de fraudes internas e Resposta a Incidentes). A regra de ouro é: nunca alterar a evidência original. O profissional domina a criação de imagens forenses, análise de malwares e redação de laudos técnicos.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • 55+ Tópicos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-cyan-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-cyan-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-balance-scale text-cyan-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos & Preservação</h3>
+                    <p class="text-gray-400 text-sm mb-6">A base legal e técnica da coleta de dados.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">Metodologia</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Cadeia de Custódia</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">RFC 3227</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Write Blockers</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-cyan-500 text-sm font-bold mb-2 uppercase">Aquisição de Dados</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Imagens Forenses (E01/DD)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Hashing (MD5/SHA)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-amber-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-amber-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-hdd text-amber-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sistemas de Arquivos & Artefatos</h3>
+                    <p class="text-gray-400 text-sm mb-6">Onde os segredos se escondem no disco.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-amber-500 text-sm font-bold mb-2 uppercase">Estrutura de Disco</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">NTFS (MFT, $LogFile)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">EXT4 / APFS</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Carving de Dados</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-amber-500 text-sm font-bold mb-2 uppercase">Artefatos Windows</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Registro (Registry)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Prefetch & Shimcache</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Event Logs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-purple-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-microscope text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Live Forensics & Rede</h3>
+                    <p class="text-gray-400 text-sm mb-6">Análise de dados voláteis e tráfego.</p>
+                    
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-purple-500 text-sm font-bold mb-2 uppercase">Memory Forensics</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Dump de RAM</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Análise de Processos</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Conexões Ativas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-green-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-file-contract text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mobile & Laudo Técnico</h3>
+                    <p class="text-gray-400 text-sm mb-6">Dispositivos móveis e a entrega final.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Mobile Forensics</span>
+                            <span class="text-green-500 font-mono text-xs">Android ADB & iOS Backup</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Cloud Forensics</span>
+                            <span class="text-green-500 font-mono text-xs">O365 & Google Workspace logs</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Relatório Pericial</span>
+                            <span class="text-green-500 font-mono text-xs">Linguagem técnica vs Jurídica</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Maleta do Perito</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                Ferramentas Open Source e proprietárias essenciais para aquisição, análise e indexação de evidências digitais.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-laptop-medical text-cyan-500"></i>
+                        Software & Hardware
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Aquisição & Triagem</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-900/30 border border-cyan-800 text-cyan-400 rounded text-sm font-medium">FTK Imager</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Kali Linux (Forensic Mode)</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Caine OS</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Análise Profunda</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-900/30 border border-purple-800 text-purple-300 rounded text-sm font-medium">Autopsy</span>
+                            <span class="px-3 py-1 bg-amber-900/30 border border-amber-800 text-amber-300 rounded text-sm font-medium">Volatility</span>
+                            <span class="px-3 py-1 bg-green-900/30 border border-green-800 text-green-300 rounded text-sm font-medium">Wireshark</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Eric Zimmerman Tools</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-user-secret text-amber-500"></i>
+                        Soft Skills & Mindset
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Imparcialidade</h4>
+                                <p class="text-gray-500 text-xs mt-1">A evidência fala por si. Evitar viés de confirmação é crucial para um laudo válido.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Curiosidade Investigativa</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber olhar onde ninguém olha (Slack space, Alternate Data Streams, Logs antigos).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Escrita Forense</h4>
+                                <p class="text-gray-500 text-xs mt-1">Capacidade de explicar termos complexos para juízes, advogados e gestores leigos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-cyan-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                DO INCIDENTE AO TRIBUNAL: DESCUBRA A VERDADE ESCONDIDA NOS DADOS.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Esta jornada prepara você para lidar com cenas de crimes digitais. Começamos com a preservação correta, passamos pela anatomia do sistema operacional e chegamos à análise de malwares complexos.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-cyan-900/20 border border-cyan-900/50 p-6 rounded hover:bg-cyan-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - First Responder</h4>
+                        <p class="text-xs text-cyan-100 leading-relaxed font-medium">
+                            Coleta de memória RAM, clonagem de disco com verificação de integridade (Hash) e isolamento da cena.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-cyan-500/20 text-[10px] text-cyan-300 px-3 py-1 rounded-full w-max mt-4 border border-cyan-500/30">
+                        COLETA
+                    </span>
+                </div>
+
+                <div class="bg-amber-900/20 border border-amber-900/50 p-6 rounded hover:bg-amber-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Windows Forensics</h4>
+                        <p class="text-xs text-amber-100 leading-relaxed font-medium">
+                            Shellbags, UserAssist, Logs de Eventos, LNK Files e análise profunda do Registro do Windows.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-amber-500/20 text-[10px] text-amber-300 px-3 py-1 rounded-full w-max mt-4 border border-amber-500/30">
+                        ANÁLISE
+                    </span>
+                </div>
+
+                <div class="bg-purple-900/20 border border-purple-900/50 p-6 rounded hover:bg-purple-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Advanced & RAM</h4>
+                        <p class="text-xs text-purple-100 leading-relaxed font-medium">
+                            Uso do Volatility Framework para encontrar malwares injetados na memória e conexões ocultas.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-purple-500/20 text-[10px] text-purple-300 px-3 py-1 rounded-full w-max mt-4 border border-purple-500/30">
+                        INVESTIGAÇÃO
+                    </span>
+                </div>
+
+                <div class="bg-green-900/20 border border-green-900/50 p-6 rounded hover:bg-green-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Expert Witness</h4>
+                        <p class="text-xs text-green-100 leading-relaxed font-medium">
+                            Estruturação do Laudo Pericial, resposta a quesitos legais e apresentação de evidências.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-green-500/20 text-[10px] text-green-300 px-3 py-1 rounded-full w-max mt-4 border border-green-500/30">
+                        REPORT
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

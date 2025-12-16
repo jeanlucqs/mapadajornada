@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% block title %}Trilha UX Designer - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-rose-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-rose-500 flex items-center justify-center text-[8px] font-bold text-white border border-black">RSCH</span>
+                <span class="w-5 h-5 rounded-full bg-violet-600 flex items-center justify-center text-[8px] font-bold text-white border border-black">Fi</span>
+                <span class="w-5 h-5 rounded-full bg-teal-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">A11y</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: Product Design, Design Systems e Acessibilidade</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Interface e Experiência do</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Usuário (UX/UI)</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O UX Designer é o advogado do usuário dentro da sala de reuniões. Sua missão é garantir que a tecnologia não seja apenas funcional, mas intuitiva, acessível e agradável. É a ponte vital entre a complexidade do código e a psicologia humana, transformando problemas de negócio em soluções de design elegantes.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">O Arquiteto de Experiências</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    O profissional de UX não "faz telas bonitas" — isso é consequência. O trabalho real envolve **Empatia e Pesquisa**. Ele entende a dor do cliente, desenha fluxos de navegação, cria protótipos interativos e testa exaustivamente antes de uma linha de código ser escrita.
+                </p>
+                <p>
+                    Hoje, o mercado exige um perfil híbrido (**Product Designer**): alguém que domine a estratégia (Discovery), a arquitetura de informação e a interface visual (UI), sempre baseando decisões em dados e diretrizes de acessibilidade (WCAG).
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • Double Diamond</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-rose-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-rose-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-search text-rose-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Imersão & Pesquisa</h3>
+                    <p class="text-gray-400 text-sm mb-6">Entendendo o problema antes de propor a solução.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-rose-500 text-sm font-bold mb-2 uppercase">UX Research</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Entrevistas com Usuários</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Criação de Personas</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Benchmarking</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-rose-500 text-sm font-bold mb-2 uppercase">Mapeamento</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Jornada do Usuário</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Empathy Map</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-amber-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-amber-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-sitemap text-amber-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Estrutura & Ideação</h3>
+                    <p class="text-gray-400 text-sm mb-6">Organizando a informação de forma lógica.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-amber-500 text-sm font-bold mb-2 uppercase">Arquitetura</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">User Flows (Fluxogramas)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Sitemaps</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Card Sorting</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-amber-500 text-sm font-bold mb-2 uppercase">Baixa Fidelidade</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Wireframes (Rabiscoframes)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Crazy 8s (Ideação)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-violet-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-violet-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-pen-nib text-violet-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Interface & Prototipagem</h3>
+                    <p class="text-gray-400 text-sm mb-6">Dando vida visual e interatividade ao produto.</p>
+                    
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-violet-500 text-sm font-bold mb-2 uppercase">UI Foundations</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Tipografia & Cores</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Grid & Spacing</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Atomic Design</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-violet-500 text-sm font-bold mb-2 uppercase">Figma Mastery</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Auto Layout</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Components & Variants</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Prototipagem Interativa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-teal-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-teal-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-check-circle text-teal-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Testes & Entrega</h3>
+                    <p class="text-gray-400 text-sm mb-6">Validando hipóteses e passando o bastão para Dev.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Usabilidade</span>
+                            <span class="text-teal-500 font-mono text-xs">Testes Moderados/Não-Moderados</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Acessibilidade</span>
+                            <span class="text-teal-500 font-mono text-xs">WCAG 2.1 Checklist & Contrast</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Developer Handoff</span>
+                            <span class="text-teal-500 font-mono text-xs">Specs & Assets Export</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Design Stack</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O designer moderno precisa de ferramentas que permitam colaboração em tempo real e prototipagem rápida.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-tools text-rose-500"></i>
+                        Ferramentas Essenciais
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">UI & Prototyping</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-violet-900/30 border border-violet-800 text-violet-300 rounded text-sm font-medium">Figma</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-400 rounded text-sm font-medium">Adobe XD / Sketch</span>
+                            <span class="px-3 py-1 bg-pink-900/30 border border-pink-800 text-pink-300 rounded text-sm font-medium">Framer (No-Code)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Colaboração & Whiteboard</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-900/30 border border-amber-800 text-amber-300 rounded text-sm font-medium">Miro</span>
+                            <span class="px-3 py-1 bg-purple-900/30 border border-purple-800 text-purple-300 rounded text-sm font-medium">FigJam</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Notion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-heart text-rose-500"></i>
+                        Habilidades Humanas
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Empatia Genuína</h4>
+                                <p class="text-gray-500 text-xs mt-1">Capacidade de se colocar no lugar do usuário e sentir suas frustrações.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Comunicação & Storytelling</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber "vender" o design explicando o <i>porquê</i> das decisões para stakeholders.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Receber Críticas (Design Critique)</h4>
+                                <p class="text-gray-500 text-xs mt-1">Entender que a crítica é sobre o trabalho, não sobre a pessoa. Desapego do ego.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-rose-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                NÃO CRIE APENAS TELAS. CRIE EXPERIÊNCIAS QUE AS PESSOAS AMEM.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Esta jornada transforma você de um entusiasta visual em um Product Designer estratégico, capaz de liderar a criação de produtos digitais do início ao fim.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded hover:bg-gray-800/60 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - UI Designer</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed font-medium">
+                            Domínio de ferramentas visuais, tipografia, teoria das cores e composição de layouts.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-gray-600/20 text-[10px] text-gray-300 px-3 py-1 rounded-full w-max mt-4 border border-gray-600/30">
+                        VISUAL
+                    </span>
+                </div>
+
+                <div class="bg-rose-900/20 border border-rose-900/50 p-6 rounded hover:bg-rose-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - UX Researcher</h4>
+                        <p class="text-xs text-rose-100 leading-relaxed font-medium">
+                            Condução de entrevistas, testes de usabilidade e análise heurística de interfaces.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-rose-500/20 text-[10px] text-rose-300 px-3 py-1 rounded-full w-max mt-4 border border-rose-500/30">
+                        PESQUISA
+                    </span>
+                </div>
+
+                <div class="bg-violet-900/20 border border-violet-900/50 p-6 rounded hover:bg-violet-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Product Designer</h4>
+                        <p class="text-xs text-violet-100 leading-relaxed font-medium">
+                            Visão holística (End-to-End), Design Systems e alinhamento com métricas de negócio.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-violet-500/20 text-[10px] text-violet-300 px-3 py-1 rounded-full w-max mt-4 border border-violet-500/30">
+                        ESTRATÉGIA
+                    </span>
+                </div>
+
+                <div class="bg-teal-900/20 border border-teal-900/50 p-6 rounded hover:bg-teal-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Design Ops</h4>
+                        <p class="text-xs text-teal-100 leading-relaxed font-medium">
+                            Gestão de processos, escala de times de design e integração técnica com engenharia.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-teal-500/20 text-[10px] text-teal-300 px-3 py-1 rounded-full w-max mt-4 border border-teal-500/30">
+                        LIDERANÇA
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

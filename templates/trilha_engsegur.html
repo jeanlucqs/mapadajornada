@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% block title %}Trilha Security Engineer - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-emerald-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center text-[8px] font-bold text-white border border-black">APP</span>
+                <span class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">CLD</span>
+                <span class="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">OPS</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: DevSecOps, Kubernetes e Automação</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Engenharia de Segurança e</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Security by Design</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                A Engenharia de Segurança não é sobre apagar incêndios, é sobre construir edifícios à prova de fogo. O foco é projetar sistemas resilientes, integrar segurança no ciclo de desenvolvimento (SDLC) e automatizar controles para que a proteção escale junto com o produto.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Perfil do Engenheiro</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    O Security Engineer é um híbrido entre Desenvolvedor, SysAdmin e Especialista em Segurança. Ele atua proativamente implementando **DevSecOps** e conceitos de **"Shift Left"**. Ao invés de apenas monitorar logs, ele escreve código para proteger a infraestrutura.
+                </p>
+                <p>
+                    Este profissional domina **Cloud (AWS/Azure)**, **Containers (Docker/Kubernetes)** e ferramentas de **CI/CD**. Ele desenha arquiteturas seguras, realiza modelagem de ameaças (Threat Modeling) e trabalha lado a lado com os times de Engenharia de Software para mitigar vulnerabilidades na fonte.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • 60+ Tópicos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-emerald-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-emerald-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-emerald-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Engenharia de Base</h3>
+                    <p class="text-gray-400 text-sm mb-6">Para proteger o código, você deve saber codar.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-emerald-500 text-sm font-bold mb-2 uppercase">Programação</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Python (Automação)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Golang (Ferramentas)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Bash Scripting</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-emerald-500 text-sm font-bold mb-2 uppercase">Sistemas & Hardening</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Linux Security Modules</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SSH Hardening</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-purple-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bug text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Application Security (AppSec)</h3>
+                    <p class="text-gray-400 text-sm mb-6">Segurança dentro do ciclo de software.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-purple-500 text-sm font-bold mb-2 uppercase">Secure Coding</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">OWASP Top 10 API/Web</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Input Validation</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Criptografia Aplicada</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-purple-500 text-sm font-bold mb-2 uppercase">Testing Tools</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SAST (Static Analysis)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">DAST (Dynamic Analysis)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">SCA (Dependências)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-blue-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Infraestrutura & Cloud</h3>
+                    <p class="text-gray-400 text-sm mb-6">Protegendo a nuvem e orquestradores.</p>
+
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-blue-500 text-sm font-bold mb-2 uppercase">Cloud Native</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">AWS IAM & Policies</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Kubernetes Security</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Docker Hardening</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-infinity text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">DevSecOps & Automação</h3>
+                    <p class="text-gray-400 text-sm mb-6">Integração Contínua, Segurança Contínua.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">IaC Security</span>
+                            <span class="text-orange-500 font-mono text-xs">Terraform & Ansible</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">CI/CD Pipeline</span>
+                            <span class="text-orange-500 font-mono text-xs">GitHub Actions / Jenkins</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Observabilidade</span>
+                            <span class="text-orange-500 font-mono text-xs">ELK Stack & Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Stack Tecnológico</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O Engenheiro precisa dominar ferramentas que se integram aos pipelines de desenvolvimento. O foco é automação e prevenção.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-cogs text-emerald-500"></i>
+                        Engineering Toolbelt
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Pipeline & Scan</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-900/30 border border-purple-800 text-purple-300 rounded text-sm font-medium">SonarQube</span>
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-300 rounded text-sm font-medium">Snyk</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Trivy</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-gray-300 rounded text-sm font-medium">OWASP ZAP (Automated)</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Infra & Cloud</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Terraform</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 border border-yellow-800 text-yellow-300 rounded text-sm font-medium">Vault (HashiCorp)</span>
+                            <span class="px-3 py-1 bg-emerald-900/30 border border-emerald-800 text-emerald-300 rounded text-sm font-medium">WAF (Cloudflare/AWS)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-network-wired text-blue-500"></i>
+                        Arquitetura & Cultura
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Threat Modeling</h4>
+                                <p class="text-gray-500 text-xs mt-1">Capacidade de desenhar um sistema e antecipar onde ele vai quebrar antes de codar.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Cultura DevOps</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber conversar com desenvolvedores sem ser o "Dr. Não". Ser um facilitador.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Design Patterns</h4>
+                                <p class="text-gray-500 text-xs mt-1">Entender padrões de arquitetura (Microserviços, Serverless) para protegê-los.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-emerald-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                PARE DE REMENDAR FALHAS. COMECE A PROJETAR SISTEMAS QUE JÁ NASCEM SEGUROS.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Esta jornada transforma você em um arquiteto de defesa. Começamos com bases sólidas de programação e redes, e avançamos para a implementação de pipelines DevSecOps complexos.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded hover:bg-gray-800/60 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Code & Script</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed font-medium">
+                            Automatize tarefas repetitivas com Python e entenda como o Linux funciona no kernel.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-gray-600/20 text-[10px] text-gray-300 px-3 py-1 rounded-full w-max mt-4 border border-gray-600/30">
+                        FUNDAÇÃO
+                    </span>
+                </div>
+
+                <div class="bg-purple-900/20 border border-purple-900/50 p-6 rounded hover:bg-purple-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - AppSec Engineer</h4>
+                        <p class="text-xs text-purple-100 leading-relaxed font-medium">
+                            Implemente SAST/DAST no pipeline e realize Code Reviews focados em segurança.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-purple-500/20 text-[10px] text-purple-300 px-3 py-1 rounded-full w-max mt-4 border border-purple-500/30">
+                        SOFTWARE
+                    </span>
+                </div>
+
+                <div class="bg-blue-900/20 border border-blue-900/50 p-6 rounded hover:bg-blue-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Cloud Architect</h4>
+                        <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                            Domine AWS/Azure Security, IAM Roles, KMS e segurança em Serverless.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-blue-500/20 text-[10px] text-blue-300 px-3 py-1 rounded-full w-max mt-4 border border-blue-500/30">
+                        INFRA
+                    </span>
+                </div>
+
+                <div class="bg-emerald-900/20 border border-emerald-900/50 p-6 rounded hover:bg-emerald-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - DevSecOps</h4>
+                        <p class="text-xs text-emerald-100 leading-relaxed font-medium">
+                            Integre segurança no Jenkins/GitLab CI, proteja Kubernetes e gerencie segredos com Vault.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-emerald-500/20 text-[10px] text-emerald-300 px-3 py-1 rounded-full w-max mt-4 border border-emerald-500/30">
+                        PIPELINE
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

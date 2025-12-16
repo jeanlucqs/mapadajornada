@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Mapa da Jornada
+      {% endblock %}
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f0f0f',
+                        secondary: '#1a1a1a',
+                        accent: '#3a86ff'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* A classe .gradient-bg foi removida pois agora usamos o estilo com blobs */
+        
+        /* Animação suave para o menu */
+        #mobile-menu {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 100;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transform-origin: top right;
+            animation: scaleIn 0.2s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        /* Overlay para fechar o menu */
+        #menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+            backdrop-filter: blur(2px);
+        }
+    </style>
+  </head>
+
+  <body class="flex flex-col min-h-screen bg-primary text-white font-sans">
+    
+    <header class="bg-primary border-b border-gray-800 sticky top-0 z-50 relative overflow-hidden py-6">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-accent rounded-full blur-2xl"></div>
+            <div class="absolute top-0 right-0 w-40 h-40 bg-purple-500 rounded-full blur-2xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="{% static 'imagens/logo.png' %}" alt="Mapa da Jornada Icon" class="h-10 w-auto mr-3">
+                    
+                    <div class="text-2xl font-bold text-white">
+                        <span>Mapa da Jornada</span>
+                    </div>
+                </div>
+                
+                <nav class="hidden lg:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="{% url 'index' %}" class="text-gray-300 hover:text-white transition-colors font-medium">Carreiras</a></li>
+                        <li><a href="{% url 'trilhas' %}" class="text-gray-300 hover:text-white transition-colors font-medium">Trilhas</a></li>
+                        </ul>
+                </nav>
+    
+                <nav class="hidden md:block lg:hidden">
+                    <ul class="flex space-x-6">
+                        <li><a href="{% url 'index' %}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Carreiras</a></li>
+                        <li><a href="{% url 'trilhas' %}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm">Trilhas</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="hidden lg:flex items-center space-x-6">
+                    {% if user.is_authenticated %}
+                    <span class="text-gray-300">Olá, {{ user.username }}!</span>
+                    
+                    <a href="{% url 'perfil' %}" class="text-white hover:text-accent font-semibold transition-colors duration-300 transform hover:scale-105">
+                        Perfil
+                    </a>
+
+                    <form action="{% url 'logout' %}" method="post" class="inline">
+                        {% csrf_token %}
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-300">
+                            Sair
+                        </button>
+                    </form>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="bg-accent hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        Área do Aluno
+                    </a>
+                    {% endif %}
+                </div>
+    
+                <div class="hidden md:flex lg:hidden items-center space-x-4">
+                    {% if user.is_authenticated %}
+                    <span class="text-gray-300 text-sm whitespace-nowrap">Olá, {{ user.username|truncatechars:10 }}!</span>
+                    
+                    <a href="{% url 'perfil' %}" class="text-white hover:text-accent font-semibold transition-colors duration-300 text-sm whitespace-nowrap">
+                        Perfil
+                    </a>
+                    
+                    <form action="{% url 'logout' %}" method="post" class="inline">
+                        {% csrf_token %}
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300 text-sm">
+                            Sair
+                        </button>
+                    </form>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="bg-accent hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-sm whitespace-nowrap">
+                        Entrar
+                    </a>
+                    {% endif %}
+                </div>
+    
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
+                        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-secondary border border-gray-700 w-64 rounded-xl shadow-2xl">
+        <div class="p-4 space-y-3">
+            <div class="space-y-2">
+                <a href="{% url 'index' %}" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
+                    <i class="fas fa-briefcase w-5 mr-3"></i>
+                    Carreiras
+                </a>
+                <a href="{% url 'trilhas' %}" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-medium">
+                    <i class="fas fa-road w-5 mr-3"></i>
+                    Trilhas
+                </a>
+            </div>
+
+            <div class="border-t border-gray-700 pt-3">
+                {% if user.is_authenticated %}
+                <div class="space-y-2">
+                    <div class="flex items-center px-3 py-2 text-gray-400 text-xs">
+                        <i class="fas fa-user w-5 mr-3"></i>
+                        Olá, {{ user.username }}!
+                    </div>
+                    <a href="{% url 'perfil' %}" class="block text-gray-300 hover:text-white hover:bg-gray-800 py-2 px-3 rounded-lg transition-all duration-200 text-sm font-semibold">
+                        <i class="fas fa-user-circle w-5 mr-2"></i>
+                        Perfil
+                    </a>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="w-full text-white bg-red-600 hover:bg-red-700 py-2 px-3 rounded-lg text-left transition-all duration-200 text-sm font-medium">
+                            <i class="fas fa-sign-out-alt w-5 mr-3"></i>
+                            Sair
+                        </button>
+                    </form>
+                </div>
+                {% else %}
+                <a href="{% url 'login' %}" class="block bg-accent hover:bg-blue-600 text-white font-semibold py-2 px-3 rounded-lg text-center transition-all duration-200 text-sm">
+                    <i class="fas fa-graduation-cap w-5 mr-2"></i>
+                    Área do Aluno
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-overlay" class="hidden md:hidden"></div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        function toggleMenu() {
+            const isOpening = mobileMenu.classList.contains('hidden');
+            
+            mobileMenu.classList.toggle('hidden');
+            menuOverlay.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+
+            if (isOpening) {
+                mobileMenu.style.animation = 'scaleIn 0.2s ease-out';
+            }
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            menuOverlay.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+
+        // Fechar menu ao clicar no overlay
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Fechar menu ao clicar em um link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a, button[type="submit"]');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Fechar menu ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                closeMenu();
+            }
+        });
+
+        // Fechar menu com a tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                closeMenu();
+            }
+        });
+    </script>
+
+    <main class="flex-grow">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="bg-primary border-t border-gray-800 py-12 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center">
+                    <img src="{% static 'imagens/logo.png' %}" alt="Mapa da Jornada Icon" class="h-10 w-auto mr-3">
+
+                    <div class="text-2xl font-bold text-white">
+                        <span>Mapa da Jornada</span>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right text-gray-500 text-sm">
+                    &copy; 2025 - IFRN | Curso de Informática para Internet 💡 |
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

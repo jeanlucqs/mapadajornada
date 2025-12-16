@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+{% block title %}Trilha Cloud Architect - Mapa da Jornada{% endblock %}
+{% block content %}
+<body class="bg-black text-white selection:bg-sky-600 selection:text-white">
+
+    <main class="max-w-5xl mx-auto px-6 lg:px-12 py-10">
+
+        <div class="inline-flex items-center bg-[#1F1F1F] rounded-full px-4 py-2 mb-8 border border-gray-800">
+            <div class="flex -space-x-1 mr-3">
+                <span class="w-5 h-5 rounded-full bg-sky-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">AZR</span>
+                <span class="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">AWS</span>
+                <span class="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-[8px] font-bold text-black border border-black">$$$</span>
+            </div>
+            <span class="text-xs text-gray-400">Alta demanda: Migração, FinOps e Modernização de Legado</span>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-xl md:text-2xl font-normal text-gray-200">Estratégia e Design de</h2>
+            <h1 class="text-4xl md:text-5xl font-bold mt-1 mb-6 text-white bg-clip-text">Arquitetura em Nuvem</h1>
+            <p class="text-gray-400 leading-relaxed max-w-3xl text-sm md:text-base">
+                O Arquiteto de Soluções é o visionário técnico. Ele traduz requisitos de negócio complexos em infraestruturas escaláveis, seguras e econômicas. Não se trata apenas de "subir servidores", mas de desenhar sistemas resilientes que suportem o crescimento da empresa utilizando o melhor que a nuvem (AWS, Azure, GCP) tem a oferecer.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">O Estrategista Técnico</h2>
+            <div class="space-y-6 text-gray-400 text-sm md:text-base leading-relaxed">
+                <p>
+                    Diferente do SysAdmin que mantém as luzes acesas, o Arquiteto decide *quais* luzes devem ser compradas. Ele deve dominar os padrões de arquitetura (Microserviços, Event-Driven, Serverless) e entender profundamente os modelos de custo (CapEx vs OpEx).
+                </p>
+                <p>
+                    A rotina envolve desenhar diagramas de topologia, liderar migrações (Lift & Shift vs Refactoring), definir padrões de governança e garantir que a solução siga os pilares do **Well-Architected Framework**: Segurança, Confiabilidade, Eficiência de Performance, Otimização de Custos e Excelência Operacional.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Conteúdo da Trilha</h2>
+                <span class="text-gray-400 text-sm">4 Fases • Well-Architected</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-sky-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">01</span>
+                    <div class="w-10 h-10 bg-sky-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud text-sky-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos & IaaS</h3>
+                    <p class="text-gray-400 text-sm mb-6">A base da computação em nuvem (Compute, Network, Storage).</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sky-500 text-sm font-bold mb-2 uppercase">Compute & Network</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">EC2 / Azure VM</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">VPC / VNet Design</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Load Balancers</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sky-500 text-sm font-bold mb-2 uppercase">Storage Strategy</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Block (EBS) vs Object (S3)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Lifecycle Policies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-orange-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">02</span>
+                    <div class="w-10 h-10 bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-cubes text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Escalabilidade & Databases</h3>
+                    <p class="text-gray-400 text-sm mb-6">Garantindo que o sistema não caia e os dados persistam.</p>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Databases (PaaS)</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Relacional (RDS/SQL DB)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">NoSQL (DynamoDB/Cosmos)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Caching (Redis)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-orange-500 text-sm font-bold mb-2 uppercase">Resiliência</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Auto Scaling Groups</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Multi-AZ vs Multi-Region</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Disaster Recovery (DR)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-pink-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">03</span>
+                    <div class="w-10 h-10 bg-pink-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-rocket text-pink-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Modernização & Serverless</h3>
+                    <p class="text-gray-400 text-sm mb-6">Saindo de servidores para serviços gerenciados.</p>
+                    
+                    <div class="mb-4 p-2 bg-black/50 rounded border border-gray-800 flex justify-center items-center text-gray-500 text-xs overflow-hidden">
+                        
+
+
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-pink-500 text-sm font-bold mb-2 uppercase">Cloud Native</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Containers (EKS/AKS)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">FaaS (Lambda/Functions)</span>
+                                <span class="px-2 py-1 bg-gray-900 border border-gray-800 rounded text-xs text-gray-300">Event Bridge / SNS / SQS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#111] border border-gray-800 rounded-xl p-6 relative group hover:border-violet-500 transition-colors">
+                    <span class="absolute top-6 right-6 text-gray-500 text-xs font-mono">04</span>
+                    <div class="w-10 h-10 bg-violet-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-balance-scale text-violet-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Governança, Segurança & FinOps</h3>
+                    <p class="text-gray-400 text-sm mb-6">O olhar do gestor sobre o ambiente técnico.</p>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Identity (IAM)</span>
+                            <span class="text-violet-500 font-mono text-xs">RBAC, MFA & SSO</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">FinOps</span>
+                            <span class="text-violet-500 font-mono text-xs">Cost Explorer, Budgets & Spot Instances</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Compliance</span>
+                            <span class="text-violet-500 font-mono text-xs">AWS Config / Azure Policy</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6">Design Toolkit</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-4xl">
+                O Arquiteto escreve menos código que um Dev, mas desenha mais. Suas ferramentas são diagramas, calculadoras e templates de infraestrutura.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-pencil-ruler text-sky-500"></i>
+                        Arquitetura & IaC
+                    </h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Diagramas & Visualização</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-sky-900/30 border border-sky-800 text-sky-300 rounded text-sm font-medium">Lucidchart / Draw.io</span>
+                            <span class="px-3 py-1 bg-gray-800 border border-gray-700 text-white rounded text-sm font-medium">Visio</span>
+                            <span class="px-3 py-1 bg-pink-900/30 border border-pink-800 text-pink-300 rounded text-sm font-medium">Cloudcraft</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Implementação (IaC)</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-violet-900/30 border border-violet-800 text-violet-300 rounded text-sm font-medium">Terraform</span>
+                            <span class="px-3 py-1 bg-orange-900/30 border border-orange-800 text-orange-300 rounded text-sm font-medium">AWS CloudFormation</span>
+                            <span class="px-3 py-1 bg-blue-900/30 border border-blue-800 text-blue-300 rounded text-sm font-medium">Azure Bicep</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-handshake text-orange-500"></i>
+                        Consultoria & Negócios
+                    </h3>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Comunicação C-Level</h4>
+                                <p class="text-gray-500 text-xs mt-1">Saber traduzir "Kubernetes Cluster" para "Agilidade na entrega de valor" para o CEO.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Trade-offs (Tomada de Decisão)</h4>
+                                <p class="text-gray-500 text-xs mt-1">Não existe solução perfeita. Saber escolher entre Custo vs Performance vs Risco.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 min-w-[20px] h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs">✓</div>
+                            <div>
+                                <h4 class="text-white font-medium text-sm">Negociação com Vendors</h4>
+                                <p class="text-gray-500 text-xs mt-1">Entender contratos de licenciamento, Enterprise Agreements e suporte.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-[#1a1a1a] p-8 md:p-12 rounded-lg border-t-4 border-sky-600">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-6 uppercase leading-tight">
+                DO ON-PREMISE À NUVEM: DESENHE O FUTURO DA INFRAESTRUTURA.
+            </h3>
+            
+            <p class="text-gray-300 mb-10 text-sm md:text-base leading-relaxed">
+                Esta jornada prepara você para as certificações mais cobiçadas do mercado (Solutions Architect Associate/Pro) e para projetos de transformação digital real.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="bg-gray-800/40 border border-gray-700/50 p-6 rounded hover:bg-gray-800/60 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">01 - Practitioner</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed font-medium">
+                            Entendimento dos serviços globais, modelo de responsabilidade compartilhada e faturamento.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-gray-600/20 text-[10px] text-gray-300 px-3 py-1 rounded-full w-max mt-4 border border-gray-600/30">
+                        CONCEITOS
+                    </span>
+                </div>
+
+                <div class="bg-sky-900/20 border border-sky-900/50 p-6 rounded hover:bg-sky-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">02 - Associate</h4>
+                        <p class="text-xs text-sky-100 leading-relaxed font-medium">
+                            Design de arquiteturas de 3 camadas (Web/App/DB), segurança de redes VPC e armazenamento S3.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-sky-500/20 text-[10px] text-sky-300 px-3 py-1 rounded-full w-max mt-4 border border-sky-500/30">
+                        DESIGN
+                    </span>
+                </div>
+
+                <div class="bg-orange-900/20 border border-orange-900/50 p-6 rounded hover:bg-orange-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">03 - Professional</h4>
+                        <p class="text-xs text-orange-100 leading-relaxed font-medium">
+                            Migrações complexas, conectividade híbrida (Direct Connect/ExpressRoute) e Multi-Account.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-orange-500/20 text-[10px] text-orange-300 px-3 py-1 rounded-full w-max mt-4 border border-orange-500/30">
+                        ESTRATÉGIA
+                    </span>
+                </div>
+
+                <div class="bg-violet-900/20 border border-violet-900/50 p-6 rounded hover:bg-violet-900/40 transition cursor-pointer flex flex-col justify-between min-h-[220px] group">
+                    <div>
+                        <h4 class="font-bold text-white text-sm mb-3 uppercase opacity-90 group-hover:opacity-100">04 - Specialty</h4>
+                        <p class="text-xs text-violet-100 leading-relaxed font-medium">
+                            Aprofundamento em áreas específicas: Segurança Avançada, Data Analytics ou Networking.
+                        </p>
+                    </div>
+                    <span class="inline-block bg-violet-500/20 text-[10px] text-violet-300 px-3 py-1 rounded-full w-max mt-4 border border-violet-500/30">
+                        EXPERT
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+{% endblock %}

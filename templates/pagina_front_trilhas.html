@@ -1,0 +1,526 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Trilha Frontend - Mapa da Jornada{% endblock %}
+
+{% block content %}
+
+<section class="gradient-bg pt-32 pb-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-blue-600 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-600 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10 text-center">
+        <div class="mb-8 inline-flex items-center justify-center">
+            <span class="px-4 py-1.5 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold tracking-wide uppercase">
+                <i class="fas fa-rocket mr-2"></i> Trilha Master
+            </span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
+            Torne-se um <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Desenvolvedor Front-end</span>
+        </h1>
+        
+        <p class="text-gray-400 text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+            Não é apenas sobre código. É sobre criar experiências que <span class="text-white font-medium">milhões de pessoas</span> vão tocar, clicar e usar todos os dias.
+        </p>
+        
+        </div>
+</section>
+
+<section class="bg-[#0f0f0f] py-24 border-y border-gray-800 relative">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">O Que Você Vai Fazer?</h2>
+            <p class="text-gray-400">Transforme linhas de código em interfaces visuais.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-center">
+            
+            <div class="bg-[#1e1e1e] rounded-xl overflow-hidden shadow-2xl border border-gray-700 font-mono text-sm relative group hover:border-blue-500/50 transition-colors duration-500">
+                <div class="bg-[#252526] px-4 py-2 flex items-center gap-2 border-b border-gray-700">
+                    <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <span class="text-gray-400 ml-4 text-xs">style.css</span>
+                </div>
+                <div class="p-6 text-gray-300 leading-relaxed">
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">1</span> <span class="text-purple-400">.botao-magico</span> <span class="text-yellow-400">{</span></div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">2</span> &nbsp;&nbsp;<span class="text-blue-300">background</span>: <span class="text-orange-400">linear-gradient</span>(45deg, blue, purple);</div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">3</span> &nbsp;&nbsp;<span class="text-blue-300">color</span>: <span class="text-orange-400">white</span>;</div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">4</span> &nbsp;&nbsp;<span class="text-blue-300">padding</span>: <span class="text-green-300">15px 30px</span>;</div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">5</span> &nbsp;&nbsp;<span class="text-blue-300">border-radius</span>: <span class="text-green-300">50px</span>;</div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">6</span> &nbsp;&nbsp;<span class="text-blue-300">box-shadow</span>: <span class="text-green-300">0 10px 20px rgba(0,0,0,0.3)</span>;</div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">7</span> &nbsp;&nbsp;<span class="text-blue-300">transition</span>: <span class="text-green-300">transform 0.3s</span>;</div>
+                    <div class="flex"><span class="text-gray-600 w-6 select-none">8</span> <span class="text-yellow-400">}</span></div>
+                    <div class="absolute bottom-6 left-10 w-2 h-5 bg-blue-500 animate-pulse"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
+                <p class="text-gray-400 mb-8 text-sm uppercase tracking-widest">Resultado Renderizado</p>
+                <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-xl shadow-lg shadow-purple-500/30 transform hover:scale-110 transition-transform duration-300 cursor-pointer">
+                    Botão Mágico ✨
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#0a0a0a] py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-8">Carreira</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="space-y-6">
+                
+                <div class="bg-gray-800/30 border border-gray-700 rounded-2xl p-6 backdrop-blur-sm">
+                    <h4 class="text-white font-semibold mb-4 border-b border-gray-700 pb-2">Visão de Mercado</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                <span>Demanda (Remoto)</span>
+                                <span class="text-green-400">Alta</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                <span>Salário Inicial</span>
+                                <span class="text-blue-400">Médio/Alto</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                <span>Curva de Aprendizado</span>
+                                <span class="text-orange-400">Moderada</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800/30 border border-gray-700 rounded-2xl p-6 backdrop-blur-sm">
+                    <h4 class="text-white font-semibold mb-4 border-b border-gray-700 pb-2">Ferramentas Diárias</h4>
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center gap-1 group">
+                            <div class="w-10 h-10 rounded-lg bg-[#007acc]/20 flex items-center justify-center group-hover:bg-[#007acc]/40 transition">
+                                <i class="fas fa-code text-[#007acc]"></i>
+                            </div>
+                            <span class="text-[10px] text-gray-400">VS Code</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 group">
+                            <div class="w-10 h-10 rounded-lg bg-[#F24E1E]/20 flex items-center justify-center group-hover:bg-[#F24E1E]/40 transition">
+                                <i class="fab fa-figma text-[#F24E1E]"></i>
+                            </div>
+                            <span class="text-[10px] text-gray-400">Figma</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 group">
+                            <div class="w-10 h-10 rounded-lg bg-[#f05032]/20 flex items-center justify-center group-hover:bg-[#f05032]/40 transition">
+                                <i class="fab fa-git-alt text-[#f05032]"></i>
+                            </div>
+                            <span class="text-[10px] text-gray-400">Git</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 group">
+                            <div class="w-10 h-10 rounded-lg bg-[#4285F4]/20 flex items-center justify-center group-hover:bg-[#4285F4]/40 transition">
+                                <i class="fab fa-chrome text-[#4285F4]"></i>
+                            </div>
+                            <span class="text-[10px] text-gray-400">Chrome</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lg:col-span-2 bg-gray-800/30 border border-gray-700 rounded-2xl p-8 backdrop-blur-sm">
+                <div class="flex items-center gap-6 mb-8">
+                    <div class="w-20 h-20 rounded-full bg-gray-700 flex items-center justify-center shadow-lg shadow-blue-900/20">
+                        <i class="fas fa-laptop-code text-3xl text-blue-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Pessoa Desenvolvedora Front-end</h3>
+                        <p class="text-gray-400 text-sm">O arquiteto das interfaces web</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-white font-semibold mb-4 text-lg border-b border-gray-700 pb-2">Habilidades</h4>
+                        <ul class="space-y-3 text-gray-400 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Leitura e escrita em HTML5 e CSS3</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Implementação de design responsivo</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Experiência com JavaScript (ES6+)</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Frameworks (React, Vue ou Angular)</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 mr-2"></i> Controle de versão (Git/GitHub)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-semibold mb-4 text-lg border-b border-gray-700 pb-2">Tecnologias</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-900/30 text-orange-400 rounded-md text-xs border border-orange-800">HTML5</span>
+                            <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-md text-xs border border-blue-800">CSS3</span>
+                            <span class="px-3 py-1 bg-yellow-900/30 text-yellow-400 rounded-md text-xs border border-yellow-800">JavaScript</span>
+                            <span class="px-3 py-1 bg-cyan-900/30 text-cyan-400 rounded-md text-xs border border-cyan-800">React</span>
+                            <span class="px-3 py-1 bg-purple-900/30 text-purple-400 rounded-md text-xs border border-purple-800">Tailwind</span>
+                            <span class="px-3 py-1 bg-gray-700/30 text-gray-300 rounded-md text-xs border border-gray-600">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="conteudo" class="gradient-bg py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-8">Conteúdo da Trilha</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div class="space-y-4">
+                <div class="border border-gray-700 bg-gray-800/30 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('content-fundamentos')" class="w-full flex justify-between items-center p-5 cursor-pointer hover:bg-gray-700/30 transition-colors group focus:outline-none">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400">1</div>
+                            <span class="text-white font-medium text-lg">Fundamentos</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-500 text-sm">6 tópicos</span>
+                            <i id="icon-content-fundamentos" class="fas fa-chevron-down text-gray-500 group-hover:text-blue-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div id="content-fundamentos" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-5 border-t border-gray-700 bg-gray-900/50">
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center"><i class="fas fa-play-circle text-blue-500 mr-3 text-sm"></i> HTML5 Semântico & SEO</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-blue-500 mr-3 text-sm"></i> CSS3: Flexbox & Grid</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-blue-500 mr-3 text-sm"></i> Design Responsivo</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-blue-500 mr-3 text-sm"></i> Lógica de Programação</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-blue-500 mr-3 text-sm"></i> DOM Manipulation</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-blue-500 mr-3 text-sm"></i> JavaScript Moderno (ES6+)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 bg-gray-800/30 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('content-ferramentas')" class="w-full flex justify-between items-center p-5 cursor-pointer hover:bg-gray-700/30 transition-colors group focus:outline-none">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400">2</div>
+                            <span class="text-white font-medium text-lg">Ferramentas</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-500 text-sm">4 tópicos</span>
+                            <i id="icon-content-ferramentas" class="fas fa-chevron-down text-gray-500 group-hover:text-blue-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div id="content-ferramentas" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-5 border-t border-gray-700 bg-gray-900/50">
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center"><i class="fas fa-play-circle text-green-500 mr-3 text-sm"></i> Git & GitHub Flow</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-green-500 mr-3 text-sm"></i> NPM & Yarn</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-green-500 mr-3 text-sm"></i> Framework CSS (Tailwind)</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-green-500 mr-3 text-sm"></i> Build Tools (Vite)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 bg-gray-800/30 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('content-mercado')" class="w-full flex justify-between items-center p-5 cursor-pointer hover:bg-gray-700/30 transition-colors group focus:outline-none">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400">3</div>
+                            <span class="text-white font-medium text-lg">Carreira</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-500 text-sm">4 tópicos</span>
+                            <i id="icon-content-mercado" class="fas fa-chevron-down text-gray-500 group-hover:text-blue-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div id="content-mercado" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-5 border-t border-gray-700 bg-gray-900/50">
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center"><i class="fas fa-play-circle text-orange-500 mr-3 text-sm"></i> LinkedIn Estratégico</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-orange-500 mr-3 text-sm"></i> Currículo para Tech</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-orange-500 mr-3 text-sm"></i> Entrevistas Técnicas</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-orange-500 mr-3 text-sm"></i> Soft Skills Essenciais</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 bg-gray-800/30 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('content-projetos')" class="w-full flex justify-between items-center p-5 cursor-pointer hover:bg-gray-700/30 transition-colors group focus:outline-none">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">4</div>
+                            <span class="text-white font-medium text-lg">Projetos</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-500 text-sm">4 tópicos</span>
+                            <i id="icon-content-projetos" class="fas fa-chevron-down text-gray-500 group-hover:text-blue-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div id="content-projetos" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <div class="p-5 border-t border-gray-700 bg-gray-900/50">
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-center"><i class="fas fa-play-circle text-purple-500 mr-3 text-sm"></i> Landing Page Responsiva</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-purple-500 mr-3 text-sm"></i> To-Do List (JS Puro)</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-purple-500 mr-3 text-sm"></i> App de Clima (API)</li>
+                                <li class="flex items-center"><i class="fas fa-play-circle text-purple-500 mr-3 text-sm"></i> E-commerce (React)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-fit sticky top-10">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-blue-500/30 rounded-2xl p-8 shadow-2xl relative overflow-hidden group hover:border-blue-500/50 transition-all duration-500">
+                    
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl group-hover:bg-blue-500/30 transition-all duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-blue-500/20 rounded-lg">
+                                <i class="fas fa-lightbulb text-yellow-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Sabedoria Dev</h3>
+                        </div>
+                        
+                        <p class="text-gray-300 text-lg leading-relaxed italic mb-6">
+                            "A melhor forma de aprender Frontend não é assistindo vídeos passivamente, é <span class="text-blue-400 font-bold">quebrando coisas</span>. Tente construir algo, falhe, pesquise o erro e conserte. É nesse processo que a mágica acontece."
+                        </p>
+                        
+                        <div class="flex items-center justify-between border-t border-gray-700 pt-4">
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Dica Sênior</span>
+                            <div class="flex text-yellow-500 text-xs gap-1">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-6 text-center shadow-lg">
+                    <p class="text-white font-bold text-lg mb-2">Já criou seu GitHub?</p>
+                    <p class="text-white/80 text-sm mb-4">O mercado quer ver seu código!</p>
+                    <a href="https://github.com" target="_blank" class="inline-block bg-white text-blue-600 px-6 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors">
+                        Criar Agora
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#0f0f0f] py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-10">Arsenal de Estudos Gratuitos</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <a href="https://www.w3schools.com/" target="_blank" class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-all group">
+                <i class="fas fa-graduation-cap text-4xl text-green-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xl font-bold text-white mb-2">W3Schools</h3>
+                <p class="text-gray-400 text-sm">Aprenda a sintaxe de HTML, CSS e JS com exemplos interativos rápidos.</p>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=curso+javascript" target="_blank" class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-red-500 transition-all group">
+                <i class="fab fa-youtube text-4xl text-red-500 mb-4 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xl font-bold text-white mb-2">YouTube</h3>
+                <p class="text-gray-400 text-sm">Milhares de tutoriais práticos. Recomendado: Curso em Vídeo, Rocketseat.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#1a1a1a] py-20 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+        <div class="bg-gray-800/30 border border-gray-700 rounded-3xl p-10">
+            <h2 class="text-3xl font-bold text-center text-white mb-4">Seu Caminho na Trilha</h2>
+            <p class="text-center text-gray-400 mb-12 text-sm">Siga estes passos para o sucesso profissional:</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                
+                <div class="bg-gray-300 rounded-xl p-6 h-64 flex flex-col hover:bg-white transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-seedling text-6xl text-blue-900"></i>
+                    </div>
+                    <div class="mb-auto">
+                        <span class="text-5xl font-black text-blue-700 opacity-40 group-hover:opacity-100 transition-opacity">01</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-gray-900 text-sm mb-2">Aprenda os fundamentos</h4>
+                        <p class="text-gray-600 text-xs">HTML, CSS e Lógica. Sem isso, nada para em pé.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-300 rounded-xl p-6 h-64 flex flex-col hover:bg-white transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-layer-group text-6xl text-blue-900"></i>
+                    </div>
+                    <div class="mb-auto">
+                        <span class="text-5xl font-black text-blue-700 opacity-40 group-hover:opacity-100 transition-opacity">02</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-gray-900 text-sm mb-2">Construa Portfólio</h4>
+                        <p class="text-gray-600 text-xs">Projetos reais valem mais que certificados.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-300 rounded-xl p-6 h-64 flex flex-col hover:bg-white transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-file-alt text-6xl text-blue-900"></i>
+                    </div>
+                    <div class="mb-auto">
+                        <span class="text-5xl font-black text-blue-700 opacity-40 group-hover:opacity-100 transition-opacity">03</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-gray-900 text-sm mb-2">Networking</h4>
+                        <p class="text-gray-600 text-xs">Linkedin e comunidades. Quem não é visto, não é lembrado.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-300 rounded-xl p-6 h-64 flex flex-col hover:bg-white transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-search-dollar text-6xl text-blue-900"></i>
+                    </div>
+                    <div class="mb-auto">
+                        <span class="text-5xl font-black text-blue-700 opacity-40 group-hover:opacity-100 transition-opacity">04</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-gray-900 text-sm mb-2">Aplicações</h4>
+                        <p class="text-gray-600 text-xs">Candidate-se para vagas Jr e até Estágio.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-300 rounded-xl p-6 h-64 flex flex-col hover:bg-white transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-trophy text-6xl text-blue-900"></i>
+                    </div>
+                    <div class="mb-auto">
+                        <span class="text-5xl font-black text-blue-700 opacity-40 group-hover:opacity-100 transition-opacity">05</span>
+                    </div>
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-gray-900 text-sm mb-2">Primeiro Emprego</h4>
+                        <p class="text-gray-600 text-xs">Parabéns! Agora o estudo continua para sempre.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#0f0f0f] py-20">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl font-bold text-center text-white mb-12">Dúvidas Frequentes</h2>
+        
+        <div class="space-y-4">
+            <div class="border border-gray-800 rounded-lg overflow-hidden">
+                <button onclick="toggleAccordion('faq-1')" class="w-full flex justify-between items-center p-5 bg-gray-900 hover:bg-gray-800 transition-colors text-left focus:outline-none">
+                    <span class="text-white font-medium">Preciso de faculdade para ser Frontend?</span>
+                    <i id="icon-faq-1" class="fas fa-plus text-blue-500"></i>
+                </button>
+                <div id="faq-1" class="max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="p-5 text-gray-400 bg-gray-900/50">
+                        Não obrigatoriamente. Muitas empresas (especialmente startups e empresas internacionais) valorizam mais o portfólio e o teste técnico do que o diploma. Porém, a faculdade ajuda no networking e fundamentos.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-gray-800 rounded-lg overflow-hidden">
+                <button onclick="toggleAccordion('faq-2')" class="w-full flex justify-between items-center p-5 bg-gray-900 hover:bg-gray-800 transition-colors text-left focus:outline-none">
+                    <span class="text-white font-medium">Preciso saber inglês?</span>
+                    <i id="icon-faq-2" class="fas fa-plus text-blue-500"></i>
+                </button>
+                <div id="faq-2" class="max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="p-5 text-gray-400 bg-gray-900/50">
+                        Para começar, o inglês técnico (leitura) é essencial, pois a documentação oficial das ferramentas é em inglês. Para vagas sênior ou internacionais, a fala é obrigatória.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border border-gray-800 rounded-lg overflow-hidden">
+                <button onclick="toggleAccordion('faq-3')" class="w-full flex justify-between items-center p-5 bg-gray-900 hover:bg-gray-800 transition-colors text-left focus:outline-none">
+                    <span class="text-white font-medium">Meu computador é fraco, consigo programar?</span>
+                    <i id="icon-faq-3" class="fas fa-plus text-blue-500"></i>
+                </button>
+                <div id="faq-3" class="max-h-0 overflow-hidden transition-all duration-300">
+                    <div class="p-5 text-gray-400 bg-gray-900/50">
+                        Sim! Desenvolvimento Web (Frontend) é muito leve. Qualquer computador que rode um navegador e um editor de texto (VS Code) serve para começar.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+        
+        // Verifica se é um ícone de seta (Conteúdo) ou Mais/Menos (FAQ)
+        const isArrow = icon.classList.contains('fa-chevron-down');
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            if (isArrow) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            }
+        } else {
+            // Fecha outros do mesmo grupo
+            document.querySelectorAll('[id^="content-"], [id^="faq-"]').forEach(el => el.style.maxHeight = null);
+            document.querySelectorAll('[id^="icon-content-"]').forEach(el => el.style.transform = 'rotate(0deg)');
+            document.querySelectorAll('[id^="icon-faq-"]').forEach(el => {
+                el.classList.remove('fa-minus');
+                el.classList.add('fa-plus');
+            });
+
+            content.style.maxHeight = content.scrollHeight + "px";
+            if (isArrow) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        }
+    }
+</script>
+
+<style>
+    .gradient-bg {
+        background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    }
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+    .text-gradient {
+        background: linear-gradient(90deg, #3a86ff 0%, #5fa5ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .accent-gradient {
+        background: linear-gradient(90deg, #3a86ff 0%, #5fa5ff 100%);
+    }
+</style>
+
+{% endblock %}
