@@ -1,167 +1,156 @@
 {% extends 'base.html' %}
-{% block title %}Editar Perfil{% endblock %}
+{% load static %}
+
+{% block title %}Editar Perfil - Mapa da Jornada{% endblock %}
 
 {% block content %}
-<div class="max-w-3xl mx-auto p-8 bg-[#1e1e1e] rounded-lg">
-  <h1 class="text-3xl font-bold mb-6 text-center">Editar Perfil</h1>
-
-  {% if messages %}
-    {% for m in messages %}
-      <p class="text-green-600 text-center mb-4">{{ m }}</p>
-    {% endfor %}
-  {% endif %}
-
-  <!-- FORMULÁRIO PRINCIPAL -->
-  <form method="post" enctype="multipart/form-data" class="space-y-6" id="perfil-form">
-    {% csrf_token %}
+<div class="min-h-screen bg-[#0a0a0a] pb-20 pt-24 relative overflow-hidden">
     
-    <!-- DADOS BÁSICOS DO PERFIL -->
-    <div>
-      <label class="text-2xl font-bold mb-4 block font-semibold mb-1">Foto</label>
-      {{ form.foto }}
+    <div class="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-900/10 to-transparent pointer-events-none"></div>
+    <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="container mx-auto px-4 max-w-4xl relative z-10">
+
+        <div class="bg-gray-900/60 border border-gray-800 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+            
+            <div class="mb-8 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-6">
+                <div>
+                    <h1 class="text-3xl font-bold text-white mb-2">Editar Perfil</h1>
+                    <p class="text-gray-400">Atualize suas informações e mostre seu melhor.</p>
+                </div>
+                <a href="{% url 'perfil' %}" class="text-gray-400 hover:text-white flex items-center gap-2 transition group px-4 py-2 rounded-lg border border-transparent hover:border-gray-700">
+                    <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> Voltar ao Perfil
+                </a>
+            </div>
+
+            <form method="post" class="space-y-10">
+                {% csrf_token %}
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-blue-500/10 rounded-lg"><i class="fas fa-user-edit text-blue-500"></i></span>
+                        Sobre Você
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="space-y-2">
+                            <label for="{{ form.curso.id_for_label }}" class="block text-sm font-medium text-gray-300 uppercase tracking-wider">Curso / Formação Atual</label>
+                            <input type="text" name="{{ form.curso.name }}" id="{{ form.curso.id_for_label }}" value="{{ form.curso.value|default:'' }}" class="w-full bg-gray-900 border border-gray-700 text-white rounded-xl p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-600" placeholder="Ex: Análise e Desenvolvimento de Sistemas">
+                            {% if form.curso.errors %}<p class="text-red-400 text-sm mt-1">{{ form.curso.errors.0 }}</p>{% endif %}
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="{{ form.bio.id_for_label }}" class="block text-sm font-medium text-gray-300 uppercase tracking-wider">Minha Biografia</label>
+                            <textarea name="{{ form.bio.name }}" id="{{ form.bio.id_for_label }}" rows="4" class="w-full bg-gray-900 border border-gray-700 text-white rounded-xl p-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-600 resize-none" placeholder="Conte um pouco sobre seus objetivos e paixões na tecnologia...">{{ form.bio.value|default:'' }}</textarea>
+                            {% if form.bio.errors %}<p class="text-red-400 text-sm mt-1">{{ form.bio.errors.0 }}</p>{% endif %}
+                            <p class="text-xs text-gray-500 text-right">Seja breve e impactante.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800/30 p-6 rounded-2xl border border-gray-700/50">
+                    <h2 class="text-lg font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-blue-500/10 rounded-lg"><i class="fas fa-code text-blue-400"></i></span>
+                        Habilidades Técnicas (Hard Skills)
+                    </h2>
+
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-400 mb-3">Suas habilidades atuais:</p>
+                        <div class="flex flex-wrap gap-2">
+                            {% for hab in habilidades %}
+                            <span class="px-4 py-2 bg-blue-900/20 text-blue-300 border border-blue-800/50 rounded-lg text-sm font-medium flex items-center gap-3 group hover:bg-red-900/20 hover:border-red-800/50 hover:text-red-300 transition-all">
+                                {{ hab.nome }}
+                                <a href="{% url 'excluir_habilidade' hab.id %}" class="text-blue-500/60 group-hover:text-red-400 transition" onclick="return confirm('Remover a habilidade {{ hab.nome }}?')" title="Remover">
+                                    <i class="fas fa-times"></i>
+                                </a>
+                            </span>
+                            {% empty %}
+                            <p class="text-gray-500 italic text-sm">Nenhuma cadastrada.</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-3">Adicionar Novas (Ex: Python, React, SQL):</label>
+                        <div id="habilidades-container" class="space-y-3">
+                            <div class="flex gap-2">
+                                <input type="text" name="habilidades" placeholder="Digite uma habilidade..." class="flex-1 bg-gray-900 border border-gray-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none">
+                            </div>
+                        </div>
+                        <button type="button" onclick="adicionarCampo('habilidades-container', 'habilidades')" class="mt-3 text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-2 transition">
+                            <i class="fas fa-plus-circle"></i> Adicionar outro campo
+                        </button>
+                        <p class="text-xs text-gray-500 mt-2">Preencha os campos e clique em "Salvar Alterações" no final da página.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800/30 p-6 rounded-2xl border border-gray-700/50">
+                    <h2 class="text-lg font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-purple-500/10 rounded-lg"><i class="fas fa-brain text-purple-400"></i></span>
+                        Competências (Soft Skills)
+                    </h2>
+
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-400 mb-3">Suas competências atuais:</p>
+                        <div class="flex flex-wrap gap-2">
+                            {% for comp in competencias %}
+                            <span class="px-4 py-2 bg-purple-900/20 text-purple-300 border border-purple-800/50 rounded-lg text-sm font-medium flex items-center gap-3 group hover:bg-red-900/20 hover:border-red-800/50 hover:text-red-300 transition-all">
+                                {{ comp.nome }}
+                                <a href="{% url 'excluir_competencia' comp.id %}" class="text-purple-500/60 group-hover:text-red-400 transition" onclick="return confirm('Remover a competência {{ comp.nome }}?')" title="Remover">
+                                    <i class="fas fa-times"></i>
+                                </a>
+                            </span>
+                            {% empty %}
+                            <p class="text-gray-500 italic text-sm">Nenhuma cadastrada.</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-3">Adicionar Novas (Ex: Liderança, Comunicação):</label>
+                        <div id="competencias-container" class="space-y-3">
+                            <div class="flex gap-2">
+                                <input type="text" name="competencias" placeholder="Digite uma competência..." class="flex-1 bg-gray-900 border border-gray-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-purple-500 outline-none">
+                            </div>
+                        </div>
+                        <button type="button" onclick="adicionarCampo('competencias-container', 'competencias')" class="mt-3 text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center gap-2 transition">
+                            <i class="fas fa-plus-circle"></i> Adicionar outro campo
+                        </button>
+                        <p class="text-xs text-gray-500 mt-2">Preencha os campos e clique em "Salvar Alterações" no final da página.</p>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-gray-800">
+                    <button type="submit" class="w-full md:w-auto md:px-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-4 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-3 text-lg">
+                        <i class="fas fa-save"></i> Salvar Alterações
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-
-    <div>
-      <label class=" text-2xl font-bold mb-4 block font-semibold mb-1">Curso</label>
-      <input type="text" name="{{ form.curso.name }}" value="{{ form.curso.value|default:'' }}"
-             class="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md">
-    </div>
-
-    <!-- BLOCO DE HABILIDADES -->
-    <div class="mt-10">
-      <h2 class="text-2xl font-bold mb-4 text-white">Minhas Habilidades</h2>
-
-      <!-- Lista de habilidades existentes -->
-      <div class="flex flex-wrap gap-2 mb-4">
-        {% for hab in habilidades %}
-          <div class="flex items-center bg-[#BFDFF6] text-gray-800 text-sm font-medium px-4 py-1 rounded-full">
-            <span>{{ hab.nome }}</span>
-            <a href="{% url 'excluir_habilidade' hab.id %}" 
-               onclick="return confirm('Tem certeza que deseja excluir esta habilidade?');"
-               class="ml-2 text-red-600 hover:text-red-800 font-bold"
-               title="Excluir habilidade">✕</a>
-          </div>
-        {% empty %}
-          <p class="text-gray-500">Nenhuma habilidade cadastrada.</p>
-        {% endfor %}
-      </div>
-
-      <!-- Campo para adicionar nova habilidade -->
-      <div class="mt-4 flex gap-2 items-center">
-        <input type="text" name="nova_habilidade" placeholder="Nova habilidade" 
-               class="border border-gray-300 text-black rounded-lg px-3 py-1 w-full focus:ring-2 focus:ring-blue-400 outline-none"
-               id="nova-habilidade-input">
-        <button type="button" onclick="adicionarHabilidade()" class="bg-blue-600 text-white px-4 py-1 rounded-lg hover:bg-blue-700 transition">Adicionar</button>
-      </div>
-
-      <!-- Lista oculta de habilidades a serem salvas -->
-      <div id="habilidades-container"></div>
-    </div>
-
-    <!-- BLOCO DE COMPETÊNCIAS -->
-    <div class="mt-10 mb-8">
-      <h2 class="text-2xl font-bold mb-4 text-white">Minhas Competências</h2>
-
-      <!-- Lista de competências existentes -->
-      <div class="flex flex-wrap gap-2 mb-4">
-        {% for comp in competencias %}
-          <div class="flex items-center bg-[#BFDFF6] text-gray-800 text-sm font-medium px-4 py-1 rounded-full">
-            <span>{{ comp.nome }}</span>
-            <a href="{% url 'excluir_competencia' comp.id %}" 
-               onclick="return confirm('Tem certeza que deseja excluir esta competência?');"
-               class="ml-2 text-red-600 hover:text-red-800 font-bold"
-               title="Excluir competência">✕</a>
-          </div>
-        {% empty %}
-          <p class="text-gray-500">Nenhuma competência cadastrada.</p>
-        {% endfor %}
-      </div>
-
-      <!-- Campo para adicionar nova competência -->
-      <div class="mt-4 flex gap-2 items-center">
-        <input type="text" name="nova_competencia" placeholder="Nova competência" 
-               class="border border-gray-300 text-black rounded-lg px-3 py-1 w-full focus:ring-2 focus:ring-blue-400 outline-none"
-               id="nova-competencia-input">
-        <button type="button" onclick="adicionarCompetencia()" class="bg-blue-600 text-white px-4 py-1 rounded-lg hover:bg-blue-700 transition">Adicionar</button>
-      </div>
-
-      <!-- Lista oculta de competências a serem salvas -->
-      <div id="competencias-container"></div>
-
-      <!-- BOTÕES DE AÇÃO -->
-      <div class="flex justify-between mt-6">
-        <a href="{% url 'perfil' %}" class="bg-red-600 text-white rounded-lg px-5 py-2 hover:bg-red-700 transition">Cancelar</a>
-        <button type="submit" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">Salvar Tudo</button>
-      </div>
-    </div>
-  </form>
 </div>
 
 <script>
-let habilidadesAdicionadas = [];
-let competenciasAdicionadas = [];
-
-function adicionarHabilidade() {
-    const input = document.getElementById('nova-habilidade-input');
-    const habilidade = input.value.trim();
-    
-    if (habilidade && !habilidadesAdicionadas.includes(habilidade)) {
-        habilidadesAdicionadas.push(habilidade);
-        atualizarHabilidadesContainer();
-        input.value = '';
+    function adicionarCampo(containerId, inputName) {
+        const container = document.getElementById(containerId);
+        const div = document.createElement('div');
+        div.className = 'flex gap-2 animate-fade-in-up';
+        div.innerHTML = `
+            <input type="text" name="${inputName}" placeholder="Digite mais uma..." class="flex-1 bg-gray-900 border border-gray-700 text-white rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none">
+            <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-400 px-2 transition"><i class="fas fa-trash"></i></button>
+        `;
+        container.appendChild(div);
     }
-}
-
-function adicionarCompetencia() {
-    const input = document.getElementById('nova-competencia-input');
-    const competencia = input.value.trim();
-    
-    if (competencia && !competenciasAdicionadas.includes(competencia)) {
-        competenciasAdicionadas.push(competencia);
-        atualizarCompetenciasContainer();
-        input.value = '';
-    }
-}
-
-function atualizarHabilidadesContainer() {
-    const container = document.getElementById('habilidades-container');
-    container.innerHTML = '';
-    
-    habilidadesAdicionadas.forEach((hab, index) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'habilidades';
-        input.value = hab;
-        container.appendChild(input);
-    });
-}
-
-function atualizarCompetenciasContainer() {
-    const container = document.getElementById('competencias-container');
-    container.innerHTML = '';
-    
-    competenciasAdicionadas.forEach((comp, index) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'competencias';
-        input.value = comp;
-        container.appendChild(input);
-    });
-}
-
-// Permitir adicionar com Enter
-document.getElementById('nova-habilidade-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        adicionarHabilidade();
-    }
-});
-
-document.getElementById('nova-competencia-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        adicionarCompetencia();
-    }
-});
 </script>
+
+<style>
+    /* Animação simples para novos inputs */
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 0.3s ease-out;
+    }
+</style>
 {% endblock %}

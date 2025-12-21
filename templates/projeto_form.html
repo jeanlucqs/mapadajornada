@@ -1,90 +1,105 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{{ titulo }}{% endblock %}
+
+{% block title %}Gerenciar Projeto - Mapa da Jornada{% endblock %}
 
 {% block content %}
-<div class="min-h-screen flex justify-center items-start py-10">
-  <div class="w-full max-w-2xl px-8">
+<div class="min-h-screen bg-[#0a0a0a] pt-32 pb-20 flex items-center justify-center relative overflow-hidden">
     
-    <h1 class="text-4xl font-semibold mb-8 text-left text-white">{{ titulo }}</h1>
+    <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-green-600 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-blue-600 rounded-full blur-[100px]"></div>
+    </div>
 
-    <form method="post" class="space-y-6">
-      {% csrf_token %}
+    <div class="container mx-auto px-4 relative z-10 max-w-2xl">
+        
+        <div class="bg-gray-900/60 border border-gray-700 p-8 rounded-3xl backdrop-blur-xl shadow-2xl">
+            
+            <div class="mb-8 border-b border-gray-700 pb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fas fa-project-diagram text-green-500"></i>
+                        {% if 'Adicionar' in titulo %}Novo Projeto{% else %}Editar Projeto{% endif %}
+                    </h1>
+                    <p class="text-gray-400 text-sm">Adicione seus trabalhos ao portfólio.</p>
+                </div>
+                <a href="{% url 'perfil' %}" class="px-4 py-2 rounded-lg border border-gray-600 text-gray-400 hover:text-white hover:bg-gray-800 transition text-sm flex items-center gap-2">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
 
-      {% if form.non_field_errors %}
-        <div class="p-3 bg-red-100 text-red-800 rounded-md">
-          {% for error in form.non_field_errors %}
-            <p>{{ error }}</p>
-          {% endfor %}
+            <form method="post" class="space-y-6">
+                {% csrf_token %}
+                
+                {% for field in form %}
+                <div class="space-y-2 group">
+                    <label for="{{ field.id_for_label }}" class="block text-xs font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-green-400 transition-colors">
+                        {{ field.label }}
+                        {% if field.field.required %}<span class="text-red-500">*</span>{% endif %}
+                    </label>
+                    
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-500">
+                            {% if field.name == 'titulo' %}
+                                <i class="fas fa-heading"></i>
+                            {% elif field.name == 'descricao' %}
+                                <i class="fas fa-align-left mt-1 self-start"></i> {% elif field.name == 'link_repositorio' %}
+                                <i class="fab fa-github"></i>
+                            {% elif field.name == 'link_producao' %}
+                                <i class="fas fa-globe"></i>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-wrapper">
+                            {{ field }}
+                        </div>
+                    </div>
+                    
+                    {% if field.help_text %}
+                        <p class="text-xs text-gray-500">{{ field.help_text }}</p>
+                    {% endif %}
+                    
+                    {% if field.errors %}
+                        <div class="text-red-400 text-xs mt-1 bg-red-900/10 p-2 rounded border border-red-900/30 flex items-center gap-2">
+                            <i class="fas fa-exclamation-circle"></i> {{ field.errors.0 }}
+                        </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+                <div class="bg-blue-900/20 border border-blue-800/50 rounded-xl p-4 flex items-start gap-3">
+                    <i class="fas fa-lightbulb text-yellow-400 mt-1"></i>
+                    <p class="text-sm text-blue-200">
+                        <strong>Dica:</strong> Projetos com links de "Demo" (projeto no ar) recebem 2x mais cliques de recrutadores do que apenas código.
+                    </p>
+                </div>
+
+                <div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button type="submit" class="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-4 px-6 rounded-xl transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2">
+                        <i class="fas fa-save"></i> Salvar Projeto
+                    </button>
+                    
+                    {% if 'Editar' in titulo %} <a href="{% url 'excluir_projeto' form.instance.id %}" class="bg-red-900/20 border border-red-800 text-red-400 hover:bg-red-900/40 hover:text-white font-bold py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-2" onclick="return confirm('Tem certeza que deseja excluir este projeto?')">
+                        <i class="fas fa-trash"></i> Excluir
+                    </a>
+                    {% endif %}
+                </div>
+            </form>
+
         </div>
-      {% endif %}
-
-      <div>
-        <label for="{{ form.titulo.id_for_label }}" class="block text-sm font-medium text-white">
-          {{ form.titulo.label }}
-        </label>
-        <div class="mt-1">
-          <input type="text" name="{{ form.titulo.name }}" id="{{ form.titulo.id_for_label }}" 
-                 class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                 value="{{ form.titulo.value|default:'' }}">
-        </div>
-        {% if form.titulo.errors %}
-          <p class="mt-1 text-sm text-red-600">{{ form.titulo.errors|first }}</p>
-        {% endif %}
-      </div>
-
-      <div>
-        <label for="{{ form.descricao.id_for_label }}" class="block text-sm font-medium text-white">
-          {{ form.descricao.label }}
-        </label>
-        <div class="mt-1">
-          <textarea name="{{ form.descricao.name }}" id="{{ form.descricao.id_for_label }}" 
-                    class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    rows="4">{{ form.descricao.value|default:'' }}</textarea>
-        </div>
-        {% if form.descricao.errors %}
-          <p class="mt-1 text-sm text-red-600">{{ form.descricao.errors|first }}</p>
-        {% endif %}
-      </div>
-      
-      <div>
-        <label for="{{ form.link_repositorio.id_for_label }}" class="block text-sm font-medium text-white">
-          {{ form.link_repositorio.label }}
-        </label>
-        <div class="mt-1">
-          <input type="url" name="{{ form.link_repositorio.name }}" id="{{ form.link_repositorio.id_for_label }}" 
-                 class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                 value="{{ form.link_repositorio.value|default:'' }}">
-        </div>
-        {% if form.link_repositorio.errors %}
-          <p class="mt-1 text-sm text-red-600">{{ form.link_repositorio.errors|first }}</p>
-        {% endif %}
-      </div>
-
-      <div>
-        <label for="{{ form.link_producao.id_for_label }}" class="block text-sm font-medium text-white">
-          {{ form.link_producao.label }}
-        </label>
-        <div class="mt-1">
-          <input type="url" name="{{ form.link_producao.name }}" id="{{ form.link_producao.id_for_label }}" 
-                 class="w-full px-3 py-2 bg-white text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                 value="{{ form.link_producao.value|default:'' }}">
-        </div>
-        {% if form.link_producao.errors %}
-          <p class="mt-1 text-sm text-red-600">{{ form.link_producao.errors|first }}</p>
-        {% endif %}
-      </div>
-
-      <div class="flex gap-4 pt-4">
-        <button type="submit" class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
-          Salvar
-        </button>
-        <a href="{% url 'perfil' %}" class="inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-          Cancelar
-        </a>
-      </div>
-
-    </form>
-  </div>
+    </div>
 </div>
+
+<style>
+    /* Ajuste fino para os ícones dentro dos inputs */
+    .field-wrapper input, .field-wrapper textarea {
+        padding-left: 3rem !important; /* Espaço para o ícone */
+        transition: all 0.3s ease;
+    }
+    .field-wrapper input:focus, .field-wrapper textarea:focus {
+        background-color: rgba(17, 24, 39, 1); /* bg-gray-900 mais sólido */
+        border-color: #10b981; /* green-500 */
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+    }
+</style>
 {% endblock %}
