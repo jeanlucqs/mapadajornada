@@ -68,7 +68,9 @@ python manage.py loaddata mapa/fixtures/initial_data.json
 python -m venv venv; .\venv\Scripts\Activate.ps1; pip install -r requirements.txt; python manage.py migrate; python manage.py loaddata mapa/fixtures/initial_data.json; python manage.py runserver
 ```
 
-### Árvore de Arquivos
+```bash
+
+Árvore de Arquivos
 
 MAPADAJORNADA/
 ├── config/                # Configurações do projeto Django
@@ -95,3 +97,4 @@ MAPADAJORNADA/
 ├── manage.py              # CLI do Django
 ├── README.md              # Documentação do projeto
 └── requirements.txt       # Lista de dependências
+```
