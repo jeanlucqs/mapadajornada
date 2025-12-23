@@ -46,32 +46,26 @@ python -m venv venv
 ```
 
 
-```bash
 **2. Instalar dependências**
-
+```bash
 pip install -r requirements.txt
-
 ```
 
-```bash
 **3. Configurar o Banco de Dados Aplicar as migrações para criar as tabelas necessárias.**
 
-
+```bash
 python manage.py migrate
 ```
 
-```bash
 **4. Carregar Dados Iniciais Este passo é crucial para popular o sistema com as trilhas e configurações básicas.**
-
+```bash
 python manage.py loaddata mapa/fixtures/initial_data.json
 
 ```
 
-```bash
 **One-Liner**
-
+```bash
 python -m venv venv; .\venv\Scripts\Activate.ps1; pip install -r requirements.txt; python manage.py migrate; python manage.py loaddata mapa/fixtures/initial_data.json; python manage.py runserver
-
 ```
 
 ### Árvore de Arquivos
