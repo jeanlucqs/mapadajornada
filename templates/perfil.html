@@ -1,123 +1,165 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Meu Perfil{% endblock %}
+
+{% block title %}Meu Perfil - Mapa da Jornada{% endblock %}
 
 {% block content %}
-<div class="min-h-screen flex justify-center items-start py-10">
-  <div class="w-full max-w-2xl px-8">
+<div class="min-h-screen bg-[#0a0a0a] pb-20 pt-24 relative overflow-hidden">
     
-    {% if messages %}
-      <div class="mb-6">
-        {% for message in messages %}
-          <div class="p-4 rounded-md 
-                      {% if message.tags == 'success' %}bg-green-100 text-green-800{% else %}bg-red-100 text-red-800{% endif %}"
-               role="alert">
-            {{ message }}
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
+    <div class="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-blue-900/20 to-transparent pointer-events-none"></div>
+    <div class="absolute top-20 right-20 w-72 h-72 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-    <h1 class="text-4xl font-semibold mb-12 text-left text-white">Meu Perfil</h1>
-    
-    <div class="flex items-center gap-6 mb-10">
-      <div class="w-24 h-24 rounded-full  flex items-center justify-center overflow-hidden">
-        {% if perfil.foto %}
-            <img src="{{ perfil.foto.url }}" alt="Foto de Perfil" class="w-full h-full object-cover">
-        {% else %}
-            <span class="text-gray-300 text-2xl font-bold">
-              {{ user.first_name|first|upper }}{{ user.last_name|first|upper }}
-            </span>
-        {% endif %}
-      </div>
+    <div class="container mx-auto px-4 max-w-6xl relative z-10">
 
-      <div class="flex-1 text-left">
-        <h2 class="text-3xl font-extrabold text-white">
-          {% if user.first_name or user.last_name %}
-            {{ user.first_name }} {{ user.last_name }}
-          {% else %}
-            {{ user.username }}
-          {% endif %}
-        </h2>
-        <p class="text-gray-100 mt-2">
-          {{ perfil.curso|default:"Curso não informado" }}
-        </p>
-      </div>
-
-      <a href="{% url 'editar_perfil' %}"
-         class="bg-white text-gray-900 font-medium py-2 px-4 rounded-md border border-gray-300 hover:bg-gray-100 transition">
-        Editar Perfil
-      </a>
-    </div>
-
-    <div class="mt-8">
-      <h3 class="text-3xl font-bold text-white mb-3">Habilidades</h3>
-      <div class="flex flex-wrap gap-3">
-        {% for hab in habilidades %}
-          <span class="bg-[#BFDFF6] text-gray-900 px-4 py-2 rounded-md text-lg font-medium">
-            {{ hab.nome }}
-          </span>
-        {% empty %}
-          <p class="text-gray-400 text-sm">Nenhuma habilidade cadastrada.</p>
-        {% endfor %}
-      </div>
-    </div>
-
-    <div class="mt-10 mb-12">
-      <h3 class="text-3xl font-bold text-white mb-3">Competências</h3>
-      <div class="flex flex-wrap gap-3">
-        {% for comp in competencias %}
-          <span class="bg-[#BFDFF6] text-gray-900 px-4 py-2 rounded-md text-lg font-medium">
-            {{ comp.nome }}
-          </span>
-        {% empty %}
-          <p class="text-gray-600 text-sm">Nenhuma competência cadastrada.</p>
-        {% endfor %}
-      </div>
-    </div>
-
-        <div class="mt-10 mb-12">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-3xl font-bold text-White">Meus Projetos</h3>
-        <a href="{% url 'adicionar_projeto' %}" class="inline-block bg-blue-600 text-white font-medium py-2 px-5 rounded-lg hover:bg-blue-700 transition">
-          + Adicionar Projeto
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        {% for projeto in projetos %}
-          <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col">
+        <div class="bg-gray-900/60 border border-gray-800 rounded-3xl p-8 mb-8 backdrop-blur-md shadow-2xl relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
-            <h4 class="text-xl font-bold text-gray-900">{{ projeto.titulo }}</h4>
-            
-            {% if projeto.descricao %}
-              <p class="text-gray-700 my-2 flex-grow">{{ projeto.descricao|linebreaksbr }}</p>
-            {% endif %}
-            
-            <div class="mt-4 {% if not projeto.link_repositorio and not projeto.link_producao %}hidden{% endif %}">
-              {% if projeto.link_repositorio %}
-                <a href="{{ projeto.link_repositorio }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">Ver Repositório</a>
-              {% endif %}
-              {% if projeto.link_producao %}
-                <a href="{{ projeto.link_producao }}" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline font-medium {% if projeto.link_repositorio %}ml-4{% endif %}">Ver Aplicação</a>
-              {% endif %}
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 relative z-10">
+                <div class="relative flex-shrink-0">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-[3px]">
+                        <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                            {% if perfil.foto %}
+                                <img src="{{ perfil.foto.url }}" alt="{{ user.username }}" class="w-full h-full object-cover">
+                            {% else %}
+                                <span class="text-4xl font-bold text-white">{{ user.username|first|upper }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 text-center md:text-left w-full">
+                    <h1 class="text-4xl font-bold text-white mb-1">{{ user.first_name }} {{ user.last_name }}</h1>
+                    <p class="text-gray-400 text-lg mb-4">@{{ user.username }}</p>
+                    
+                    {% if perfil.bio %}
+                    <div class="mb-6 bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 inline-block text-left max-w-2xl">
+                        <p class="text-gray-300 text-base leading-relaxed italic">
+                            "{{ perfil.bio|linebreaksbr }}"
+                        </p>
+                    </div>
+                    {% endif %}
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                        {% if perfil.curso %}
+                        <span class="px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-sm font-medium">
+                            <i class="fas fa-graduation-cap mr-2"></i> {{ perfil.curso }}
+                        </span>
+                        {% endif %}
+                        
+                        <span class="px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 border border-gray-700 text-sm font-medium">
+                            <i class="fas fa-calendar-alt mr-2"></i> Desde {{ user.date_joined|date:"Y" }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 mt-4 md:mt-0">
+                    <a href="{% url 'editar_perfil' %}" class="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-xl border border-gray-600 transition-all hover:scale-105 shadow-lg font-medium">
+                        <i class="fas fa-edit mr-2"></i> Editar Perfil
+                    </a>
+                </div>
             </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            <div class="mt-5 border-t pt-4">
-              <a href="{% url 'editar_projeto' projeto.id %}" class="text-sm bg-yellow-400 text-black font-medium py-2 px-3 rounded-md hover:bg-yellow-500 transition">
-                Editar
-              </a>
-              <a href="{% url 'excluir_projeto' projeto.id %}" class="text-sm bg-red-600 text-white font-medium py-2 px-3 rounded-md hover:bg-red-700 transition ml-2">
-                Excluir
-              </a>
+            <div class="space-y-8">
+                
+                <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fas fa-code text-blue-500"></i> Habilidades
+                        </h3>
+                        <a href="{% url 'editar_perfil' %}" class="text-xs text-gray-500 hover:text-blue-400 transition uppercase font-bold tracking-wider">Gerenciar</a>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        {% for hab in habilidades %}
+                        <span class="px-3 py-1 bg-blue-900/20 text-blue-300 border border-blue-800/50 rounded-lg text-sm font-medium flex items-center gap-2 group">
+                            {{ hab.nome }}
+                        </span>
+                        {% empty %}
+                        <p class="text-gray-500 text-sm italic w-full">Nenhuma habilidade.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fas fa-brain text-purple-500"></i> Competências
+                        </h3>
+                        <a href="{% url 'editar_perfil' %}" class="text-xs text-gray-500 hover:text-purple-400 transition uppercase font-bold tracking-wider">Gerenciar</a>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        {% for comp in competencias %}
+                        <span class="px-3 py-1 bg-purple-900/20 text-purple-300 border border-purple-800/50 rounded-lg text-sm font-medium flex items-center gap-2">
+                            {{ comp.nome }}
+                        </span>
+                        {% empty %}
+                        <p class="text-gray-500 text-sm italic w-full">Nenhuma competência.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
             </div>
-          </div>
-        {% empty %}
-          <p class="text-gray-600 text-sm col-span-1 md:col-span-2">Você ainda não adicionou nenhum projeto.</p>
-        {% endfor %}
-      </div>
-    </div>
+
+            <div class="lg:col-span-2">
+                <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-8 backdrop-blur-sm min-h-[500px]">
+                    
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+                            <i class="fas fa-rocket text-green-500"></i> Meus Projetos
+                        </h3>
+                        <a href="{% url 'adicionar_projeto' %}" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition flex items-center shadow-lg shadow-green-900/20">
+                            <i class="fas fa-plus mr-2"></i> Novo
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {% for projeto in projetos %}
+                        <div class="bg-gray-800/40 border border-gray-700 rounded-xl p-6 hover:border-gray-500 transition-all duration-300 group flex flex-col h-full relative">
+                            
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
+                                <a href="{% url 'editar_projeto' projeto.id %}" class="text-gray-400 hover:text-blue-400" title="Editar"><i class="fas fa-pen"></i></a>
+                                <a href="{% url 'excluir_projeto' projeto.id %}" class="text-gray-400 hover:text-red-500" onclick="return confirm('Tem certeza?')" title="Excluir"><i class="fas fa-trash"></i></a>
+                            </div>
+
+                            <h4 class="text-xl font-bold text-white mb-2 pr-10">{{ projeto.titulo }}</h4>
+                            <p class="text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
+                                {{ projeto.descricao|default:"Sem descrição." }}
+                            </p>
+
+                            <div class="flex gap-3 mt-auto">
+                                {% if projeto.link_repositorio %}
+                                <a href="{{ projeto.link_repositorio }}" target="_blank" class="flex-1 bg-gray-900 border border-gray-700 text-white py-2 rounded-lg text-center text-sm hover:bg-gray-700 transition flex items-center justify-center gap-2">
+                                    <i class="fab fa-github"></i> Repositório
+                                </a>
+                                {% endif %}
+                                {% if projeto.link_producao %}
+                                <a href="{{ projeto.link_producao }}" target="_blank" class="flex-1 bg-green-600/10 border border-green-600/30 text-green-400 py-2 rounded-lg text-center text-sm hover:bg-green-600/20 transition flex items-center justify-center gap-2">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-span-2 flex flex-col items-center justify-center py-16 text-center">
+                            <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-folder-open text-3xl text-gray-600"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2">Seu portfólio está vazio</h4>
+                            <p class="text-gray-500 max-w-sm mb-6">Adicione seus projetos acadêmicos e pessoais para mostrar seu talento ao mundo.</p>
+                            <a href="{% url 'adicionar_projeto' %}" class="text-blue-400 hover:text-blue-300 font-medium">
+                                + Adicionar primeiro projeto
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 {% endblock %}

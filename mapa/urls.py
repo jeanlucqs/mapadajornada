@@ -56,6 +56,15 @@ urlpatterns = [
     path('projeto/adicionar/', views.adicionar_projeto, name='adicionar_projeto'),
     path('projeto/editar/<int:id>/', views.editar_projeto, name='editar_projeto'),
     path('projeto/excluir/<int:id>/', views.excluir_projeto, name='excluir_projeto'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('dashboard/trilha/delete/<int:id>/', views.deletar_trilha, name='deletar_trilha'),
+    path('dashboard/carreira/delete/<int:id>/', views.deletar_carreira, name='deletar_carreira'),
+    path('dashboard/trilha/nova/', views.gerenciar_trilha, name='criar_trilha'),
+    path('dashboard/trilha/editar/<int:id>/', views.gerenciar_trilha, name='editar_trilha'),
+
+    # URLs para gerenciar Carreiras
+    path('dashboard/carreira/nova/', views.gerenciar_carreira, name='criar_carreira'),
+    path('dashboard/carreira/editar/<int:id>/', views.gerenciar_carreira, name='editar_carreira'),
 ]
 
 if settings.DEBUG:

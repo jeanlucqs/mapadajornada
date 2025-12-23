@@ -5,7 +5,8 @@ class Perfil(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     foto = models.ImageField(upload_to='fotos_perfil/', blank=True, null=True)
     curso = models.CharField(max_length=100, blank=True, null=True)
-
+    bio = models.TextField(blank=True, null=True)
+    
     def __str__(self):
         return f"Perfil de {self.user.username}"
 
@@ -254,6 +255,27 @@ class Projeto(models.Model):
         verbose_name = "Projeto"
         verbose_name_plural = "Projetos"
         ordering = ['-id'] 
+
+    def __str__(self):
+        return self.titulo
+
+class Trilha(models.Model):
+    titulo = models.CharField(max_length=100, verbose_name="Título da Trilha")
+    descricao = models.TextField(verbose_name="Descrição Curta")
+    icone = models.CharField(max_length=50, default="fas fa-road", help_text="Classe do FontAwesome (Ex: fas fa-code)")
+    
+    url_nome = models.CharField(
+        max_length=100, 
+        verbose_name="Nome da Rota/URL", 
+        help_text="Ex: 'trilha_frontend' ou 'trilha_backend'"
+    )
+    
+    ordem = models.PositiveIntegerField(default=0, help_text="Ordem de exibição")
+
+    class Meta:
+        verbose_name = "Trilha"
+        verbose_name_plural = "Trilhas"
+        ordering = ['ordem']
 
     def __str__(self):
         return self.titulo
